@@ -33,11 +33,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Debug - List files
+        run: ls -la
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
+          # cache: 'pip' # Temporarily disabled to debug file matching issue
 
       - name: Install dependencies
         run: |
