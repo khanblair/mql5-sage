@@ -1,0 +1,52 @@
+name: 🔍 Ask MQL5 Question
+
+on:
+  workflow_dispatch:
+    inputs:
+      question:
+        description: 'Your MQL5 question'
+        required: true
+        type: string
+      show_sources:
+        description: 'Show source pages?'
+        required: false
+        default: 'true'
+        type: choice
+        options: ['true', 'false']
+
+permissions:
+  contents: write
+
+jobs:
+  ask:
+    name: Answer MQL5 Question
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - run: pip install groq
+
+      - name: Ask mql5-sage
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          QUESTION: ${{ github.event.inputs.question }}
+          SHOW_SOURCES: ${{ github.event.inputs.show_sources }}
+        run: python scripts/ask.py
+
+      - name: Commit Q&A to journal
+        run: |
+          git config user.name "mql5-sage[bot]"
+          git config user.email "mql5-sage@users.noreply.github.com"
+          git add knowledge/ journal/ JOURNAL.md 2>/dev/null || true
+          if ! git diff --staged --quiet; then
+            git commit -m "🔍 ask: $(echo '${{ github.event.inputs.question }}' | cut -c1-60)"
+            git push
+          fi

@@ -1,0 +1,43 @@
+name: 🧬 Daily Evolution
+
+on:
+  schedule:
+    - cron: '0 9 * * *'   # Every day 9am UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  evolve:
+    name: Self-Assessment & Evolution
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - run: pip install groq
+
+      - name: Run evolution
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python scripts/evolve.py
+
+      - name: Commit journal entry
+        run: |
+          git config user.name "mql5-sage[bot]"
+          git config user.email "mql5-sage@users.noreply.github.com"
+          git add knowledge/ journal/ JOURNAL.md README.md 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "🧬 evolve: $(date -u +%Y-%m-%d)"
+            git push
+          fi

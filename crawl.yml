@@ -1,0 +1,68 @@
+name: 🕷️ Crawl MQL5 Docs
+
+# ─── TRIGGERS ────────────────────────────────────────────────────────────────
+# Weekly full re-crawl (Sunday midnight) to pick up doc updates
+# Manual: trigger from Actions tab to crawl a specific section
+on:
+  schedule:
+    - cron: '0 2 * * 0'   # Every Sunday at 02:00 UTC
+  workflow_dispatch:
+    inputs:
+      section:
+        description: 'Section slug to crawl (e.g. "trading") — leave blank to crawl all priority-1 sections'
+        required: false
+        type: string
+      max_pages:
+        description: 'Max pages to crawl this run (default 40)'
+        required: false
+        default: '40'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    name: Crawl & Ingest MQL5 Docs
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests beautifulsoup4 groq lxml
+
+      - name: Crawl MQL5 docs
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TARGET_SECTION: ${{ github.event.inputs.section }}
+          MAX_PAGES: ${{ github.event.inputs.max_pages || '40' }}
+        run: python scripts/crawl.py
+
+      - name: Commit new knowledge
+        run: |
+          git config user.name "mql5-sage[bot]"
+          git config user.email "mql5-sage@users.noreply.github.com"
+          git add knowledge/ journal/ JOURNAL.md README.md crawl_state.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No new pages crawled."
+          else
+            COUNT=$(python -c "
+import json, pathlib
+kb = json.loads(pathlib.Path('knowledge/knowledge_base.json').read_text())
+print(len(kb.get('chunks', [])))" 2>/dev/null || echo "?")
+            git commit -m "🕷️ crawl: ${COUNT} total chunks in knowledge base"
+            git push
+          fi
