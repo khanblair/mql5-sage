@@ -571,6 +571,8 @@ def main():
     print(f"  Max this run    : {MAX_PAGES} pages")
     print(f"  Groq calls      : 1 (end of run only — free tier safe)")
 
+    session = requests.Session()
+
     # Autonomous discovery of new sections
     sections = discover_sections(session, config)
 
@@ -584,7 +586,6 @@ def main():
         already_done = set(p.get("section", "") for p in kb.get("pages", {}).values())
         sections.sort(key=lambda s: (s.get("priority", 5), s["slug"] in already_done))
 
-    session = requests.Session()
     pages_crawled_total = 0
     sections_crawled = []   # (section_title, [page_metas])
 
