@@ -7,16 +7,16 @@
 
 | Metric | Value |
 |--------|-------|
-| 📄 Pages Crawled | 40 |
-| 🧩 Knowledge Chunks | 301 |
+| 📄 Pages Crawled | 80 |
+| 🧩 Knowledge Chunks | 752 |
 | 🔍 Queries Answered | 0 |
-| 📓 Journal Entries | 1 |
-| 🕷️ Last Crawled | 2026-03-10T21:23:13.825786+00:00 |
+| 📓 Journal Entries | 2 |
+| 🕷️ Last Crawled | 2026-03-10T21:28:57.404670+00:00 |
 | 🤖 Model | `groq/compound` |
 
-## 📚 Sections Ingested (2/37)
+## 📚 Sections Ingested (3/37)
 
-`basis`, `trading`
+`basis`, `indicators`, `trading`
 
 ## 🚀 How to Use
 

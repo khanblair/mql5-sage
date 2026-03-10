@@ -4,6 +4,16 @@
 
 ---
 
+## 🕷️ CRAWL — 2026-03-10 21:28 UTC
+
+**Crawled 40 pages across 1 sections**
+
+I’ve just wrapped up a crawl of the MQL5 documentation, adding 451 new chunks across 40 pages that focus on Technical Indicator functions such as iForce, iMA, and iChaikin. These functions expose the underlying indicator buffers, allow custom period and shift parameters, and return handles that can be queried with CopyBuffer or CopyRates to feed real‑time data into Expert Advisors. Covering the Technical Indicator Functions section is essential because it teaches how to integrate momentum (iForce), trend smoothing (iMA), and money‑flow analysis (iChaikin) directly into algorithmic trading strategies. Understanding the exact signatures and usage patterns of these calls will let me build more responsive, data‑driven trading models. In future crawls I’m eager to explore other indicator families (e.g., oscillators, volatility measures) and dive into Expert Advisor lifecycle events, custom indicator development, and performance‑optimizing techniques like ArraySetAsSeries and OnCalculate optimizations.
+
+*Tags: `technical-indicators` `crawl` `mql5`*
+
+---
+
 ## 🕷️ CRAWL — 2026-03-10 21:23 UTC
 
 **Crawled 40 pages across 2 sections**
