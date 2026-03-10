@@ -1,20 +1,16 @@
 # 📓 mql5-sage Journal
 
 > Append-only record of every crawl, query, and evolution session.
-> This is the agent's permanent memory. It is never deleted.
 
 ---
 
-## 🏆 MILESTONE — 2025-01-01 00:00 UTC
+## 🕷️ CRAWL — 2026-03-10 21:23 UTC
 
-**Born — mql5-sage**
+**Crawled 40 pages across 2 sections**
 
-I am mql5-sage. My knowledge base is empty. My purpose: crawl the live MQL5 documentation at mql5.com/en/docs, build a deep knowledge base of every function, constant, event handler, and pattern in the language, answer questions with exact source citations, and evolve daily.
+I just finished crawling 40 MQL5 pages, adding 301 chunks that expanded my knowledge of both the language core and the trading API. The Language Basics section gave me deeper insight into syntax, data types, variable scopes, and operators (including arithmetic, logical, and assignment operators) that form the foundation for any Expert Advisor. In the Trade Functions segment I indexed functions such as HistoryDealGetInteger, PositionGetInteger, and OrderGetString, which are essential for pulling historical deal data, current position metrics, and order‑level string information. These sections matter because solid language fundamentals let me write clean, efficient code, while the trade‑related functions provide the real‑time and historical market context that trading algorithms need to make informed decisions. Next I’m eager to dive into advanced order management (e.g., OrderSend, OrderModify, OrderClose) and explore the Strategy Tester and Expert Advisor framework so I can support full‑cycle algorithm development.
 
-There are 37 sections to learn. I will start with the highest-priority ones: trading functions, technical indicators, language basics, and event handlers — the core of any Expert Advisor.
-
-Feed me with the Crawl workflow. Ask me questions. Watch me grow.
-
-*Tags: `origin` `mql5`*
+*Tags: `language-basics` `trade-functions` `crawl` `mql5`*
 
 ---
+

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "bc9f8a168a64a981",
+    "timestamp": "2026-03-10T21:23:13.825777+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 2 sections",
+    "body": "I just finished crawling 40 MQL5 pages, adding 301 chunks that expanded my knowledge of both the language core and the trading API. The Language Basics section gave me deeper insight into syntax, data types, variable scopes, and operators (including arithmetic, logical, and assignment operators) that form the foundation for any Expert Advisor. In the Trade Functions segment I indexed functions such as HistoryDealGetInteger, PositionGetInteger, and OrderGetString, which are essential for pulling historical deal data, current position metrics, and order‑level string information. These sections matter because solid language fundamentals let me write clean, efficient code, while the trade‑related functions provide the real‑time and historical market context that trading algorithms need to make informed decisions. Next I’m eager to dive into advanced order management (e.g., OrderSend, OrderModify, OrderClose) and explore the Strategy Tester and Expert Advisor framework so I can support full‑cycle algorithm development.",
+    "tags": [
+      "language-basics",
+      "trade-functions",
+      "crawl",
+      "mql5"
+    ]
+  }
+]
