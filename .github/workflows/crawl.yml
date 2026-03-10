@@ -60,9 +60,9 @@ jobs:
             echo "No new pages crawled."
           else
             COUNT=$(python -c "
-import json, pathlib
-kb = json.loads(pathlib.Path('knowledge/knowledge_base.json').read_text())
-print(len(kb.get('chunks', [])))" 2>/dev/null || echo "?")
+          import json, pathlib
+          kb = json.loads(pathlib.Path('knowledge/knowledge_base.json').read_text())
+          print(len(kb.get('chunks', [])))" 2>/dev/null || echo "?")
             git commit -m "🕷️ crawl: ${COUNT} total chunks in knowledge base"
             git push
           fi
