@@ -5,7 +5,7 @@ name: 🕷️ Crawl MQL5 Docs
 # Manual: trigger from Actions tab to crawl a specific section
 on:
   schedule:
-    - cron: '0 2 * * 0'   # Every Sunday at 02:00 UTC
+    - cron: '0 */8 * * *'   # Every 8 hours
   push:
     branches: [ main ]
   workflow_dispatch:

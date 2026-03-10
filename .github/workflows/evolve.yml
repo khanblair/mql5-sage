@@ -2,7 +2,7 @@ name: 🧬 Daily Evolution
 
 on:
   schedule:
-    - cron: '0 9 * * *'   # Every day 9am UTC
+    - cron: '30 */8 * * *'  # Every 8 hours (offset by 30m from crawl)
   workflow_dispatch:
 
 permissions:
@@ -23,7 +23,9 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - run: pip install groq
+      - run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Run evolution
         env:
