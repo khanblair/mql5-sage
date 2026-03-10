@@ -42,7 +42,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install requests beautifulsoup4 groq lxml
+          pip install -r requirements.txt
 
       - name: Crawl MQL5 docs
         env:
