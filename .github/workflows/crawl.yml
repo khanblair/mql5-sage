@@ -6,6 +6,8 @@ name: 🕷️ Crawl MQL5 Docs
 on:
   schedule:
     - cron: '0 2 * * 0'   # Every Sunday at 02:00 UTC
+  push:
+    branches: [ main ]
   workflow_dispatch:
     inputs:
       section:
