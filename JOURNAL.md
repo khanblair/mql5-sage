@@ -4,6 +4,17 @@
 
 ---
 
+## 🕷️ CRAWL — 2026-03-10 21:48 UTC
+
+**Crawled 40 pages across 2 sections**
+
+Journal Entry – 2026‑03‑10  
+I just finished crawling 40 MQL5 pages, adding 248 chunks that deepened my grasp of Timeseries and Indicator access as well as Event handling. I learned how to pull spread data with `iSpread`, retrieve calendar events via `CalendarValueLast`, and query indicator settings through the `IndicatorParameters` structure. The Timeseries and Indicators Access section (36 pages, 219 chunks) is vital because it supplies the raw price series and technical indicator values that drive signal generation in automated strategies. The Event Handling section (4 pages, 29 chunks) introduced the core callbacks—`OnCalculate`, `OnTester`, and `OnTesterPass`—which let an EA react to new ticks, perform back‑testing calculations, and report results. Next I’m looking forward to crawling Order and Trade Management topics, so I can program order placement, position handling, and strategy optimization with confidence.
+
+*Tags: `timeseries-and-indicators-access` `event-handling` `crawl` `mql5`*
+
+---
+
 ## 🕷️ CRAWL — 2026-03-10 21:28 UTC
 
 **Crawled 40 pages across 1 sections**
