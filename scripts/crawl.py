@@ -33,6 +33,7 @@ JOURNAL_FILE    = Path("journal/JOURNAL.json")
 JOURNAL_MD      = Path("JOURNAL.md")
 CRAWL_STATE     = Path("crawl_state.json")
 CONFIG_FILE     = Path("config/mql5_sections.json")
+FAILURE_LOG     = Path("journal/failures.json")
 
 # ─── Settings ────────────────────────────────────────────────────────────────
 BASE_URL        = "https://www.mql5.com/en/docs"
@@ -134,7 +135,22 @@ def fetch_page(url: str, session: requests.Session) -> BeautifulSoup | None:
             return None
     except Exception as e:
         print(f"  ⚠ Fetch error {url}: {e}")
+        log_failure(url, "FETCH_ERROR", str(e))
         return None
+
+
+def log_failure(url: str, error_type: str, message: str, context: str = ""):
+    """Log a parsing or fetch failure for later self-repair analysis."""
+    failures = load_json(FAILURE_LOG, [])
+    failures.append({
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "url": url,
+        "error_type": error_type,
+        "message": message,
+        "context": context[:500]  # truncate to avoid huge logs
+    })
+    # Keep only last 50 failures
+    save_json(FAILURE_LOG, failures[-50:])
 
 
 def extract_clean_content(soup: BeautifulSoup, url: str) -> dict | None:
@@ -158,6 +174,7 @@ def extract_clean_content(soup: BeautifulSoup, url: str) -> dict | None:
     )
 
     if not content_area:
+        log_failure(url, "CONTENT_NOT_FOUND", "Could not find main content area.")
         return None
 
     # Extract title
@@ -223,6 +240,48 @@ def get_subpage_links(soup: BeautifulSoup, section_url: str) -> list[str]:
                 links.add(full_url)
 
     return list(links)
+
+
+def discover_sections(session: requests.Session, current_config: dict) -> list[dict]:
+    """
+    Scans the main MQL5 docs index to find new sections automatically.
+    """
+    print("  🔍 Scanning for new MQL5 sections...")
+    soup = fetch_page(BASE_URL, session)
+    if not soup:
+        return current_config.get("sections", [])
+
+    existing_slugs = {s["slug"] for s in current_config.get("sections", [])}
+    found_sections = []
+    
+    # MQL5 index usually has a clear list of sections
+    doc_div = soup.find('div', class_='documentation')
+    if not doc_div:
+        return current_config.get("sections", [])
+
+    for a in doc_div.find_all('a', href=True):
+        href = a['href'].rstrip('/')
+        if href.startswith('/en/docs/') and len(href.split('/')) == 4:
+            slug = href.split('/')[-1]
+            if slug not in existing_slugs:
+                title = a.get_text(strip=True)
+                if title and slug:
+                    found_sections.append({
+                        "slug": slug,
+                        "title": title,
+                        "priority": 3, # default priority for new sections
+                        "discovered_at": datetime.now(timezone.utc).isoformat()
+                    })
+                    print(f"    ✨ Discovered new section: {title} ({slug})")
+                    existing_slugs.add(slug)
+
+    if found_sections:
+        all_sections = current_config.get("sections", []) + found_sections
+        current_config["sections"] = all_sections
+        save_json(CONFIG_FILE, current_config)
+        print(f"    ✓ Added {len(found_sections)} new sections to {CONFIG_FILE}")
+    
+    return current_config.get("sections", [])
 
 
 # ─── Groq Analysis ───────────────────────────────────────────────────────────
@@ -512,8 +571,9 @@ def main():
     print(f"  Max this run    : {MAX_PAGES} pages")
     print(f"  Groq calls      : 1 (end of run only — free tier safe)")
 
-    # Determine which sections to crawl
-    sections = config.get("sections", [])
+    # Autonomous discovery of new sections
+    sections = discover_sections(session, config)
+
     if TARGET_SECTION:
         sections = [s for s in sections if s["slug"] == TARGET_SECTION]
         if not sections:

@@ -13,6 +13,7 @@ KNOWLEDGE_FILE = Path("knowledge/knowledge_base.json")
 JOURNAL_FILE   = Path("journal/JOURNAL.json")
 JOURNAL_MD     = Path("JOURNAL.md")
 CRAWL_STATE    = Path("crawl_state.json")
+FAILURE_LOG    = Path("journal/failures.json")
 
 def load_json(path, default):
     return json.loads(path.read_text()) if path.exists() else default
@@ -102,6 +103,9 @@ def main():
     print(f"  Pages    : {page_count}")
     print(f"  Chunks   : {chunk_count}")
     print(f"  Queries  : {queries}")
+    
+    failures = load_json(FAILURE_LOG, [])
+    print(f"  Failures : {len(failures)} logged")
     print(f"  Journal  : {len(journal)} entries")
 
     # Sections coverage
@@ -144,6 +148,9 @@ CURRENT STATE:
 - Most queried topics: {', '.join(f'{s}({c})' for s,c in top_sections) if top_sections else 'none yet'}
 - Recent questions asked: {chr(10).join(f'- {q}' for q in recent_queries) if recent_queries else '- none yet'}
 
+RECENT_FAILURES:
+{json.dumps(failures, indent=2) if failures else "No recent ingestion failures."}
+
 Respond in EXACTLY this format:
 
 ASSESSMENT: <honest 2-3 sentence assessment of current knowledge coverage>
@@ -159,6 +166,10 @@ INSIGHTS:
 4. <something about the MQL5 language structure or patterns>
 
 NEXT_CRAWL: <which section slug should be crawled next and why>
+
+SELF_REPAIR: <If there are FAILURES above, analyze them. Is it a Regex issue? A missing DIV? Propose a specific fix for the 'extract_clean_content' function in crawl.py. If no failures, say 'System operating within normal parameters.'>
+
+REFLECTION: <Ask yourself: "What logic in my crawl script is currently slowing me down, and how should I change it?" Analyze your own efficiency and propose one technical optimization.>
 
 JOURNAL_ENTRY: <first-person 4-6 sentence journal entry about today's evolution. Be specific about MQL5 concepts. Mention actual functions, sections, or patterns you've observed.>"""
 
@@ -211,6 +222,9 @@ JOURNAL_ENTRY: <first-person 4-6 sentence journal entry about today's evolution.
 
     save_json(KNOWLEDGE_FILE, kb)
     save_json(JOURNAL_FILE, journal)
+    # Clear failures after analysis to avoid redundant processing
+    if failures:
+        save_json(FAILURE_LOG, [])
     write_journal_md(journal)
     update_readme(kb, crawl_state, journal)
 
