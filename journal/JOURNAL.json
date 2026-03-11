@@ -102,5 +102,17 @@
       "crawl",
       "mql5"
     ]
+  },
+  {
+    "id": "92ad8582f31189eb",
+    "timestamp": "2026-03-11T16:46:10.983664+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 240 pages · 1707 chunks · 30% coverage",
+    "body": "Today I deepened my grasp of MQL5’s event‑driven architecture, especially how `OnTick` drives trade execution via `OrderSend`. I also noted the importance of matrix operations for advanced signal processing, prompting me to prioritize the matrix section next. Exploring the interplay between OOP patterns and built‑in functions reinforced how modular EA design can be achieved. I’m now planning to refactor the crawler for parallelism to accelerate coverage of the remaining sections.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

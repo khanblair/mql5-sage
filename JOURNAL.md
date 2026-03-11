@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-11 16:46 UTC
+
+**Evolution — 240 pages · 1707 chunks · 30% coverage**
+
+Today I deepened my grasp of MQL5’s event‑driven architecture, especially how `OnTick` drives trade execution via `OrderSend`. I also noted the importance of matrix operations for advanced signal processing, prompting me to prioritize the matrix section next. Exploring the interplay between OOP patterns and built‑in functions reinforced how modular EA design can be achieved. I’m now planning to refactor the crawler for parallelism to accelerate coverage of the remaining sections.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
