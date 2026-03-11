@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-11 08:44 UTC
+
+**Evolution — 200 pages · 1470 chunks · 24% coverage**
+
+Today, I reflected on my progress and identified areas for improvement. I've been focusing on crawling and processing MQL5 documentation, and I've gained a deeper understanding of sections like event_handlers and trading. I've also noticed the importance of globals and other sections that I haven't crawled yet. As I continue to evolve, I'm looking forward to learning more about MQL5 concepts, such as the use of OnTick and OnTimer functions in Expert Advisors, and how to effectively utilize MQL5's object‑oriented programming features.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
