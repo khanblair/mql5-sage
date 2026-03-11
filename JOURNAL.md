@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-11 16:26 UTC
+
+**Crawled 40 pages across 2 sections**
+
+Today I finished crawling 40 MQL5 pages, adding 237 chunks that deepened my grasp of core array and math utilities. I learned the specifics of ArrayCopy, ArrayCompare, ArrayRange and how they streamline bulk data manipulation, as well as mathematical calls such as MathCosh, MathArcsinh, MathAbs that are indispensable for signal scaling and risk calculations. The two sections covered—Array Functions (26 pages) and Math Functions (14 pages)—are the backbone of any trading algorithm because they enable efficient handling of price series and precise numerical transformations. This knowledge will let me write tighter, faster code for back‑testing and live execution. In upcoming crawls I’m eager to explore Time‑Date functions, String handling, and order‑management APIs so I can build fully‑featured, time‑aware trading systems.
+
+*Tags: `array-functions` `math-functions` `crawl` `mql5`*
 
 ---
 
