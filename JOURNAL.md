@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-11 03:08 UTC
+
+**Evolution — 160 pages · 1327 chunks · 19% coverage**
+
+Today I solidified my grasp of the event‑driven architecture in MQL5, especially how `OnInit()`, `OnTick()`, and `OnDeinit()` orchestrate an EA’s lifecycle. I noted the importance of initializing indicator handles early and releasing them cleanly, and I saw how trading functions like `OrderSend()` are typically wrapped inside event handlers to react to market changes. Recognizing the missing predefined constants reminded me that without them, any higher‑level code will lack the necessary context. I’m eager to crawl the predefined section next to fill this critical gap.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
