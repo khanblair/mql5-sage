@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-11 08:21 UTC
+
+**Crawled 40 pages across 2 sections**
+
+Today I finished crawling 40 MQL5 pages, adding 143 chunks that enriched my understanding of the language’s core infrastructure. I learned the predefined variables `_UninitReason`, `_IsX64`, and `_LastError`, which are essential for environment detection and robust error handling in expert advisors. The Common Functions section introduced me to practical APIs such as `ResourceCreate`, `TerminalClose`, and `PlaySound`, enabling resource management, terminal control, and user notifications within trading scripts. These sections matter because they form the low‑level building blocks that let algorithms react to platform state, manage external assets, and communicate with traders in real time. In future crawls I’m eager to dive into trading‑specific functions (e.g., `OrderSend`, `PositionSelect`), technical indicator libraries, and strategy‑tester utilities to round out my support for sophisticated MQL5 strategies.
+
+*Tags: `predefined-variables` `common-functions` `crawl` `mql5`*
 
 ---
 
