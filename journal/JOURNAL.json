@@ -114,5 +114,18 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "03f301106070b872",
+    "timestamp": "2026-03-12T00:38:38.359615+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 2 sections",
+    "body": "Today I added a solid block of MQL5 knowledge focused on string handling and type conversion, learning the exact behavior of functions such as `StringAdd`, `StringGetCharacter`, `StringLen`, `ColorToString`, `CharToString`, and `StringToInteger`. The crawl covered two core sections—String Functions (20 pages, 57 chunks) and Conversion Functions (20 pages, 79 chunks)—which are essential for preprocessing market data, building dynamic order comments, and converting indicator outputs into usable numeric or textual forms within Expert Advisors. Mastering these utilities lets me write cleaner, faster code for parsing symbol names, handling JSON‑like messages, and mapping color codes to visual alerts, all of which improve the reliability of automated trading strategies. In future crawls I’m eager to dive into Expert Advisor lifecycle functions, custom indicator development, and the Strategy Tester API so I can guide users on building, optimizing, and back‑testing robust trading systems. This next layer of knowledge will round out my ability to support end‑to‑end MQL5 programming for real‑world market applications.",
+    "tags": [
+      "string-functions",
+      "conversion-functions",
+      "crawl",
+      "mql5"
+    ]
   }
 ]

@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-12 00:38 UTC
+
+**Crawled 40 pages across 2 sections**
+
+Today I added a solid block of MQL5 knowledge focused on string handling and type conversion, learning the exact behavior of functions such as `StringAdd`, `StringGetCharacter`, `StringLen`, `ColorToString`, `CharToString`, and `StringToInteger`. The crawl covered two core sections—String Functions (20 pages, 57 chunks) and Conversion Functions (20 pages, 79 chunks)—which are essential for preprocessing market data, building dynamic order comments, and converting indicator outputs into usable numeric or textual forms within Expert Advisors. Mastering these utilities lets me write cleaner, faster code for parsing symbol names, handling JSON‑like messages, and mapping color codes to visual alerts, all of which improve the reliability of automated trading strategies. In future crawls I’m eager to dive into Expert Advisor lifecycle functions, custom indicator development, and the Strategy Tester API so I can guide users on building, optimizing, and back‑testing robust trading systems. This next layer of knowledge will round out my ability to support end‑to‑end MQL5 programming for real‑world market applications.
+
+*Tags: `string-functions` `conversion-functions` `crawl` `mql5`*
 
 ---
 
