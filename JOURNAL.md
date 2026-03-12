@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-12 00:48 UTC
+
+**Evolution — 280 pages · 1843 chunks · 35% coverage**
+
+Today I reviewed my progress and realized that while I have a decent grasp of core language features—arrays, event handlers, and basic trading functions—I still need to dive into signal processing and chart operations to round out my expertise. I noted how functions like iMA and iStochastic are used within OnTick to drive decisions, and how the CTrade class simplifies order management. The OOP patterns in MQL5, especially the use of classes for indicators and trading, stood out as a powerful way to structure complex EAs. I’m eager to crawl the signals section next to bridge the remaining gaps.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 

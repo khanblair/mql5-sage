@@ -127,5 +127,17 @@
       "crawl",
       "mql5"
     ]
+  },
+  {
+    "id": "62491ebe7eabd98f",
+    "timestamp": "2026-03-12T00:48:01.022441+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 280 pages · 1843 chunks · 35% coverage",
+    "body": "Today I reviewed my progress and realized that while I have a decent grasp of core language features—arrays, event handlers, and basic trading functions—I still need to dive into signal processing and chart operations to round out my expertise. I noted how functions like iMA and iStochastic are used within OnTick to drive decisions, and how the CTrade class simplifies order management. The OOP patterns in MQL5, especially the use of classes for indicators and trading, stood out as a powerful way to structure complex EAs. I’m eager to crawl the signals section next to bridge the remaining gaps.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
