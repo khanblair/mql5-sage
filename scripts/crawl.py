@@ -22,10 +22,10 @@ import re
 from pathlib import Path
 from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse
-
 import requests
 from bs4 import BeautifulSoup
 from groq import Groq
+from scripts.notify import send_telegram_message
 
 # ─── Paths ───────────────────────────────────────────────────────────────────
 KNOWLEDGE_FILE  = Path("knowledge/knowledge_base.json")
@@ -641,6 +641,15 @@ def main():
     print(f"✓ Journal updated  →  JOURNAL.md")
     print(f"✓ README updated with current stats")
     print(f"\n  💳 Groq requests used this run: 1 / 250 daily limit")
+
+    # Send Telegram Notification
+    summary_msg = (
+        f"🕷️ *MQL5 Crawl Session*\n"
+        f"✅ Crawled: {pages_crawled_total} pages\n"
+        f"📊 Total Chunks: {len(kb['chunks'])}\n"
+        f"🔗 [View Journal](https://{os.getenv('GITHUB_REPOSITORY_OWNER', 'user')}.github.io/{os.getenv('GITHUB_REPOSITORY_NAME', 'repo')}/)"
+    )
+    send_telegram_message(summary_msg)
 
 
 if __name__ == "__main__":

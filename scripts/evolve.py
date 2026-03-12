@@ -7,6 +7,7 @@ import os, sys, json, hashlib, time
 from pathlib import Path
 from datetime import datetime, timezone
 from groq import Groq
+from scripts.notify import send_telegram_message
 
 GROQ_MODEL     = "groq/compound"   # exact model string from Groq dashboard
 KNOWLEDGE_FILE = Path("knowledge/knowledge_base.json")
@@ -227,6 +228,46 @@ JOURNAL_ENTRY: <first-person 4-6 sentence journal entry about today's evolution.
         save_json(FAILURE_LOG, [])
     write_journal_md(journal)
     update_readme(kb, crawl_state, journal)
+
+    # Send Telegram Notification
+    latest = journal[-1] if journal else None
+    if latest:
+        # Extract assessment from the journal body, assuming it's structured as in the prompt
+        # The prompt asks for "ASSESSMENT: <honest 2-3 sentence assessment>"
+        # and "JOURNAL_ENTRY: <first-person 4-6 sentence journal entry>"
+        # The provided diff uses "LOGIC_FIX:" which is not in the prompt, so I'll adjust to use "JOURNAL_ENTRY:"
+        # or just take the beginning of the body if "ASSESSMENT:" isn't found.
+        body_content = latest.get("body", "")
+        assessment_start_tag = "ASSESSMENT:"
+        journal_entry_start_tag = "JOURNAL_ENTRY:"
+
+        assessment = "Evolution complete." # Default message
+
+        if assessment_start_tag in body_content:
+            # Find the start of ASSESSMENT
+            assessment_start_index = body_content.find(assessment_start_tag) + len(assessment_start_tag)
+            
+            # Find the start of the next section (e.g., COVERAGE_GAPS or JOURNAL_ENTRY)
+            # Iterate through possible next sections in the prompt to find the earliest one
+            next_section_tags = ["COVERAGE_GAPS:", "QUERY_PATTERNS:", "INSIGHTS:", "NEXT_CRAWL:", "SELF_REPAIR:", "REFLECTION:", journal_entry_start_tag]
+            next_section_index = len(body_content) # Default to end of string
+
+            for tag in next_section_tags:
+                tag_index = body_content.find(tag, assessment_start_index)
+                if tag_index != -1 and tag_index < next_section_index:
+                    next_section_index = tag_index
+            
+            assessment = body_content[assessment_start_index:next_section_index].strip()
+            assessment = assessment.split('\n')[0] # Take only the first line or two for brevity if it spans multiple lines
+            assessment = assessment[:200] + "..." if len(assessment) > 200 else assessment
+
+
+        evolution_msg = (
+            f"🧬 *MQL5 Evolution Session*\n"
+            f"🧠 *Assessment*: {assessment}\n"
+            f"🔗 [View Full Journal](https://{os.getenv('GITHUB_REPOSITORY_OWNER', 'user')}.github.io/{os.getenv('GITHUB_REPOSITORY_NAME', 'repo')}/)"
+        )
+        send_telegram_message(evolution_msg)
 
     print(f"\n✓ Evolution complete · Journal updated · README updated")
 

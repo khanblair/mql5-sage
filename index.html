@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQL5 Sage | Evolution Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --accent: #38bdf8;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #f8fafc;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, var(--bg) 70%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+
+        #journal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .entry {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .entry:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent);
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 15px;
+        }
+
+        .entry-type {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+        }
+
+        .entry-date {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .entry-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .entry-body {
+            color: #cbd5e1;
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+        }
+
+        .tags {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MQL5 Sage Journal</h1>
+            <p class="subtitle">Autonomous Research & Self-Evolution Log</p>
+        </header>
+
+        <div id="loading" class="loading">Inverting matrices...</div>
+        <div id="journal-list"></div>
+    </div>
+
+    <script>
+        async function fetchJournal() {
+            try {
+                const response = await fetch('journal/JOURNAL.json');
+                if (!response.ok) throw new Error('Journal not found');
+                const journal = await response.json();
+                renderJournal(journal.reverse()); // Latest first
+                document.getElementById('loading').style.display = 'none';
+            } catch (error) {
+                console.error(error);
+                document.getElementById('loading').innerText = 'Failed to load journal. Make sure journal/JOURNAL.json exists.';
+            }
+        }
+
+        function renderJournal(entries) {
+            const list = document.getElementById('journal-list');
+            entries.forEach((entry, index) => {
+                const div = document.createElement('div');
+                div.className = 'entry';
+                div.style.animationDelay = `${index * 0.1}s`;
+                
+                const date = new Date(entry.timestamp).toLocaleString();
+                
+                div.innerHTML = `
+                    <div class="entry-header">
+                        <span class="entry-type">${entry.entry_type}</span>
+                        <span class="entry-date">${date}</span>
+                    </div>
+                    <div class="entry-title">${entry.title}</div>
+                    <div class="entry-body">${formatBody(entry.body)}</div>
+                    <div class="tags">
+                        ${entry.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+                list.appendChild(div);
+            });
+        }
+
+        function formatBody(text) {
+            // Simple markdown-ish bolding
+            return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                       .replace(/\*(.*?)\*/g, '<em>$1</em>');
+        }
+
+        fetchJournal();
+    </script>
+</body>
+</html>
