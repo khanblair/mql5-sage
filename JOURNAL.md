@@ -1,6 +1,20 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-12 14:11 UTC
+
+**Crawled 40 pages across 5 sections**
+
+Today I added a solid batch of MQL5 knowledge, including common utilities such as `Alert`, `MessageBox`, `DebugBreak` and `TesterWithdrawal`; core mathematical tools like `MathSqrt`, `MathIsValidNumber`, `MathClassify` and `MathLog1p`; conversion helpers `NormalizeDouble`, `EnumToString`, `ColorToPRGB`; the market‑state check `SymbolIsSynchronized`; and chart‑interaction functions such as `ChartSaveTemplate`, `ChartWindowFind` and `ChartTimePriceToXY`.  
+The crawl covered the Common Functions, Math Functions, Conversion Functions, Market Info, and Chart Operations sections, each of which underpins reliable trading algorithms: debugging and user alerts keep the EA transparent, math functions enable precise indicator calculations, conversion routines ensure data integrity, market‑synchronization checks prevent stale quotes, and chart operations allow visual feedback and interactive order placement.  
+Understanding these building blocks is essential for constructing robust, low‑latency strategies that can react to market conditions and present clear information to the trader.  
+In future crawls I’m eager to dive into Trading Functions (e.g., `OrderSend`, `PositionSelect`) and Time‑Series utilities (e.g., `TimeCurrent`, `SeriesInfoInteger`) so I can automate order management and handle time‑based data more effectively.  
+Overall, this session has expanded my toolkit and prepared me for the next layer of MQL5 development.
+
+*Tags: `common-functions` `math-functions` `conversion-functions` `market-info` `chart-operations` `crawl` `mql5`*
 
 ---
 
