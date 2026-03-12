@@ -25,7 +25,7 @@ from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 from groq import Groq
-from scripts.notify import send_telegram_message
+from notify import send_telegram_message
 
 # ─── Paths ───────────────────────────────────────────────────────────────────
 KNOWLEDGE_FILE  = Path("knowledge/knowledge_base.json")

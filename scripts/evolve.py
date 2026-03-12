@@ -7,7 +7,7 @@ import os, sys, json, hashlib, time
 from pathlib import Path
 from datetime import datetime, timezone
 from groq import Groq
-from scripts.notify import send_telegram_message
+from notify import send_telegram_message
 
 GROQ_MODEL     = "groq/compound"   # exact model string from Groq dashboard
 KNOWLEDGE_FILE = Path("knowledge/knowledge_base.json")
