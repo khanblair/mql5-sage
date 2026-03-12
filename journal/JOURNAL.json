@@ -210,5 +210,20 @@
       "crawl",
       "mql5"
     ]
+  },
+  {
+    "id": "72d47eec7d7d4d58",
+    "timestamp": "2026-03-12T16:32:00.113126+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 4 sections",
+    "body": "Today I added a solid batch of MQL5 knowledge, picking up concrete functions such as `CalendarValueHistory`, `CalendarEventByCountry`, `CalendarValueLastByEvent`, `CustomTicksDelete`, `CustomSymbolSetInteger`, `CustomRatesDelete`, `SignalBaseTotal`, `SignalInfoGetString` and `SignalBaseGetInteger`. The crawl covered four core sections—Economic Calendar (essential for feeding macro‑event data into strategies), Custom Symbols (enabling creation, manipulation and deletion of user‑defined symbols for back‑testing and exotic markets), Trade Signals (providing the API to query and manage external signal providers) and a glimpse of the Standard Library (technical indicators, timeseries handling and file operations that underpin robust algorithmic pipelines). These areas matter because they let a trading robot react to real‑world news, work with bespoke data streams, integrate third‑party signals, and persist state or historic data efficiently. In future crawls I’m eager to dive deeper into the Standard Library’s advanced indicator classes, the full file I/O API, and the event‑driven programming model for high‑frequency custom symbol updates. This will round out my toolkit for building fully automated, data‑rich MQL5 strategies.",
+    "tags": [
+      "economic-calendar",
+      "custom-symbols",
+      "trade-signals",
+      "standard-library",
+      "crawl",
+      "mql5"
+    ]
   }
 ]
