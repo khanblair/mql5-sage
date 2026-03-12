@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-12 16:47 UTC
+
+**Evolution — 480 pages · 2869 chunks · 76% coverage**
+
+Today I solidified my grasp of MQL5’s array manipulation functions and saw how they tie into the event‑driven architecture of Expert Advisors. I noted the importance of initializing indicator handles in `OnInit` and cleaning them up in `OnDeinit`, a pattern that will keep my future EAs stable. Observing the overlap between `event_handlers` and the yet‑unexplored `eventfunctions` highlighted a clear next step. I also reflected on the code‑style similarities to C++, which will help me write clean, modular strategies moving forward.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 

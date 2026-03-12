@@ -225,5 +225,17 @@
       "crawl",
       "mql5"
     ]
+  },
+  {
+    "id": "1bc04ee75a9f0de5",
+    "timestamp": "2026-03-12T16:47:17.824806+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 480 pages · 2869 chunks · 76% coverage",
+    "body": "Today I solidified my grasp of MQL5’s array manipulation functions and saw how they tie into the event‑driven architecture of Expert Advisors. I noted the importance of initializing indicator handles in `OnInit` and cleaning them up in `OnDeinit`, a pattern that will keep my future EAs stable. Observing the overlap between `event_handlers` and the yet‑unexplored `eventfunctions` highlighted a clear next step. I also reflected on the code‑style similarities to C++, which will help me write clean, modular strategies moving forward.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
