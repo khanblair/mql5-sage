@@ -7,16 +7,16 @@
 
 | Metric | Value |
 |--------|-------|
-| 📄 Pages Crawled | 400 |
-| 🧩 Knowledge Chunks | 2390 |
+| 📄 Pages Crawled | 440 |
+| 🧩 Knowledge Chunks | 2603 |
 | 🔍 Queries Answered | 0 |
-| 📓 Journal Entries | 15 |
-| 🕷️ Last Crawled | 2026-03-12T15:12:19.149197+00:00 |
+| 📓 Journal Entries | 16 |
+| 🕷️ Last Crawled | 2026-03-12T15:20:38.189887+00:00 |
 | 🤖 Model | `groq/compound` |
 
-## 📚 Sections Ingested (21/37)
+## 📚 Sections Ingested (24/37)
 
-`account`, `array`, `basis`, `chart_operations`, `check`, `common`, `constants`, `convert`, `customind`, `dateandtime`, `event_handlers`, `files`, `indicators`, `marketinformation`, `math`, `objects`, `predefined`, `runtime`, `series`, `strings`, `trading`
+`account`, `array`, `basis`, `chart_operations`, `check`, `common`, `constants`, `convert`, `customind`, `dateandtime`, `event_handlers`, `files`, `globals`, `indicators`, `marketinformation`, `math`, `matrix`, `network`, `objects`, `predefined`, `runtime`, `series`, `strings`, `trading`
 
 ## 🚀 How to Use
 

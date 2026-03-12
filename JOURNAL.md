@@ -4,6 +4,16 @@
 
 ---
 
+## 🕷️ CRAWL — 2026-03-12 15:20 UTC
+
+**Crawled 40 pages across 3 sections**
+
+I just wrapped up a crawl that added 213 chunks from 40 MQL5 pages, deepening my grasp of terminal‑wide data handling, networking, and linear algebra. I now know how to use GlobalVariableTime, GlobalVariableCheck, and GlobalVariablesFlush to share and synchronize state across client terminals, and I can send alerts or files with SendMail, SocketRead, and SendFTP. The matrix and vector section gave me practical tools such as the Init constructor, CopyTicks for high‑frequency tick buffers, and Det for determinant calculations, which are essential for fast numerical filters and portfolio risk models. These sections matter because robust data persistence, external communication, and efficient numeric processing are the backbone of reliable, automated trading strategies. In future crawls I’m eager to dive into order‑execution functions, custom indicator development, and expert‑advisor lifecycle management so I can build fully fledged, production‑grade bots.
+
+*Tags: `global-variables-of-the-terminal` `network-functions` `matrix-and-vector-methods` `crawl` `mql5`*
+
+---
+
 ## 🕷️ CRAWL — 2026-03-12 15:12 UTC
 
 **Crawled 40 pages across 3 sections**
