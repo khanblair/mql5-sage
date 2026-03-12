@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-12 08:22 UTC
+
+**Crawled 40 pages across 4 sections**
+
+Today I added concrete MQL5 knowledge such as the date‑time utilities `StructToTime`, `TimeGMT` and `TimeToStruct`, the account‑query functions `AccountInfoString`, `AccountInfoInteger`, `AccountInfoDouble`, as well as environment checks like `TerminalInfoInteger`, `TerminalInfoString` and the `Digits` constant, plus market‑data calls `SymbolInfoSessionQuote`, `SymbolInfoString` and `SymbolName`. The crawl covered four core sections—Date and Time, Account Information, Checkup, and Market Info—each of which is essential for building robust trading algorithms: precise timing, accurate account monitoring, runtime state validation, and real‑time symbol data all feed directly into signal generation and risk management. Understanding these APIs lets me schedule trades, adapt to broker settings, and react to market sessions programmatically. In future crawls I’m eager to dive into order‑management functions (`OrderSend`, `OrderModify`, `OrderClose`) and strategy‑testing tools such as backtesting, optimization, and the `CTrade` class. Expanding into those areas will round out my ability to develop, test, and execute fully automated trading systems.
+
+*Tags: `date-and-time` `account-information` `checkup` `market-info` `crawl` `mql5`*
 
 ---
 

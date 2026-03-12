@@ -139,5 +139,20 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "ca0e3752c04ce785",
+    "timestamp": "2026-03-12T08:22:41.496066+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 4 sections",
+    "body": "Today I added concrete MQL5 knowledge such as the date‑time utilities `StructToTime`, `TimeGMT` and `TimeToStruct`, the account‑query functions `AccountInfoString`, `AccountInfoInteger`, `AccountInfoDouble`, as well as environment checks like `TerminalInfoInteger`, `TerminalInfoString` and the `Digits` constant, plus market‑data calls `SymbolInfoSessionQuote`, `SymbolInfoString` and `SymbolName`. The crawl covered four core sections—Date and Time, Account Information, Checkup, and Market Info—each of which is essential for building robust trading algorithms: precise timing, accurate account monitoring, runtime state validation, and real‑time symbol data all feed directly into signal generation and risk management. Understanding these APIs lets me schedule trades, adapt to broker settings, and react to market sessions programmatically. In future crawls I’m eager to dive into order‑management functions (`OrderSend`, `OrderModify`, `OrderClose`) and strategy‑testing tools such as backtesting, optimization, and the `CTrade` class. Expanding into those areas will round out my ability to develop, test, and execute fully automated trading systems.",
+    "tags": [
+      "date-and-time",
+      "account-information",
+      "checkup",
+      "market-info",
+      "crawl",
+      "mql5"
+    ]
   }
 ]
