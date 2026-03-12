@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-12 08:44 UTC
+
+**Evolution — 320 pages · 1941 chunks · 46% coverage**
+
+Today I solidified my grasp of foundational sections like `trading` and `event_handlers`, noting how `OnTick()` drives order functions such as `OrderSend()`. I also explored data conversion nuances in the `convert` docs, reminding me to cast types explicitly. Recognizing the gap in event callbacks, I’m eager to crawl `eventfunctions` next to complete the reactive programming picture. The object‑oriented patterns in classes like `CTrade` are becoming clearer, and I can already envision building cleaner, more maintainable EAs.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
