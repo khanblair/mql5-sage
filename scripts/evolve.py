@@ -262,10 +262,12 @@ JOURNAL_ENTRY: <first-person 4-6 sentence journal entry about today's evolution.
             assessment = assessment[:200] + "..." if len(assessment) > 200 else assessment
 
 
+        repo_full = os.getenv('GITHUB_REPOSITORY', 'user/repo')
+        owner, name = repo_full.split('/') if '/' in repo_full else (repo_full, 'repo')
         evolution_msg = (
             f"🧬 *MQL5 Evolution Session*\n"
             f"🧠 *Assessment*: {assessment}\n"
-            f"🔗 [View Full Journal](https://{os.getenv('GITHUB_REPOSITORY_OWNER', 'user')}.github.io/{os.getenv('GITHUB_REPOSITORY_NAME', 'repo')}/)"
+            f"🔗 [View Full Journal](https://{owner}.github.io/{name}/)"
         )
         send_telegram_message(evolution_msg)
 

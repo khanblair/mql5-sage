@@ -643,11 +643,13 @@ def main():
     print(f"\n  💳 Groq requests used this run: 1 / 250 daily limit")
 
     # Send Telegram Notification
+    repo_full = os.getenv('GITHUB_REPOSITORY', 'user/repo')
+    owner, name = repo_full.split('/') if '/' in repo_full else (repo_full, 'repo')
     summary_msg = (
         f"🕷️ *MQL5 Crawl Session*\n"
         f"✅ Crawled: {pages_crawled_total} pages\n"
         f"📊 Total Chunks: {len(kb['chunks'])}\n"
-        f"🔗 [View Journal](https://{os.getenv('GITHUB_REPOSITORY_OWNER', 'user')}.github.io/{os.getenv('GITHUB_REPOSITORY_NAME', 'repo')}/)"
+        f"🔗 [View Journal](https://{owner}.github.io/{name}/)"
     )
     send_telegram_message(summary_msg)
 
