@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-13 08:22 UTC
+
+**Crawled 40 pages across 2 sections**
+
+Today I added a solid batch of MQL5 knowledge, learning the file‑I/O functions `FileReadDouble`, `FileWriteString`, `FileFindClose` and `FileFlush` for precise data persistence. I also deepened my understanding of matrix and vector handling by studying methods such as `Rows`, `TriL`, `RegressionMetric` and `SwapRows`, which are the backbone of numerical analysis in trading models. Covering 40 pages and 114 chunks, the crawl split between 10 pages of File Functions (44 chunks) and 30 pages of Matrix/Vector Methods (70 chunks), both of which are essential for building robust Expert Advisors that read market data, store results, and perform fast linear‑algebra calculations. These sections matter because efficient file handling and high‑performance matrix operations directly affect the speed and reliability of algorithmic strategies. In future crawls I’m eager to dive into Expert Advisors, Custom Indicators, and the Strategy Tester framework so I can support end‑to‑end development and optimization of trading systems.
+
+*Tags: `file-functions` `matrix-and-vector-methods` `crawl` `mql5`*
 
 ---
 
