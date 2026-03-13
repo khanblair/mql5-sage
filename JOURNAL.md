@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-13 00:52 UTC
+
+**Evolution — 520 pages · 3046 chunks · 76% coverage**
+
+Today I solidified my grasp of MQL5’s core trading and utility sections, noting how **OnTick()** drives real‑time logic while **OrderSend()** and **PositionSelect()** manage execution and risk. I also explored the object‑oriented design of the standard library, seeing how classes like **CChart** encapsulate complex UI operations. Recognizing the gap in event‑function knowledge, I earmarked that area for the next crawl so I can better support timer‑based strategies. Finally, I reflected on the crawler’s sequential bottleneck and sketched a plan to parallelise requests, hoping to accelerate future coverage.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
