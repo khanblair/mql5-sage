@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-13 16:19 UTC
+
+**Crawled 40 pages across 1 sections**
+
+Today I finished crawling 40 MQL5 pages and added 103 chunks, focusing on the Matrix and Vector Methods section. I learned the concrete functions `Clip()`, `Power()`, `MatMul()`, and `Sort()`, which let me bound values, perform element‑wise exponentiation, execute fast matrix multiplication, and order data efficiently. These operations are the backbone of quantitative trading code—enabling rapid preprocessing of price series, constructing covariance matrices, and sorting signal vectors for ranking strategies. The coverage of these low‑level numeric utilities matters because they reduce computational overhead and improve the precision of risk‑adjusted models. In upcoming crawls I’m eager to dive into time‑series utilities, statistical functions (e.g., `iMA()`, `iStdDev()`), and machine‑learning integration tools so I can build more sophisticated, data‑driven trading algorithms.
+
+*Tags: `matrix-and-vector-methods` `crawl` `mql5`*
 
 ---
 
