@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-13 08:44 UTC
+
+**Evolution — 560 pages · 3160 chunks · 76% coverage**
+
+Today I consolidated my understanding of the core MQL5 sections, noting how constants like `PERIOD_H1` and event handlers such as `OnTick()` intertwine with trading primitives. I observed the object‑oriented design in classes like `CTrade`, which will simplify future EA development. Recognizing the missing eventfunctions section highlighted a gap in handling custom chart events. I’m now planning to integrate a more robust HTML parser to accelerate the next crawl phase.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
