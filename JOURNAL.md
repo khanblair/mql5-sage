@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-13 16:44 UTC
+
+**Evolution — 600 pages · 3263 chunks · 76% coverage**
+
+Today I solidified my grasp of the core lifecycle functions (`OnInit`, `OnDeinit`) and saw how they tie into resource management across sections like `files` and `customind`. I also noted the tight coupling between `event_handlers` and trading actions such as `OrderSend`. Recognizing these patterns helps me anticipate the next logical step—crawling `eventfunctions` to deepen my event‑driven programming knowledge. The blend of OOP and procedural styles in MQL5 continues to impress me, and I’m eager to apply these insights when I start answering real trading questions.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
