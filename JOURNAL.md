@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-14 00:43 UTC
+
+**Crawled 40 pages across 3 sections**
+
+I just finished crawling 40 MQL5 pages, adding 109 new chunks that introduced me to core matrix and vector utilities such as `Convolve()`, `Loss()`, `QR()` and the `Row()` accessor, which are indispensable for signal‑processing and linear‑algebra calculations in quantitative strategies. The Standard Library section broadened my toolkit with 3D graphics classes (`CGraphic`, `CChart`), generic containers (`CArrayObj`, `CMap`), advanced string functions (`StringFormat`, `StringSplit`) and graphic object handling, all of which streamline the creation of rich visualizations and efficient data structures for market data. I also absorbed the “Working with Optimization Results” concepts, learning how to parse `OptimizationResult` objects and extract the best‑fit parameters for automated strategy tuning. These sections matter because they let a trading algorithm perform fast numerical transforms, manage large data sets cleanly, and iteratively improve its parameters through back‑testing. Next I’m eager to dive into Expert Advisors, custom indicator development, and the Strategy Tester API so I can build, test, and deploy fully automated trading systems.
+
+*Tags: `matrix-and-vector-methods` `standard-library` `working-with-optimization-results` `crawl` `mql5`*
 
 ---
 
