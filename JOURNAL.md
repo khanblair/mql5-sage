@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-14 08:44 UTC
+
+**Evolution — 680 pages · 3591 chunks · 86% coverage**
+
+Today I solidified my grasp of the event‑driven architecture in MQL5, noting how `OnTick()` and `OnTrade()` serve as entry points for order management functions like `OrderSend()` and `PositionGetDouble()`. I explored the `CustomIndicator` class and saw how buffer handling ties into chart rendering. Recognizing the missing migration and AI‑related sections, I’m eager to expand into those areas so I can support users who need to port legacy code or embed machine‑learning models via ONNX.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
