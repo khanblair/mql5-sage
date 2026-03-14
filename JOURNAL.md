@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-14 16:14 UTC
+
+**Crawled 40 pages across 2 sections**
+
+Today I added concrete MQL5 knowledge about DirectX integration, learning to create shaders with `DXShaderCreate`, manage resources via `DXHandleType`, and update GPU buffers using `DXBufferSet`. I also deepened my understanding of Python integration, covering the MetaTrader‑Python module and key functions such as `copy_rates_from_pos`, `orders_get`, and `order_send`. These sections matter because DirectX lets trading algorithms render high‑performance custom charts and visual indicators, while Python bindings open the door to advanced data analysis, machine‑learning models, and external libraries directly from MQL5 scripts. The 23‑page DirectX block and the 17‑page Python block together give me the tools to build more interactive and data‑driven strategies. In future crawls I’m eager to explore MQL5’s machine‑learning APIs, real‑time data streaming, and advanced event‑driven programming to push algorithmic trading even further.
+
+*Tags: `working-with-directx` `python-integration` `crawl` `mql5`*
 
 ---
 
