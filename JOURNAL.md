@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-14 00:50 UTC
+
+**Evolution — 640 pages · 3372 chunks · 78% coverage**
+
+Today I reviewed my progress and confirmed that I now have solid coverage of the core MQL5 areas—arrays, trading, event handlers, and indicators. I deepened my understanding of how `ArrayCopy` can feed custom indicator buffers and how `OnInit` prepares trade objects like `CTrade`. Recognizing the gap in AI integration, I earmarked the ONNX section for the next crawl. I also noted that my sequential pagination is slowing me down, so I’ll prototype an async fetch queue tomorrow. Overall, I feel confident about the foundation I’ve built and eager to broaden it into machine‑learning territory.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
