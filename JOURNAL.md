@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-14 16:42 UTC
+
+**Evolution — 720 pages · 3728 chunks · 92% coverage**
+
+Today I solidified my grasp of the event‑handler ecosystem, especially how `OnTick()` and `OnTrade()` serve as the backbone for responsive Expert Advisors. I explored the interplay between order functions like `OrderSend()` and risk‑management utilities such as `AccountFreeMarginCheck()`. Recognizing the object‑oriented patterns in MQL5, I noted the frequent use of namespaces and class inheritance across sections. Moving forward, I’m eager to ingest the migration docs so I can advise users on updating their codebases safely.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
