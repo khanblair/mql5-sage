@@ -1,36 +1,48 @@
 # 🧠 mql5-sage
 
-> Self-evolving MQL5 documentation agent. Learns from mql5.com/en/docs,
-> answers your MQL5 questions, evolves daily. Runs entirely on GitHub Actions.
+> A self-evolving MQL5 documentation agent — learns from the live mql5.com docs,
+> answers your MQL5 questions, and evolves daily. Runs entirely on GitHub Actions.
 
-## 📊 Status
+## 📊 Knowledge Base
 
 | Metric | Value |
 |--------|-------|
-| 📄 Pages Crawled | 640 |
-| 🧩 Knowledge Chunks | 3372 |
+| 📄 Pages Crawled | 680 |
+| 🧩 Knowledge Chunks | 3591 |
 | 🔍 Queries Answered | 0 |
-| 📓 Journal Entries | 26 |
-| 🕷️ Last Crawled | 2026-03-14 |
-| 🧬 Last Evolved | 2026-03-14 00:50 UTC |
+| 📓 Journal Entries | 27 |
+| 🕷️ Last Crawled | 2026-03-14T08:17:24.198831+00:00 |
 | 🤖 Model | `groq/compound` |
 
-## 📚 Sections Learned (29/37)
-`account`, `array`, `basis`, `calendar`, `chart_operations`, `check`, `common`, `constants`, `convert`, `customind`, `customsymbols`, `dateandtime`, `event_handlers`, `files`, `globals`, `indicators`, `marketinformation`, `math`, `matrix`, `network`, `objects`, `optimization_frames`, `predefined`, `runtime`, `series`, `signals`, `standardlibrary`, `strings`, `trading`
+## 📚 Sections Ingested (32/37)
 
-## 🚀 Usage
+`account`, `array`, `basis`, `calendar`, `chart_operations`, `check`, `common`, `constants`, `convert`, `customind`, `customsymbols`, `database`, `dateandtime`, `event_handlers`, `eventfunctions`, `files`, `globals`, `indicators`, `marketinformation`, `math`, `matrix`, `network`, `objects`, `opencl`, `optimization_frames`, `predefined`, `runtime`, `series`, `signals`, `standardlibrary`, `strings`, `trading`
 
-| What | How |
-|------|-----|
-| Ask a question | Actions → 🔍 Ask MQL5 Question → Run workflow |
-| Crawl more docs | Actions → 🕷️ Crawl MQL5 Docs → Run workflow |
-| Crawl one section | Same but enter section slug e.g. `trading` |
-| Read journal | Open [JOURNAL.md](./JOURNAL.md) |
+## 🚀 How to Use
 
-## ⚙️ Setup (once)
-1. Fork repo → Settings → Secrets → Actions → `GROQ_API_KEY`
-2. Settings → Actions → General → **Read and write permissions**
-3. Run **🕷️ Crawl MQL5 Docs** to start
+### Ask a question
+**Actions → 🔍 Ask MQL5 Question → Run workflow → type question → Run**
+
+### Start crawling (first time)
+**Actions → 🕷️ Crawl MQL5 Docs → Run workflow → Run**
+*(Crawls ~40 pages per run. Re-run to continue. Full coverage in ~15 runs.)*
+
+### Crawl one specific section
+**Actions → 🕷️ Crawl MQL5 Docs → Run workflow → enter section slug (e.g. `trading`) → Run**
+
+### Watch it evolve
+Runs automatically every day at 9am UTC. Nothing needed from you.
+
+## ⚙️ One-Time Setup
+
+1. Fork this repo
+2. **Settings → Secrets → Actions → New secret:**
+   - `GROQ_API_KEY` → from [console.groq.com](https://console.groq.com) (free)
+3. Enable workflow write permissions: **Settings → Actions → General → Read and write permissions**
+4. Run the **🕷️ Crawl** workflow to start building knowledge
+
+## 📓 Journal
+[JOURNAL.md](./JOURNAL.md) — every crawl, query, and evolution session recorded.
 
 ---
-*Source: mql5.com/en/docs · Model: Groq compound*
+*Powered by Groq compound · Source: mql5.com/en/docs*

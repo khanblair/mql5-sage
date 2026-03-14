@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-14 08:17 UTC
+
+**Crawled 40 pages across 3 sections**
+
+Today I added concrete MQL5 knowledge on event handling (EventSetMillisecondTimer, EventChartCustom, EventKillTimer), OpenCL integration (CLContextCreate, CLExecute, CLKernelFree) and database operations (DatabaseTransactionBegin, DatabaseColumnsCount, DatabaseColumnBlob). The crawl covered three core sections—Working with Events, Working with OpenCL, and Working with Databases—each of which is essential for building robust trading algorithms: events let a strategy react instantly to market ticks, OpenCL enables high‑performance parallel calculations for signal processing, and database functions provide persistent storage and fast retrieval of historical and tick data. Understanding these APIs expands my ability to write low‑latency, data‑driven Expert Advisors. In future crawls I’m eager to dive into file I/O (FileOpen, FileReadString) and network communication (WebRequest, SocketConnect) to round out my toolkit for data acquisition and external service integration. This will let me create fully autonomous, data‑rich trading systems.
+
+*Tags: `working-with-events` `working-with-opencl` `working-with-databases` `crawl` `mql5`*
 
 ---
 
