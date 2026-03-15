@@ -41,7 +41,26 @@ def update_readme(kb, crawl_state, journal):
     page_count  = len(kb.get("pages", {}))
     chunk_count = len(kb.get("chunks", []))
     queries     = kb.get("total_queries", 0)
-    sections    = sorted(set(p.get("section","") for p in kb.get("pages",{}).values()))
+
+    # Calculate actual coverage
+    pages_by_section: dict[str, int] = {}
+    for p in kb.get("pages",{}).values():
+        sec = p.get("section","")
+        pages_by_section[sec] = pages_by_section.get(sec, 0) + 1
+
+    config = load_json(Path("config/mql5_sections.json"), {"sections":[]})
+    all_slugs = {s["slug"] for s in config.get("sections",[])}
+    max_pages_per_section = 60
+
+    section_progress = []
+    for slug in all_slugs:
+        pages = pages_by_section.get(slug, 0)
+        progress = min(pages / max_pages_per_section * 100, 100)
+        section_progress.append(progress)
+
+    coverage_pct = round(sum(section_progress) / len(section_progress)) if section_progress else 0
+    sections = sorted([s for s, c in pages_by_section.items() if c > 0])
+
     last_evolved = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     last_crawl   = crawl_state.get("last_crawl","Never")[:10] if crawl_state.get("last_crawl") else "Not yet"
 
@@ -60,9 +79,10 @@ def update_readme(kb, crawl_state, journal):
 | 📓 Journal Entries | {len(journal)} |
 | 🕷️ Last Crawled | {last_crawl} |
 | 🧬 Last Evolved | {last_evolved} |
+| 📈 True Coverage | {coverage_pct}% (based on actual pages crawled) |
 | 🤖 Model | `groq/compound` |
 
-## 📚 Sections Learned ({len(sections)}/37)
+## 📚 Sections Learned ({len(sections)}/{len(all_slugs)})
 {', '.join(f'`{s}`' for s in sections) if sections else '*None yet*'}
 
 ## 🚀 Usage
@@ -82,6 +102,48 @@ def update_readme(kb, crawl_state, journal):
 ---
 *Source: mql5.com/en/docs · Model: Groq compound*
 """)
+
+def update_status_json(kb, journal):
+    """Generate status.json for GitHub Pages dashboard."""
+    Path("docs").mkdir(exist_ok=True)
+
+    page_count = len(kb.get("pages", {}))
+    chunk_count = len(kb.get("chunks", []))
+    queries = kb.get("total_queries", 0)
+
+    # Calculate actual coverage
+    pages_by_section: dict[str, int] = {}
+    for p in kb.get("pages", {}).values():
+        sec = p.get("section", "")
+        pages_by_section[sec] = pages_by_section.get(sec, 0) + 1
+
+    config = load_json(Path("config/mql5_sections.json"), {"sections": []})
+    all_slugs = {s["slug"] for s in config.get("sections", [])}
+    max_pages_per_section = 60
+
+    section_progress = []
+    for slug in all_slugs:
+        pages = pages_by_section.get(slug, 0)
+        progress = min(pages / max_pages_per_section * 100, 100)
+        section_progress.append(progress)
+
+    coverage_pct = round(sum(section_progress) / len(section_progress)) if section_progress else 0
+
+    status = {
+        "page_count": page_count,
+        "chunk_count": chunk_count,
+        "query_count": queries,
+        "journal_count": len(journal),
+        "coverage_pct": coverage_pct,
+        "total_sections": len(all_slugs),
+        "sections_with_pages": len([s for s, c in pages_by_section.items() if c > 0]),
+        "sections": pages_by_section,
+        "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "journal": journal[-20:],  # Last 20 entries for dashboard
+    }
+
+    # Write to docs/ for GitHub Pages
+    Path("docs/status.json").write_text(json.dumps(status, indent=2, ensure_ascii=False))
 
 def main():
     api_key = os.environ.get("GROQ_API_KEY","")
@@ -109,10 +171,26 @@ def main():
     print(f"  Failures : {len(failures)} logged")
     print(f"  Journal  : {len(journal)} entries")
 
-    # Sections coverage
-    sections_done = sorted(set(p.get("section","") for p in kb.get("pages",{}).values()))
-    all_sections = 37
-    coverage_pct = round(len(sections_done) / all_sections * 100)
+    # Sections coverage - ACTUAL page count, not just presence
+    pages_by_section: dict[str, int] = {}
+    for p in kb.get("pages",{}).values():
+        sec = p.get("section","")
+        pages_by_section[sec] = pages_by_section.get(sec, 0) + 1
+
+    config = load_json(Path("config/mql5_sections.json"), {"sections":[]})
+    all_slugs = {s["slug"] for s in config.get("sections",[])}
+    max_pages_per_section = 60  # from config crawl_settings
+
+    # Calculate per-section completion (capped at 100%)
+    section_progress = []
+    for slug in all_slugs:
+        pages = pages_by_section.get(slug, 0)
+        progress = min(pages / max_pages_per_section * 100, 100)
+        section_progress.append(progress)
+
+    # True coverage: average progress across all sections
+    coverage_pct = round(sum(section_progress) / len(section_progress)) if section_progress else 0
+    sections_done = sorted([s for s, c in pages_by_section.items() if c > 0])
 
     # Recent queries
     recent_queries = [
@@ -132,19 +210,24 @@ def main():
 
     top_sections = sorted(section_query_map.items(), key=lambda x: -x[1])[:5]
 
-    # Uncrawled sections
-    from pathlib import Path as P
-    config = load_json(P("config/mql5_sections.json"), {"sections":[]})
-    all_slugs = {s["slug"] for s in config.get("sections",[])}
+    # Uncrawled sections (have 0 pages)
     uncrawled = all_slugs - set(sections_done)
+
+    # Per-section breakdown for reporting
+    section_details = []
+    for slug in sorted(all_slugs):
+        pages = pages_by_section.get(slug, 0)
+        pct = min(pages / max_pages_per_section * 100, 100)
+        section_details.append(f"{slug}:{pages}/{max_pages_per_section}")
 
     prompt = f"""You are mql5-sage performing a daily self-assessment.
 
 CURRENT STATE:
-- MQL5 doc pages crawled: {page_count} (coverage: {coverage_pct}% of 37 sections)
+- MQL5 doc pages crawled: {page_count} (true coverage: {coverage_pct}% based on actual page counts)
 - Knowledge chunks: {chunk_count}
 - Total queries answered: {queries}
-- Sections learned: {', '.join(sections_done) if sections_done else 'none yet'}
+- Sections with pages: {len(sections_done)}/{len(all_slugs)} sections have at least 1 page
+- Section details: {', '.join(section_details[:15])}...
 - Sections not yet crawled: {', '.join(list(uncrawled)[:10]) if uncrawled else 'all covered!'}
 - Most queried topics: {', '.join(f'{s}({c})' for s,c in top_sections) if top_sections else 'none yet'}
 - Recent questions asked: {chr(10).join(f'- {q}' for q in recent_queries) if recent_queries else '- none yet'}
@@ -228,6 +311,7 @@ JOURNAL_ENTRY: <first-person 4-6 sentence journal entry about today's evolution.
         save_json(FAILURE_LOG, [])
     write_journal_md(journal)
     update_readme(kb, crawl_state, journal)
+    update_status_json(kb, journal)
 
     # Send Telegram Notification
     latest = journal[-1] if journal else None

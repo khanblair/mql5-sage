@@ -60,6 +60,48 @@ def write_journal_md(journal: list):
         lines.append("---\n\n")
     JOURNAL_MD.write_text("".join(lines))
 
+def update_status_json(kb: dict, journal: list):
+    """Generate status.json for GitHub Pages dashboard."""
+    Path("docs").mkdir(exist_ok=True)
+
+    page_count = len(kb.get("pages", {}))
+    chunk_count = len(kb.get("chunks", []))
+    queries = kb.get("total_queries", 0)
+
+    # Calculate actual coverage
+    pages_by_section: dict[str, int] = {}
+    for p in kb.get("pages", {}).values():
+        sec = p.get("section", "")
+        pages_by_section[sec] = pages_by_section.get(sec, 0) + 1
+
+    config = load_json(Path("config/mql5_sections.json"), {"sections": []})
+    all_slugs = {s["slug"] for s in config.get("sections", [])}
+    max_pages_per_section = 60
+
+    section_progress = []
+    for slug in all_slugs:
+        pages = pages_by_section.get(slug, 0)
+        progress = min(pages / max_pages_per_section * 100, 100)
+        section_progress.append(progress)
+
+    coverage_pct = round(sum(section_progress) / len(section_progress)) if section_progress else 0
+
+    status = {
+        "page_count": page_count,
+        "chunk_count": chunk_count,
+        "query_count": queries,
+        "journal_count": len(journal),
+        "coverage_pct": coverage_pct,
+        "total_sections": len(all_slugs),
+        "sections_with_pages": len([s for s, c in pages_by_section.items() if c > 0]),
+        "sections": pages_by_section,
+        "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "journal": journal[-20:],  # Last 20 entries for dashboard
+    }
+
+    # Write to docs/ for GitHub Pages
+    Path("docs/status.json").write_text(json.dumps(status, indent=2, ensure_ascii=False))
+
 def main():
     api_key  = os.environ.get("GROQ_API_KEY","")
     question = os.environ.get("QUESTION","").strip()
@@ -171,7 +213,9 @@ Provide a clear, accurate answer with source references. Include code examples i
     save_json(KNOWLEDGE_FILE, kb)
     save_json(JOURNAL_FILE, journal)
     write_journal_md(journal)
+    update_status_json(kb, journal)
     print(f"\n✓ Q&A journaled")
+    print(f"✓ GitHub Pages status.json updated")
 
 if __name__ == "__main__":
     main()

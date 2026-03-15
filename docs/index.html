@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mql5-sage | Self-Evolving MQL5 Documentation Agent</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🧠</span>
+                <div>
+                    <h1>mql5-sage</h1>
+                    <p class="tagline">Self-evolving MQL5 documentation agent</p>
+                </div>
+            </div>
+            <div class="badges">
+                <span class="badge model">Groq Compound</span>
+                <span class="badge source">mql5.com/en/docs</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Stats -->
+            <section class="hero-stats">
+                <div class="coverage-ring">
+                    <svg viewBox="0 0 120 120">
+                        <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                        <circle class="ring-progress" cx="60" cy="60" r="52" stroke-dasharray="327" stroke-dashoffset="327" id="coverageRing"/>
+                    </svg>
+                    <div class="coverage-text">
+                        <span class="coverage-value" id="coveragePct">0%</span>
+                        <span class="coverage-label">Coverage</span>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-icon">📄</span>
+                        <span class="stat-value" id="pageCount">0</span>
+                        <span class="stat-label">Pages Crawled</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">🧩</span>
+                        <span class="stat-value" id="chunkCount">0</span>
+                        <span class="stat-label">Knowledge Chunks</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">🔍</span>
+                        <span class="stat-value" id="queryCount">0</span>
+                        <span class="stat-label">Queries Answered</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">📓</span>
+                        <span class="stat-value" id="journalCount">0</span>
+                        <span class="stat-label">Journal Entries</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Progress -->
+            <section class="sections-panel">
+                <div class="panel-header">
+                    <h2>📚 Section Progress</h2>
+                    <span class="section-count" id="sectionCount">0/39</span>
+                </div>
+                <div class="sections-list" id="sectionsList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="activity-panel">
+                <div class="panel-header">
+                    <h2>📜 Recent Journal</h2>
+                    <a href="journal.html" class="view-all">View All →</a>
+                </div>
+                <div class="activity-list" id="activityList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Quick Links -->
+            <section class="quick-links">
+                <a href="https://github.com/$(GITHUB_REPOSITORY)" class="link-card" target="_blank">
+                    <span class="link-icon">🐙</span>
+                    <span>GitHub Repo</span>
+                </a>
+                <a href="https://github.com/$(GITHUB_REPOSITORY)/actions" class="link-card" target="_blank">
+                    <span class="link-icon">⚡</span>
+                    <span>View Workflows</span>
+                </a>
+                <a href="https://mql5.com/en/docs" class="link-card" target="_blank">
+                    <span class="link-icon">📖</span>
+                    <span>MQL5 Docs</span>
+                </a>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Last updated: <span id="lastUpdated">—</span> UTC</p>
+            <p>Built with Groq • Runs on GitHub Actions</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

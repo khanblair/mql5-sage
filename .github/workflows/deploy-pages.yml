@@ -1,8 +1,12 @@
-name: 🌐 Deploy Journal to GitHub Pages
+name: 🌐 Deploy to GitHub Pages
 
 on:
   push:
     branches: ["main"]
+    paths:
+      - 'docs/**'
+      - 'knowledge/**'
+      - 'journal/**'
   workflow_dispatch:
 
 permissions:
@@ -28,7 +32,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'docs'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

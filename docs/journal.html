@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | mql5-sage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .journal-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .journal-header {
+            margin-bottom: 2rem;
+        }
+        .journal-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .journal-header p {
+            color: var(--text-secondary);
+        }
+        .journal-filters {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        .journal-entry {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .journal-entry.LEARNING { border-left: 4px solid #58a6ff; }
+        .journal-entry.QUERY { border-left: 4px solid #a371f7; }
+        .journal-entry.EVOLUTION { border-left: 4px solid #3fb950; }
+        .journal-entry.CRAWL { border-left: 4px solid #d29922; }
+        .journal-entry.MILESTONE { border-left: 4px solid #f85149; }
+        .journal-entry.SESSION { border-left: 4px solid #8b949e; }
+        .journal-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .journal-type {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            background: var(--bg-tertiary);
+        }
+        .journal-entry.LEARNING .journal-type { color: #58a6ff; }
+        .journal-entry.QUERY .journal-type { color: #a371f7; }
+        .journal-entry.EVOLUTION .journal-type { color: #3fb950; }
+        .journal-entry.CRAWL .journal-type { color: #d29922; }
+        .journal-entry.MILESTONE .journal-type { color: #f85149; }
+        .journal-date {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+        .journal-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .journal-body {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            white-space: pre-wrap;
+        }
+        .journal-tags {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .journal-tag {
+            font-size: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+            background: rgba(88, 166, 255, 0.1);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="journal-container">
+            <a href="index.html" class="back-link">← Back to Dashboard</a>
+
+            <div class="journal-header">
+                <h1>📓 Journal</h1>
+                <p>Append-only history of mql5-sage's learning journey</p>
+            </div>
+
+            <div class="journal-filters" id="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="CRAWL">🕷️ Crawl</button>
+                <button class="filter-btn" data-filter="EVOLUTION">🧬 Evolution</button>
+                <button class="filter-btn" data-filter="QUERY">🔍 Query</button>
+                <button class="filter-btn" data-filter="LEARNING">📚 Learning</button>
+            </div>
+
+            <div id="journalEntries">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allEntries = [];
+
+        async function loadJournal() {
+            try {
+                const response = await fetch('status.json');
+                const data = await response.json();
+                allEntries = data.journal || [];
+                renderJournal(allEntries);
+            } catch (error) {
+                console.error('Failed to load journal:', error);
+            }
+        }
+
+        function renderJournal(entries) {
+            const container = document.getElementById('journalEntries');
+
+            if (!entries.length) {
+                container.innerHTML = '<p style="color: var(--text-secondary);">No journal entries.</p>';
+                return;
+            }
+
+            const emoji = { LEARNING: '📚', QUERY: '🔍', EVOLUTION: '🧬', CRAWL: '🕷️', MILESTONE: '🏆', SESSION: '💬' };
+
+            container.innerHTML = entries.map(entry => {
+                const date = new Date(entry.timestamp).toLocaleDateString('en-US', {
+                    weekday: 'short', year: 'numeric', month: 'short', day: 'numeric',
+                    hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+                });
+
+                const tags = entry.tags ? entry.tags.map(t => `<span class="journal-tag">${t}</span>`).join('') : '';
+
+                return `
+                    <div class="journal-entry ${entry.entry_type}">
+                        <div class="journal-meta">
+                            <span class="journal-type">${emoji[entry.entry_type] || '•'} ${entry.entry_type}</span>
+                            <span class="journal-date">${date}</span>
+                        </div>
+                        <div class="journal-title">${entry.title}</div>
+                        <div class="journal-body">${entry.body}</div>
+                        ${tags ? `<div class="journal-tags">${tags}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Filter buttons
+        document.getElementById('filters').addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+
+                const filter = e.target.dataset.filter;
+                const filtered = filter === 'all' ? allEntries : allEntries.filter(e => e.entry_type === filter);
+                renderJournal(filtered);
+            }
+        });
+
+        loadJournal();
+    </script>
+</body>
+</html>

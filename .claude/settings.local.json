@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m py_compile E:/mql5-sage/scripts/evolve.py 2>&1 || python -m py_compile E:/mql5-sage/scripts/evolve.py 2>&1)",
+      "Bash(ls -la E:/mql5-sage/*.md E:/mql5-sage/*.json 2>/dev/null | head -20)"
+    ]
+  }
+}
