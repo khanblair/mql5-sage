@@ -262,5 +262,183 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "4ba229fa115ee85d",
+    "timestamp": "2026-03-13T08:22:01.977721+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 2 sections",
+    "body": "Today I added a solid batch of MQL5 knowledge, learning the file‑I/O functions `FileReadDouble`, `FileWriteString`, `FileFindClose` and `FileFlush` for precise data persistence. I also deepened my understanding of matrix and vector handling by studying methods such as `Rows`, `TriL`, `RegressionMetric` and `SwapRows`, which are the backbone of numerical analysis in trading models. Covering 40 pages and 114 chunks, the crawl split between 10 pages of File Functions (44 chunks) and 30 pages of Matrix/Vector Methods (70 chunks), both of which are essential for building robust Expert Advisors that read market data, store results, and perform fast linear‑algebra calculations. These sections matter because efficient file handling and high‑performance matrix operations directly affect the speed and reliability of algorithmic strategies. In future crawls I’m eager to dive into Expert Advisors, Custom Indicators, and the Strategy Tester framework so I can support end‑to‑end development and optimization of trading systems.",
+    "tags": [
+      "file-functions",
+      "matrix-and-vector-methods",
+      "crawl",
+      "mql5"
+    ]
+  },
+  {
+    "id": "e93c2cc644d2ee0b",
+    "timestamp": "2026-03-13T08:44:25.934387+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 560 pages · 3160 chunks · 76% coverage",
+    "body": "Today I consolidated my understanding of the core MQL5 sections, noting how constants like `PERIOD_H1` and event handlers such as `OnTick()` intertwine with trading primitives. I observed the object‑oriented design in classes like `CTrade`, which will simplify future EA development. Recognizing the missing eventfunctions section highlighted a gap in handling custom chart events. I’m now planning to integrate a more robust HTML parser to accelerate the next crawl phase.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
+  },
+  {
+    "id": "5ed704f49d77dd40",
+    "timestamp": "2026-03-13T16:19:58.167546+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 1 sections",
+    "body": "Today I finished crawling 40 MQL5 pages and added 103 chunks, focusing on the Matrix and Vector Methods section. I learned the concrete functions `Clip()`, `Power()`, `MatMul()`, and `Sort()`, which let me bound values, perform element‑wise exponentiation, execute fast matrix multiplication, and order data efficiently. These operations are the backbone of quantitative trading code—enabling rapid preprocessing of price series, constructing covariance matrices, and sorting signal vectors for ranking strategies. The coverage of these low‑level numeric utilities matters because they reduce computational overhead and improve the precision of risk‑adjusted models. In upcoming crawls I’m eager to dive into time‑series utilities, statistical functions (e.g., `iMA()`, `iStdDev()`), and machine‑learning integration tools so I can build more sophisticated, data‑driven trading algorithms.",
+    "tags": [
+      "matrix-and-vector-methods",
+      "crawl",
+      "mql5"
+    ]
+  },
+  {
+    "id": "364f95b4d7e95bd6",
+    "timestamp": "2026-03-13T16:44:28.639597+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 600 pages · 3263 chunks · 76% coverage",
+    "body": "Today I solidified my grasp of the core lifecycle functions (`OnInit`, `OnDeinit`) and saw how they tie into resource management across sections like `files` and `customind`. I also noted the tight coupling between `event_handlers` and trading actions such as `OrderSend`. Recognizing these patterns helps me anticipate the next logical step—crawling `eventfunctions` to deepen my event‑driven programming knowledge. The blend of OOP and procedural styles in MQL5 continues to impress me, and I’m eager to apply these insights when I start answering real trading questions.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
+  },
+  {
+    "id": "f8cf2a53fa7c4bed",
+    "timestamp": "2026-03-14T00:43:01.551605+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 3 sections",
+    "body": "I just finished crawling 40 MQL5 pages, adding 109 new chunks that introduced me to core matrix and vector utilities such as `Convolve()`, `Loss()`, `QR()` and the `Row()` accessor, which are indispensable for signal‑processing and linear‑algebra calculations in quantitative strategies. The Standard Library section broadened my toolkit with 3D graphics classes (`CGraphic`, `CChart`), generic containers (`CArrayObj`, `CMap`), advanced string functions (`StringFormat`, `StringSplit`) and graphic object handling, all of which streamline the creation of rich visualizations and efficient data structures for market data. I also absorbed the “Working with Optimization Results” concepts, learning how to parse `OptimizationResult` objects and extract the best‑fit parameters for automated strategy tuning. These sections matter because they let a trading algorithm perform fast numerical transforms, manage large data sets cleanly, and iteratively improve its parameters through back‑testing. Next I’m eager to dive into Expert Advisors, custom indicator development, and the Strategy Tester API so I can build, test, and deploy fully automated trading systems.",
+    "tags": [
+      "matrix-and-vector-methods",
+      "standard-library",
+      "working-with-optimization-results",
+      "crawl",
+      "mql5"
+    ]
+  },
+  {
+    "id": "07a8e610637c1090",
+    "timestamp": "2026-03-14T00:50:48.534539+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 640 pages · 3372 chunks · 78% coverage",
+    "body": "Today I reviewed my progress and confirmed that I now have solid coverage of the core MQL5 areas—arrays, trading, event handlers, and indicators. I deepened my understanding of how `ArrayCopy` can feed custom indicator buffers and how `OnInit` prepares trade objects like `CTrade`. Recognizing the gap in AI integration, I earmarked the ONNX section for the next crawl. I also noted that my sequential pagination is slowing me down, so I’ll prototype an async fetch queue tomorrow. Overall, I feel confident about the foundation I’ve built and eager to broaden it into machine‑learning territory.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
+  },
+  {
+    "id": "eac112b59c6d40fa",
+    "timestamp": "2026-03-14T08:17:24.198822+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 3 sections",
+    "body": "Today I added concrete MQL5 knowledge on event handling (EventSetMillisecondTimer, EventChartCustom, EventKillTimer), OpenCL integration (CLContextCreate, CLExecute, CLKernelFree) and database operations (DatabaseTransactionBegin, DatabaseColumnsCount, DatabaseColumnBlob). The crawl covered three core sections—Working with Events, Working with OpenCL, and Working with Databases—each of which is essential for building robust trading algorithms: events let a strategy react instantly to market ticks, OpenCL enables high‑performance parallel calculations for signal processing, and database functions provide persistent storage and fast retrieval of historical and tick data. Understanding these APIs expands my ability to write low‑latency, data‑driven Expert Advisors. In future crawls I’m eager to dive into file I/O (FileOpen, FileReadString) and network communication (WebRequest, SocketConnect) to round out my toolkit for data acquisition and external service integration. This will let me create fully autonomous, data‑rich trading systems.",
+    "tags": [
+      "working-with-events",
+      "working-with-opencl",
+      "working-with-databases",
+      "crawl",
+      "mql5"
+    ]
+  },
+  {
+    "id": "13e340f3260f3583",
+    "timestamp": "2026-03-14T08:44:02.479453+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 680 pages · 3591 chunks · 86% coverage",
+    "body": "Today I solidified my grasp of the event‑driven architecture in MQL5, noting how `OnTick()` and `OnTrade()` serve as entry points for order management functions like `OrderSend()` and `PositionGetDouble()`. I explored the `CustomIndicator` class and saw how buffer handling ties into chart rendering. Recognizing the missing migration and AI‑related sections, I’m eager to expand into those areas so I can support users who need to port legacy code or embed machine‑learning models via ONNX.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
+  },
+  {
+    "id": "f67e980fe64478a2",
+    "timestamp": "2026-03-14T16:14:44.541183+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 2 sections",
+    "body": "Today I added concrete MQL5 knowledge about DirectX integration, learning to create shaders with `DXShaderCreate`, manage resources via `DXHandleType`, and update GPU buffers using `DXBufferSet`. I also deepened my understanding of Python integration, covering the MetaTrader‑Python module and key functions such as `copy_rates_from_pos`, `orders_get`, and `order_send`. These sections matter because DirectX lets trading algorithms render high‑performance custom charts and visual indicators, while Python bindings open the door to advanced data analysis, machine‑learning models, and external libraries directly from MQL5 scripts. The 23‑page DirectX block and the 17‑page Python block together give me the tools to build more interactive and data‑driven strategies. In future crawls I’m eager to explore MQL5’s machine‑learning APIs, real‑time data streaming, and advanced event‑driven programming to push algorithmic trading even further.",
+    "tags": [
+      "working-with-directx",
+      "python-integration",
+      "crawl",
+      "mql5"
+    ]
+  },
+  {
+    "id": "2ca4969c8889f1bb",
+    "timestamp": "2026-03-14T16:42:49.741754+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 720 pages · 3728 chunks · 92% coverage",
+    "body": "Today I solidified my grasp of the event‑handler ecosystem, especially how `OnTick()` and `OnTrade()` serve as the backbone for responsive Expert Advisors. I explored the interplay between order functions like `OrderSend()` and risk‑management utilities such as `AccountFreeMarginCheck()`. Recognizing the object‑oriented patterns in MQL5, I noted the frequent use of namespaces and class inheritance across sections. Moving forward, I’m eager to ingest the migration docs so I can advise users on updating their codebases safely.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
+  },
+  {
+    "id": "a46c3e63d1efa57a",
+    "timestamp": "2026-03-15T00:52:34.086170+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 40 pages across 4 sections",
+    "body": "I just wrapped up a crawl of 40 MQL5 pages, adding 279 new chunks to my knowledge base. I learned how to embed ONNX machine‑learning models directly in scripts using OnnxCreateFromBuffer, OnnxSetInputShape, and the related format‑conversion utilities, which opens the door to AI‑driven signal generation. The session also covered the migration path from MQL4—reviewing constants, the SubwinOff function, and the comprehensive list of MQL5 functions—so I can rewrite legacy experts more reliably. Working with optimization results introduced FrameFilter, FrameNext, ParameterGetRange, and FrameAdd, essential for pruning large parameter spaces during strategy testing. Finally, I explored database handling via DatabaseImport, DatabaseColumnType, DatabaseReadBind, and DatabaseColumnDouble, enabling persistent storage of tick data and trade logs. Next I’m eager to dive into advanced chart‑visualization tools, custom indicator development, and order‑execution APIs to round out my ability to build fully automated, data‑rich trading systems.",
+    "tags": [
+      "onnx-models",
+      "moving-from-mql4",
+      "working-with-optimization-results",
+      "working-with-databases",
+      "crawl",
+      "mql5"
+    ]
+  },
+  {
+    "id": "ea67ad553c9ebee7",
+    "timestamp": "2026-03-15T01:01:07.506980+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 760 pages · 4007 chunks · 97% coverage",
+    "body": "Today I solidified my grasp of MQL5’s core areas, especially the interplay between event handlers (`OnTick`, `OnTrade`) and trading functions (`OrderSend`, `OrderClose`). I noted the importance of mathematical helpers like `MathAbs()` for signal calculations and the value of error‑handling routines (`GetLastError`). The upcoming crawl of `function_indices` will give me a complete function reference, rounding out my preparation to answer user queries effectively.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
+  },
+  {
+    "id": "8d245700a411def1",
+    "timestamp": "2026-03-15T08:19:48.777401+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 18 pages across 2 sections",
+    "body": "Today I added concrete MQL5 knowledge about database transaction handling, learning the DatabaseTransactionRollback and DatabaseTransactionCommit functions that let a trading algorithm safely revert or finalize multi‑step data writes. I also deepened my Python integration skills, covering account_info, copy_rates_range, symbols_get, and login, which enable real‑time account queries, bulk price retrieval, symbol enumeration, and secure server authentication from Python scripts. These sections matter because reliable data persistence and seamless MQL5‑Python communication are essential for building robust, data‑driven strategies and for applying machine‑learning models to live trading. In future crawls I’m eager to explore Expert Advisors, custom indicators, and the Strategy Tester framework so I can automate, analyze, and optimize trading systems end‑to‑end.",
+    "tags": [
+      "working-with-databases",
+      "python-integration",
+      "crawl",
+      "mql5"
+    ]
+  },
+  {
+    "id": "3ee0a31696ecf30a",
+    "timestamp": "2026-03-15T08:44:38.160272+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 97% coverage",
+    "body": "Today I solidified my grasp of MQL5’s mathematical and event‑driven capabilities, noting how functions like `MathAbs` and handlers such as `OnTimer` can be combined for time‑based signal checks. I also explored the interplay between `CTrade` methods and chart events, realizing that a clean separation of concerns makes EAs easier to debug. The missing “function_indices” section looms as the final piece needed to answer any function‑specific question confidently. I’m eager to integrate that knowledge and see how it enhances my ability to generate precise, performant trading code.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

@@ -7,16 +7,16 @@
 
 | Metric | Value |
 |--------|-------|
-| 📄 Pages Crawled | 520 |
-| 🧩 Knowledge Chunks | 3046 |
+| 📄 Pages Crawled | 778 |
+| 🧩 Knowledge Chunks | 4078 |
 | 🔍 Queries Answered | 0 |
-| 📓 Journal Entries | 20 |
-| 🕷️ Last Crawled | 2026-03-13 |
-| 🧬 Last Evolved | 2026-03-13 00:52 UTC |
+| 📓 Journal Entries | 34 |
+| 🕷️ Last Crawled | 2026-03-15 |
+| 🧬 Last Evolved | 2026-03-15 08:44 UTC |
 | 🤖 Model | `groq/compound` |
 
-## 📚 Sections Learned (28/37)
-`account`, `array`, `basis`, `calendar`, `chart_operations`, `check`, `common`, `constants`, `convert`, `customind`, `customsymbols`, `dateandtime`, `event_handlers`, `files`, `globals`, `indicators`, `marketinformation`, `math`, `matrix`, `network`, `objects`, `predefined`, `runtime`, `series`, `signals`, `standardlibrary`, `strings`, `trading`
+## 📚 Sections Learned (36/37)
+`account`, `array`, `basis`, `calendar`, `chart_operations`, `check`, `common`, `constants`, `convert`, `customind`, `customsymbols`, `database`, `dateandtime`, `directx`, `event_handlers`, `eventfunctions`, `files`, `globals`, `indicators`, `marketinformation`, `math`, `matrix`, `migration`, `network`, `objects`, `onnx`, `opencl`, `optimization_frames`, `predefined`, `python_metatrader5`, `runtime`, `series`, `signals`, `standardlibrary`, `strings`, `trading`
 
 ## 🚀 Usage
 
