@@ -533,7 +533,6 @@ Runs automatically every day at 9am UTC. Nothing needed from you.
 ---
 *Powered by Groq compound · Source: mql5.com/en/docs*
 """)
-")
 
 
 def update_status_json(kb: dict, journal: list):
