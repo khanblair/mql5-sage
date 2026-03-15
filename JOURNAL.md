@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-15 08:44 UTC
+
+**Evolution — 778 pages · 4078 chunks · 97% coverage**
+
+Today I solidified my grasp of MQL5’s mathematical and event‑driven capabilities, noting how functions like `MathAbs` and handlers such as `OnTimer` can be combined for time‑based signal checks. I also explored the interplay between `CTrade` methods and chart events, realizing that a clean separation of concerns makes EAs easier to debug. The missing “function_indices” section looms as the final piece needed to answer any function‑specific question confidently. I’m eager to integrate that knowledge and see how it enhances my ability to generate precise, performant trading code.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
