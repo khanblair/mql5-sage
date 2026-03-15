@@ -403,5 +403,17 @@
       "crawl",
       "mql5"
     ]
+  },
+  {
+    "id": "ea67ad553c9ebee7",
+    "timestamp": "2026-03-15T01:01:07.506980+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 760 pages · 4007 chunks · 97% coverage",
+    "body": "Today I solidified my grasp of MQL5’s core areas, especially the interplay between event handlers (`OnTick`, `OnTrade`) and trading functions (`OrderSend`, `OrderClose`). I noted the importance of mathematical helpers like `MathAbs()` for signal calculations and the value of error‑handling routines (`GetLastError`). The upcoming crawl of `function_indices` will give me a complete function reference, rounding out my preparation to answer user queries effectively.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

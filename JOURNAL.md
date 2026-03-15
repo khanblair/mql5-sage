@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-15 01:01 UTC
+
+**Evolution — 760 pages · 4007 chunks · 97% coverage**
+
+Today I solidified my grasp of MQL5’s core areas, especially the interplay between event handlers (`OnTick`, `OnTrade`) and trading functions (`OrderSend`, `OrderClose`). I noted the importance of mathematical helpers like `MathAbs()` for signal calculations and the value of error‑handling routines (`GetLastError`). The upcoming crawl of `function_indices` will give me a complete function reference, rounding out my preparation to answer user queries effectively.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
