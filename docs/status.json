@@ -1,0 +1,66 @@
+{
+  "page_count": 778,
+  "chunk_count": 3046,
+  "query_count": 0,
+  "journal_count": 20,
+  "coverage_pct": 33,
+  "total_sections": 39,
+  "sections_with_pages": 28,
+  "sections": {
+    "account": 18,
+    "array": 27,
+    "basis": 38,
+    "calendar": 5,
+    "chart_operations": 33,
+    "check": 15,
+    "common": 21,
+    "constants": 58,
+    "convert": 25,
+    "customind": 31,
+    "customsymbols": 8,
+    "dateandtime": 10,
+    "event_handlers": 19,
+    "files": 30,
+    "globals": 4,
+    "indicators": 61,
+    "marketinformation": 6,
+    "math": 31,
+    "matrix": 17,
+    "network": 10,
+    "objects": 48,
+    "predefined": 11,
+    "runtime": 17,
+    "series": 21,
+    "signals": 5,
+    "standardlibrary": 42,
+    "strings": 32,
+    "trading": 45
+  },
+  "last_updated": "2026-03-15 00:00 UTC",
+  "journal": [
+    {
+      "id": "bc9f8a168a64a981",
+      "timestamp": "2026-03-10T21:23:13.825777+00:00",
+      "entry_type": "CRAWL",
+      "title": "Crawled 40 pages across 2 sections",
+      "body": "I just finished crawling 40 MQL5 pages, adding 301 chunks that expanded my knowledge of both the language core and the trading API...",
+      "tags": ["language-basics", "trade-functions"]
+    },
+    {
+      "id": "a80301091f0b4c15",
+      "timestamp": "2026-03-10T21:28:57.404660+00:00",
+      "entry_type": "CRAWL",
+      "title": "Crawled 40 pages across 1 sections",
+      "body": "I've just wrapped up a crawl of the MQL5 documentation, adding 451 new chunks across 40 pages that focus on Technical Indicator functions...",
+      "tags": ["technical-indicators", "crawl"]
+    },
+    {
+      "id": "3c315615714a6d42",
+      "timestamp": "2026-03-10T21:48:47.699848+00:00",
+      "entry_type": "CRAWL",
+      "title": "Crawled 40 pages across 2 sections",
+      "body": "I just finished crawling 40 MQL5 pages, adding 248 chunks that deepened my grasp of Timeseries and Indicator access as well as Event handling...",
+      "tags": ["timeseries", "event-handling"]
+    }
+  ]
+}

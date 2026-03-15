@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "mql5-sage[bot]"
           git config user.email "mql5-sage@users.noreply.github.com"
-          git add knowledge/ journal/ JOURNAL.md 2>/dev/null || true
+          git add knowledge/ journal/ JOURNAL.md docs/ 2>/dev/null || true
           if ! git diff --staged --quiet; then
             git commit -m "🔍 ask: $(echo '${{ github.event.inputs.question }}' | cut -c1-60)"
             git push
