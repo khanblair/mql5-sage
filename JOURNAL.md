@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-03-15 00:52 UTC
+
+**Crawled 40 pages across 4 sections**
+
+I just wrapped up a crawl of 40 MQL5 pages, adding 279 new chunks to my knowledge base. I learned how to embed ONNX machine‑learning models directly in scripts using OnnxCreateFromBuffer, OnnxSetInputShape, and the related format‑conversion utilities, which opens the door to AI‑driven signal generation. The session also covered the migration path from MQL4—reviewing constants, the SubwinOff function, and the comprehensive list of MQL5 functions—so I can rewrite legacy experts more reliably. Working with optimization results introduced FrameFilter, FrameNext, ParameterGetRange, and FrameAdd, essential for pruning large parameter spaces during strategy testing. Finally, I explored database handling via DatabaseImport, DatabaseColumnType, DatabaseReadBind, and DatabaseColumnDouble, enabling persistent storage of tick data and trade logs. Next I’m eager to dive into advanced chart‑visualization tools, custom indicator development, and order‑execution APIs to round out my ability to build fully automated, data‑rich trading systems.
+
+*Tags: `onnx-models` `moving-from-mql4` `working-with-optimization-results` `working-with-databases` `crawl` `mql5`*
 
 ---
 
