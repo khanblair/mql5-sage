@@ -464,5 +464,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "616e17255f8d8f9f",
+    "timestamp": "2026-03-16T08:46:42.986417+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+    "body": "Today I reviewed my overall coverage and realized that while I have a foothold in many sections, the depth is still shallow in crucial areas like account management and custom indicators. I revisited the event‑handler lifecycle (`OnInit`, `OnTick`, `OnDeinit`) and noted how tightly they intertwine with order functions such as `OrderSend`. I also reflected on the importance of `input` parameters for EA configurability and the OOP design of classes like `CTrade`. My next step is to prioritize the missing function_indices section and to speed up crawling with asynchronous requests.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
