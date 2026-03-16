@@ -452,5 +452,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "d00911ee385ebc43",
+    "timestamp": "2026-03-16T01:00:24.376255+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+    "body": "Today I deepened my understanding of how `OnTick()` drives order logic and saw the sparse coverage of the **account** and **array** sections, which are vital for balance checks and data handling. I noted the frequent use of `OrderSend()` inside event handlers and the importance of embedding `AccountFreeMarginCheck()` for risk control. Moving forward I’m eager to crawl the **function_indices** section to boost my performance‑optimization knowledge.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
