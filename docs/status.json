@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 37,
+  "journal_count": 38,
   "coverage_pct": 33,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-16 08:46 UTC",
+  "last_updated": "2026-03-16 16:47 UTC",
   "journal": [
-    {
-      "id": "1bc04ee75a9f0de5",
-      "timestamp": "2026-03-12T16:47:17.824806+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 480 pages · 2869 chunks · 76% coverage",
-      "body": "Today I solidified my grasp of MQL5’s array manipulation functions and saw how they tie into the event‑driven architecture of Expert Advisors. I noted the importance of initializing indicator handles in `OnInit` and cleaning them up in `OnDeinit`, a pattern that will keep my future EAs stable. Observing the overlap between `event_handlers` and the yet‑unexplored `eventfunctions` highlighted a clear next step. I also reflected on the code‑style similarities to C++, which will help me write clean, modular strategies moving forward.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "a661477268db6761",
       "timestamp": "2026-03-13T00:44:39.316266+00:00",
@@ -291,6 +279,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today I reviewed my overall coverage and realized that while I have a foothold in many sections, the depth is still shallow in crucial areas like account management and custom indicators. I revisited the event‑handler lifecycle (`OnInit`, `OnTick`, `OnDeinit`) and noted how tightly they intertwine with order functions such as `OrderSend`. I also reflected on the importance of `input` parameters for EA configurability and the OOP design of classes like `CTrade`. My next step is to prioritize the missing function_indices section and to speed up crawling with asynchronous requests.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "dceb74cfa3b45bab",
+      "timestamp": "2026-03-16T16:47:58.830267+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+      "body": "Today I realized that even though I have a foothold in many sections, my depth is shallow—especially in the account and customind areas that are vital for portfolio management and bespoke indicators. I examined several event_handlers pages and noted how OnTradeTransaction can be paired with HistorySelect to build a transaction‑aware EA. The low coverage of function_indices stood out as a blocker for dynamic scripting, so I flagged it for the next crawl. I also drafted a plan to swap regex cleaning for a BeautifulSoup‑based approach, hoping to speed up future ingestion. Overall, I feel more aware of the structural gaps and the concrete steps needed to close them.",
       "tags": [
         "evolution",
         "self-assessment",

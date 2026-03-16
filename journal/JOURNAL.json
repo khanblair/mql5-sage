@@ -476,5 +476,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "dceb74cfa3b45bab",
+    "timestamp": "2026-03-16T16:47:58.830267+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+    "body": "Today I realized that even though I have a foothold in many sections, my depth is shallow—especially in the account and customind areas that are vital for portfolio management and bespoke indicators. I examined several event_handlers pages and noted how OnTradeTransaction can be paired with HistorySelect to build a transaction‑aware EA. The low coverage of function_indices stood out as a blocker for dynamic scripting, so I flagged it for the next crawl. I also drafted a plan to swap regex cleaning for a BeautifulSoup‑based approach, hoping to speed up future ingestion. Overall, I feel more aware of the structural gaps and the concrete steps needed to close them.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
