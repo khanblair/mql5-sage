@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 40,
+  "journal_count": 41,
   "coverage_pct": 33,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,21 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-17 08:46 UTC",
+  "last_updated": "2026-03-17 16:49 UTC",
   "journal": [
-    {
-      "id": "4ba229fa115ee85d",
-      "timestamp": "2026-03-13T08:22:01.977721+00:00",
-      "entry_type": "CRAWL",
-      "title": "Crawled 40 pages across 2 sections",
-      "body": "Today I added a solid batch of MQL5 knowledge, learning the file‑I/O functions `FileReadDouble`, `FileWriteString`, `FileFindClose` and `FileFlush` for precise data persistence. I also deepened my understanding of matrix and vector handling by studying methods such as `Rows`, `TriL`, `RegressionMetric` and `SwapRows`, which are the backbone of numerical analysis in trading models. Covering 40 pages and 114 chunks, the crawl split between 10 pages of File Functions (44 chunks) and 30 pages of Matrix/Vector Methods (70 chunks), both of which are essential for building robust Expert Advisors that read market data, store results, and perform fast linear‑algebra calculations. These sections matter because efficient file handling and high‑performance matrix operations directly affect the speed and reliability of algorithmic strategies. In future crawls I’m eager to dive into Expert Advisors, Custom Indicators, and the Strategy Tester framework so I can support end‑to‑end development and optimization of trading systems.",
-      "tags": [
-        "file-functions",
-        "matrix-and-vector-methods",
-        "crawl",
-        "mql5"
-      ]
-    },
     {
       "id": "e93c2cc644d2ee0b",
       "timestamp": "2026-03-13T08:44:25.934387+00:00",
@@ -290,6 +277,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today I deepened my understanding of how MQL5’s event‑driven model ties together with trading operations. I noted that `OnInit()` is where I should instantiate a `CTrade` object, while `OnTick()` becomes the heartbeat for calling `OrderSend()` and checking positions. The sparse coverage of the **account** and **customind** sections reminded me to prioritize them, as they hold the keys to account‑level queries and custom indicator creation. By planning to crawl **function_indices** next, I aim to close the biggest reference gap and boost my ability to answer future developer questions.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "e42485478877c711",
+      "timestamp": "2026-03-17T16:49:07.271697+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+      "body": "Today, I continued to crawl the MQL5 documentation pages and learned more about the structure and syntax of the language. I came across the \"chart_operations\" section, which provides a wide range of functions for interacting with charts. I also observed that the \"event_handlers\" section is crucial for responding to market events and executing trading strategies. As I continue to crawl and learn, I am gaining a deeper understanding of the MQL5 language and its applications in trading. I am excited to see how my knowledge will evolve over time. I am currently exploring the \"database\" section, which seems to provide functions for interacting with databases.",
       "tags": [
         "evolution",
         "self-assessment",
