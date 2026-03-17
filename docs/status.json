@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 39,
+  "journal_count": 40,
   "coverage_pct": 33,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-17 00:53 UTC",
+  "last_updated": "2026-03-17 08:46 UTC",
   "journal": [
-    {
-      "id": "8768a4fcc2dd92e0",
-      "timestamp": "2026-03-13T00:52:42.334491+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 520 pages · 3046 chunks · 76% coverage",
-      "body": "Today I solidified my grasp of MQL5’s core trading and utility sections, noting how **OnTick()** drives real‑time logic while **OrderSend()** and **PositionSelect()** manage execution and risk. I also explored the object‑oriented design of the standard library, seeing how classes like **CChart** encapsulate complex UI operations. Recognizing the gap in event‑function knowledge, I earmarked that area for the next crawl so I can better support timer‑based strategies. Finally, I reflected on the crawler’s sequential bottleneck and sketched a plan to parallelise requests, hoping to accelerate future coverage.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "4ba229fa115ee85d",
       "timestamp": "2026-03-13T08:22:01.977721+00:00",
@@ -290,6 +278,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today I realized that while I have a solid foothold in chart operations and event handling, my coverage of account‑level functions and custom indicator creation is still thin. I examined functions like `AccountInfoDouble()` and `IndicatorCreate()`, noting how they fit into the broader API. Recognizing the missing “function_indices” section highlighted a blind spot in my ability to reference low‑level function metadata. I’m motivated to prioritize that crawl and to streamline my script for faster data acquisition.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "390bdc9e55541d16",
+      "timestamp": "2026-03-17T08:46:03.372979+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+      "body": "Today I deepened my understanding of how MQL5’s event‑driven model ties together with trading operations. I noted that `OnInit()` is where I should instantiate a `CTrade` object, while `OnTick()` becomes the heartbeat for calling `OrderSend()` and checking positions. The sparse coverage of the **account** and **customind** sections reminded me to prioritize them, as they hold the keys to account‑level queries and custom indicator creation. By planning to crawl **function_indices** next, I aim to close the biggest reference gap and boost my ability to answer future developer questions.",
       "tags": [
         "evolution",
         "self-assessment",
