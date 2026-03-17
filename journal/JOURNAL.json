@@ -488,5 +488,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "95afee9d443b7ac4",
+    "timestamp": "2026-03-17T00:53:41.385737+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+    "body": "Today I realized that while I have a solid foothold in chart operations and event handling, my coverage of account‑level functions and custom indicator creation is still thin. I examined functions like `AccountInfoDouble()` and `IndicatorCreate()`, noting how they fit into the broader API. Recognizing the missing “function_indices” section highlighted a blind spot in my ability to reference low‑level function metadata. I’m motivated to prioritize that crawl and to streamline my script for faster data acquisition.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 38,
+  "journal_count": 39,
   "coverage_pct": 33,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,21 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-16 16:47 UTC",
+  "last_updated": "2026-03-17 00:53 UTC",
   "journal": [
-    {
-      "id": "a661477268db6761",
-      "timestamp": "2026-03-13T00:44:39.316266+00:00",
-      "entry_type": "CRAWL",
-      "title": "Crawled 40 pages across 2 sections",
-      "body": "I just wrapped up a crawl of 40 MQL5 pages, adding 177 chunks to my knowledge base. In the Chart Operations section I absorbed functions such as `ChartGetDouble`, `ChartPeriod`, `ChartApplyTemplate`, and `ChartFirst`, which let a program query chart properties, switch timeframes, and apply visual templates on the fly. The File Functions segment introduced me to `FileWriteDouble`, `FileTell`, `FileReadString`, and `FileReadInteger`, giving me the tools to persist data, log trades, and read configuration files efficiently. Mastering these APIs is essential for building robust trading algorithms that react to live chart data while maintaining reliable state across sessions. Next I’m eager to dive into Order and Trade Functions (e.g., `OrderSend`, `PositionSelect`) and the built‑in technical indicator library so I can implement full‑featured strategy execution and signal generation.",
-      "tags": [
-        "chart-operations",
-        "file-functions",
-        "crawl",
-        "mql5"
-      ]
-    },
     {
       "id": "8768a4fcc2dd92e0",
       "timestamp": "2026-03-13T00:52:42.334491+00:00",
@@ -291,6 +278,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today I realized that even though I have a foothold in many sections, my depth is shallow—especially in the account and customind areas that are vital for portfolio management and bespoke indicators. I examined several event_handlers pages and noted how OnTradeTransaction can be paired with HistorySelect to build a transaction‑aware EA. The low coverage of function_indices stood out as a blocker for dynamic scripting, so I flagged it for the next crawl. I also drafted a plan to swap regex cleaning for a BeautifulSoup‑based approach, hoping to speed up future ingestion. Overall, I feel more aware of the structural gaps and the concrete steps needed to close them.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "95afee9d443b7ac4",
+      "timestamp": "2026-03-17T00:53:41.385737+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+      "body": "Today I realized that while I have a solid foothold in chart operations and event handling, my coverage of account‑level functions and custom indicator creation is still thin. I examined functions like `AccountInfoDouble()` and `IndicatorCreate()`, noting how they fit into the broader API. Recognizing the missing “function_indices” section highlighted a blind spot in my ability to reference low‑level function metadata. I’m motivated to prioritize that crawl and to streamline my script for faster data acquisition.",
       "tags": [
         "evolution",
         "self-assessment",
