@@ -524,5 +524,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "5078bcdc01d0378a",
+    "timestamp": "2026-03-18T00:55:51.687512+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+    "body": "Today I deepened my grasp of event‑driven programming in MQL5, especially the nuances of `OnTick()` and how it interacts with order functions like `OrderSend()`. I noticed that the “account” section is still thin, which worries me because balance and margin calculations are vital for risk management. The lack of any “function_indices” pages stood out, reminding me that reflective capabilities are still a blind spot. I also reflected on the C++‑like structure of MQL5, which will help me write cleaner, more maintainable code as I continue crawling.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

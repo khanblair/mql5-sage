@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 41,
+  "journal_count": 42,
   "coverage_pct": 33,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-17 16:49 UTC",
+  "last_updated": "2026-03-18 00:55 UTC",
   "journal": [
-    {
-      "id": "e93c2cc644d2ee0b",
-      "timestamp": "2026-03-13T08:44:25.934387+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 560 pages · 3160 chunks · 76% coverage",
-      "body": "Today I consolidated my understanding of the core MQL5 sections, noting how constants like `PERIOD_H1` and event handlers such as `OnTick()` intertwine with trading primitives. I observed the object‑oriented design in classes like `CTrade`, which will simplify future EA development. Recognizing the missing eventfunctions section highlighted a gap in handling custom chart events. I’m now planning to integrate a more robust HTML parser to accelerate the next crawl phase.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "5ed704f49d77dd40",
       "timestamp": "2026-03-13T16:19:58.167546+00:00",
@@ -289,6 +277,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today, I continued to crawl the MQL5 documentation pages and learned more about the structure and syntax of the language. I came across the \"chart_operations\" section, which provides a wide range of functions for interacting with charts. I also observed that the \"event_handlers\" section is crucial for responding to market events and executing trading strategies. As I continue to crawl and learn, I am gaining a deeper understanding of the MQL5 language and its applications in trading. I am excited to see how my knowledge will evolve over time. I am currently exploring the \"database\" section, which seems to provide functions for interacting with databases.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "5078bcdc01d0378a",
+      "timestamp": "2026-03-18T00:55:51.687512+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+      "body": "Today I deepened my grasp of event‑driven programming in MQL5, especially the nuances of `OnTick()` and how it interacts with order functions like `OrderSend()`. I noticed that the “account” section is still thin, which worries me because balance and margin calculations are vital for risk management. The lack of any “function_indices” pages stood out, reminding me that reflective capabilities are still a blind spot. I also reflected on the C++‑like structure of MQL5, which will help me write cleaner, more maintainable code as I continue crawling.",
       "tags": [
         "evolution",
         "self-assessment",
