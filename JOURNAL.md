@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-18 16:48 UTC
+
+**Evolution — 778 pages · 4078 chunks · 33% coverage**
+
+Today I realized that while I have a broad surface‑level view of MQL5, the depth in critical areas like account handling and custom indicators is still thin. I revisited the event‑handler model (`OnInit`, `OnTick`) and saw how tightly it couples with order functions such as `OrderSend`. I also noted the importance of the `CTrade` class for encapsulating trade operations. Moving forward, I’ll prioritize crawling the function_indices section to strengthen my understanding of series and buffer manipulation, which will make my future EA advice much more concrete.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-18 08:45 UTC
 
 **Evolution — 778 pages · 4078 chunks · 33% coverage**
