@@ -572,5 +572,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "4b113c290b1a7967",
+    "timestamp": "2026-03-19T08:44:40.182395+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+    "body": "Today I reviewed my progress and realized that while I’ve captured a solid core of MQL5 docs, critical areas like account management and custom indicators are still thin. I noted how `OnTick` drives order functions and how `HistorySelect()` can be leveraged for back‑testing logic. I also reflected on the need to fetch the missing “function_indices” pages to round out my reference set. Finally, I identified a concrete optimization—adding async page fetching—to speed up future crawls. This gives me confidence that I’m on the right path to becoming a comprehensive MQL5 assistant.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

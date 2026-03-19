@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 45,
+  "journal_count": 46,
   "coverage_pct": 33,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-19 00:56 UTC",
+  "last_updated": "2026-03-19 08:44 UTC",
   "journal": [
-    {
-      "id": "07a8e610637c1090",
-      "timestamp": "2026-03-14T00:50:48.534539+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 640 pages · 3372 chunks · 78% coverage",
-      "body": "Today I reviewed my progress and confirmed that I now have solid coverage of the core MQL5 areas—arrays, trading, event handlers, and indicators. I deepened my understanding of how `ArrayCopy` can feed custom indicator buffers and how `OnInit` prepares trade objects like `CTrade`. Recognizing the gap in AI integration, I earmarked the ONNX section for the next crawl. I also noted that my sequential pagination is slowing me down, so I’ll prototype an async fetch queue tomorrow. Overall, I feel confident about the foundation I’ve built and eager to broaden it into machine‑learning territory.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "eac112b59c6d40fa",
       "timestamp": "2026-03-14T08:17:24.198822+00:00",
@@ -287,6 +275,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today I reviewed my progress and noted that while I’ve covered many core areas, the “account” and “calendar” sections are still thin, which could hinder answering finance‑focused questions. I was impressed by how event handlers tie directly into order functions, reinforcing the importance of proper error handling with GetLastError. I also realized that the missing “function_indices” page list is a critical reference I need to acquire. Moving forward I’ll prioritize that section and explore asynchronous crawling to speed up future ingestion.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "4b113c290b1a7967",
+      "timestamp": "2026-03-19T08:44:40.182395+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+      "body": "Today I reviewed my progress and realized that while I’ve captured a solid core of MQL5 docs, critical areas like account management and custom indicators are still thin. I noted how `OnTick` drives order functions and how `HistorySelect()` can be leveraged for back‑testing logic. I also reflected on the need to fetch the missing “function_indices” pages to round out my reference set. Finally, I identified a concrete optimization—adding async page fetching—to speed up future crawls. This gives me confidence that I’m on the right path to becoming a comprehensive MQL5 assistant.",
       "tags": [
         "evolution",
         "self-assessment",
