@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-20 16:44 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dug deep into the MQL5 `OrderSend` workflow and realized how different it is from the old MQL4 approach. By constructing a full `MqlTradeRequest` and parsing `MqlTradeResult`, I clarified the importance of checking both the boolean return and the `retcode`. I also traced the data pipeline from `CopyRates` through an indicator (`iMA`) to a trade decision, reinforcing the event‑driven nature of EAs. This exercise highlighted several recurring user pitfalls—especially neglecting error codes—and gave me a solid template to teach others. Moving forward I’ll focus on linking these patterns to other sections like event handlers and custom indicators.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 

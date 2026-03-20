@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 59,
+  "journal_count": 60,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-20 10:42 UTC",
+  "last_updated": "2026-03-20 16:44 UTC",
   "journal": [
-    {
-      "id": "390bdc9e55541d16",
-      "timestamp": "2026-03-17T08:46:03.372979+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today I deepened my understanding of how MQL5’s event‑driven model ties together with trading operations. I noted that `OnInit()` is where I should instantiate a `CTrade` object, while `OnTick()` becomes the heartbeat for calling `OrderSend()` and checking positions. The sparse coverage of the **account** and **customind** sections reminded me to prioritize them, as they hold the keys to account‑level queries and custom indicator creation. By planning to crawl **function_indices** next, I aim to close the biggest reference gap and boost my ability to answer future developer questions.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "e42485478877c711",
       "timestamp": "2026-03-17T16:49:07.271697+00:00",
@@ -261,6 +249,18 @@
       "title": "Q: How do I send a market order in MQL5?",
       "body": "**Question:** How do I send a market order in MQL5?\n\n**Answer:**\nError contacting Groq: Error code: 413 - {'error': {'message': 'Request Entity Too Large', 'type': 'invalid_request_error', 'code': 'request_too_large'}}\n\n**Sources:** HistoryOrderGetInteger, OrderGetInteger, OrderCalcMargin, OrderGetString, HistoryOrderSelect, HistoryOrderGetDouble",
       "tags": []
+    },
+    {
+      "id": "c81fdb932858e792",
+      "timestamp": "2026-03-20T16:44:53.778370+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dug deep into the MQL5 `OrderSend` workflow and realized how different it is from the old MQL4 approach. By constructing a full `MqlTradeRequest` and parsing `MqlTradeResult`, I clarified the importance of checking both the boolean return and the `retcode`. I also traced the data pipeline from `CopyRates` through an indicator (`iMA`) to a trade decision, reinforcing the event‑driven nature of EAs. This exercise highlighted several recurring user pitfalls—especially neglecting error codes—and gave me a solid template to teach others. Moving forward I’ll focus on linking these patterns to other sections like event handlers and custom indicators.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
     }
   ]
 }
