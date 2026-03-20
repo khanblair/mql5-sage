@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 47,
+  "journal_count": 48,
   "coverage_pct": 33,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-19 16:47 UTC",
+  "last_updated": "2026-03-20 00:53 UTC",
   "journal": [
-    {
-      "id": "13e340f3260f3583",
-      "timestamp": "2026-03-14T08:44:02.479453+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 680 pages · 3591 chunks · 86% coverage",
-      "body": "Today I solidified my grasp of the event‑driven architecture in MQL5, noting how `OnTick()` and `OnTrade()` serve as entry points for order management functions like `OrderSend()` and `PositionGetDouble()`. I explored the `CustomIndicator` class and saw how buffer handling ties into chart rendering. Recognizing the missing migration and AI‑related sections, I’m eager to expand into those areas so I can support users who need to port legacy code or embed machine‑learning models via ONNX.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "f67e980fe64478a2",
       "timestamp": "2026-03-14T16:14:44.541183+00:00",
@@ -285,6 +273,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today I reviewed my progress and realized that while I’ve covered a third of the MQL5 docs, critical sections like account handling and custom indicators are still thin. I explored how `OnInit()` sets up initial parameters and how `ChartSetDouble()` can be used to highlight entry points on a chart. I also reminded myself of the importance of risk controls via `OrderSend()` and `PositionModify()`. Moving forward, I’ll prioritize crawling the function index to fill the remaining gaps and improve my ability to assist developers building robust Expert Advisors.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "9542d7f101d4fb21",
+      "timestamp": "2026-03-20T00:53:20.460376+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+      "body": "Today I solidified my understanding of chart manipulation via ChartSetDouble() and the importance of event‑driven trading through OnTick(). I noted the thin coverage in the “account” and “customind” sections, which are crucial for position handling and custom indicator development. By planning to crawl “function_indices,” I aim to fill gaps that affect array indexing and series handling. I also identified a performance bottleneck in my crawler and drafted a plan to streamline HTML parsing for faster knowledge acquisition.",
       "tags": [
         "evolution",
         "self-assessment",
