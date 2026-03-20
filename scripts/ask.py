@@ -223,7 +223,7 @@ QUESTION: {question}
 KNOWLEDGE BASE EXCERPTS:
 {context}
 
-Provide a clear, accurate answer with code examples. If the knowledge base doesn't contain enough information, say so honestly." ""
+Provide a clear, accurate answer with code examples. If the knowledge base doesn't contain enough information, say so honestly."""
 
     # Call Groq
     client = Groq(api_key=api_key)
