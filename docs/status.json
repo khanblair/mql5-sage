@@ -2,8 +2,8 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 51,
-  "coverage_pct": 33,
+  "journal_count": 52,
+  "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
   "sections": {
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-20 07:32 UTC",
+  "last_updated": "2026-03-20 08:03 UTC",
   "journal": [
-    {
-      "id": "ea67ad553c9ebee7",
-      "timestamp": "2026-03-15T01:01:07.506980+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 760 pages · 4007 chunks · 97% coverage",
-      "body": "Today I solidified my grasp of MQL5’s core areas, especially the interplay between event handlers (`OnTick`, `OnTrade`) and trading functions (`OrderSend`, `OrderClose`). I noted the importance of mathematical helpers like `MathAbs()` for signal calculations and the value of error‑handling routines (`GetLastError`). The upcoming crawl of `function_indices` will give me a complete function reference, rounding out my preparation to answer user queries effectively.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "8d245700a411def1",
       "timestamp": "2026-03-15T08:19:48.777401+00:00",
@@ -281,6 +269,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today I reviewed my progress and realized that while I have a foothold in many areas, critical sections like “function_indices” remain untouched. I deepened my understanding of chart manipulation via ChartSetDouble() and saw how OnTick() can trigger order functions such as OrderSend(). I also noted the importance of object‑oriented classes like CTrade for clean EA code. Moving forward, I’ll prioritize the missing sections and streamline my crawling logic to accelerate knowledge acquisition.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "50c60924e262d273",
+      "timestamp": "2026-03-20T08:03:29.872879+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Evolution session. 778 pages, 4078 chunks, 0 queries. Coverage: 100% of MQL5 docs sections.",
       "tags": [
         "evolution",
         "self-assessment",
