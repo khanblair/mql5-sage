@@ -4,6 +4,19 @@
 
 ---
 
+## 🔍 QUERY — 2026-03-20 10:42 UTC
+
+**Q: How do I send a market order in MQL5?**
+
+**Question:** How do I send a market order in MQL5?
+
+**Answer:**
+Error contacting Groq: Error code: 413 - {'error': {'message': 'Request Entity Too Large', 'type': 'invalid_request_error', 'code': 'request_too_large'}}
+
+**Sources:** HistoryOrderGetInteger, OrderGetInteger, OrderCalcMargin, OrderGetString, HistoryOrderSelect, HistoryOrderGetDouble
+
+---
+
 ## 🔍 QUERY — 2026-03-20 10:37 UTC
 
 **Q: How do I calculate pips in MQL5 for EURUSD?**

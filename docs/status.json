@@ -1,8 +1,8 @@
 {
   "page_count": 778,
   "chunk_count": 4078,
-  "query_count": 5,
-  "journal_count": 58,
+  "query_count": 6,
+  "journal_count": 59,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-20 10:37 UTC",
+  "last_updated": "2026-03-20 10:42 UTC",
   "journal": [
-    {
-      "id": "95afee9d443b7ac4",
-      "timestamp": "2026-03-17T00:53:41.385737+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today I realized that while I have a solid foothold in chart operations and event handling, my coverage of account‑level functions and custom indicator creation is still thin. I examined functions like `AccountInfoDouble()` and `IndicatorCreate()`, noting how they fit into the broader API. Recognizing the missing “function_indices” section highlighted a blind spot in my ability to reference low‑level function metadata. I’m motivated to prioritize that crawl and to streamline my script for faster data acquisition.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "390bdc9e55541d16",
       "timestamp": "2026-03-17T08:46:03.372979+00:00",
@@ -264,6 +252,14 @@
       "entry_type": "QUERY",
       "title": "Q: How do I calculate pips in MQL5 for EURUSD?",
       "body": "**Question:** How do I calculate pips in MQL5 for EURUSD?\n\n**Answer:**\n**Answer – How to calculate pips for EURUSD in MQL5**\n\nA *pip* (price‑increment) for most major currency pairs, including **EURUSD**, is the value **0.0001** of the price.  \nIn MQL5 you do not have to hard‑code this number – you can obtain the exact point size that the platform uses for the symbol with `SymbolInfoDouble()` and the constant `SYMBOL_POINT`.  \n\nThe point size returned for EURUSD is **0.0001**, so one pip = `SYMBOL_POINT`.  \nOnce you have the point size you can:\n\n* **Display the pip size** (useful for logging or UI).  \n* **Convert a price difference into pips**:  \n\n\\[\n\\text{pips} = \\frac{|price_{2}-price_{1}|}{\\text{point}}\n\\]\n\n---\n\n### 1. Get the pip (point) value for EURUSD  \n\n```mql5\n//--- Returns the size of one point (pip) for the current symbol\ndouble pip = SymbolInfoDouble(_Symbol, SYMBOL_POINT);\n// For EURUSD this will be 0.0001\nPrintFormat(\"%s: 1 pip = %.5f\", _Symbol, pip);\n```\n\n*Source:* The example that retrieves `SYMBOL_POINT` is shown in **Source 3: PrintFormat**【Source 3】.\n\n---\n\n### 2. Example – calculate pips between two price values  \n\n```mql5\nvoid OnStart()\n{\n   //--- Get the current close price of EURUSD (latest bar)\n   double price_now = iClose(_Symbol, PERIOD_CURRENT, 0);\n   //--- Get the close price of the previous bar\n   double price_prev = iClose(_Symbol, PERIOD_CURRENT, 1);\n\n   //--- Get the point (pip) size\n   double pip = SymbolInfoDouble(_Symbol, SYMBOL_POINT);\n\n   //--- Calculate absolute pip difference\n   double pip_diff = MathAbs(price_now - price_prev) / pip;\n\n   PrintFormat(\"%s: price now = %.5f, price prev = %.5f, diff = %.2f pips\",\n               _Symbol, price_now, price_prev, pip_diff);\n}\n```\n\n*Explanation*  \n\n* `iClose()` (listed in the excerpts under **iClose**) returns the close price of a bar.  \n* `SymbolInfoDouble(_Symbol, SYMBOL_POINT)` gives the pip size (0.0001 for EURUSD).  \n* Dividing the absolute price difference by the point size yields the number of pips.\n\n---\n\n### 3. If you need the pip value in account‑currency terms  \n\nFor a position size `lot` and a contract size `contract` (standard lot = 100 000 units), the monetary value of one pip is:\n\n```mql5\ndouble lot      = 0.1;                     // example lot size\ndouble contract = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_CONTRACT_SIZE);\ndouble pip      = SymbolInfoDouble(_Symbol, SYMBOL_POINT);\ndouble pip_value = lot * contract * pip;   // monetary value of 1 pip\nPrintFormat(\"%s: 1 pip = %.2f %s\", _Symbol, pip_value, AccountInfoString(ACCOUNT_CURRENCY));\n```\n\n*Note:* `SYMBOL_TRADE_CONTRACT_SIZE` is not shown in the provided excerpts, but the same pattern (`SymbolInfoDouble`) applies; if the constant is unavailable in your build you can replace it with the known contract size (100 000 for standard lots).\n\n---\n\n### Summary  \n\n1. **Retrieve the pip size** with `SymbolInfoDouble(_Symbol, SYMBOL_POINT)` – for EURUSD this returns `0.0001`.  \n2. **Convert price differences to pips** by dividing the absolute price difference by the point size.  \n3. (Optional) **Calculate monetary pip value** using lot size and contract size.\n\nAll of the above uses only functions and constants that are documented in the excerpts you provided (e.g., `SymbolInfoDouble`, `iClose`, `PrintFormat`).\n\n**Sources:** BarsCalculated, IndicatorCreate, PrintFormat, iBars, Indexing Direction in Arrays, Buffers and Timeseries, Organizing Data Access",
+      "tags": []
+    },
+    {
+      "id": "b0c7dfd6b1a65063",
+      "timestamp": "2026-03-20T10:42:14.896262+00:00",
+      "entry_type": "QUERY",
+      "title": "Q: How do I send a market order in MQL5?",
+      "body": "**Question:** How do I send a market order in MQL5?\n\n**Answer:**\nError contacting Groq: Error code: 413 - {'error': {'message': 'Request Entity Too Large', 'type': 'invalid_request_error', 'code': 'request_too_large'}}\n\n**Sources:** HistoryOrderGetInteger, OrderGetInteger, OrderCalcMargin, OrderGetString, HistoryOrderSelect, HistoryOrderGetDouble",
       "tags": []
     }
   ]
