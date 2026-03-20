@@ -69,29 +69,24 @@ def search(kb: dict, question: str, top_k=MAX_CONTEXT) -> list[dict]:
     scored = [(s, c) for s, c in scored if s > 0]
     scored.sort(key=lambda x: -x[0])
 
-    # Get top candidates
-    candidates = [c for _, c in scored[:50]]  # Top 50 candidates
+    # Get top candidates - use more for better recall
+    candidates = [c for _, c in scored[:30]]  # Top 30 candidates
 
     if not candidates:
         return []
 
     # Second pass: Use Groq to pick the best chunks semantically
-    # This ensures we get the most relevant chunks even if keywords don't match perfectly
-    chunk_list = "\n\n".join([
-        f"[{i}] Section: {c.get('section_title','')} | Page: {c.get('page_title','')}\n{c['text'][:500]}"
+    # Much more efficient: just send titles and keywords, not full text
+    chunk_list = "\n".join([
+        f"{i}. {c.get('section_title','')}: {c.get('page_title','')} | keywords: {', '.join(c.get('keywords',[])[:10])}"
         for i, c in enumerate(candidates)
     ])
 
-    selection_prompt = f"""Given the user question: "{question}"
+    selection_prompt = f"""Question: "{question}"
 
-Select the {top_k} most relevant chunks from this knowledge base that can answer the question. Consider:
-- Function names, parameters, return values
-- Code examples
-- Related concepts
+From these MQL5 documentation chunks, which {top_k} are MOST relevant to answer this question?
+Return ONLY a JSON array of indices: [0, 3, 7]
 
-Return ONLY a JSON array of the chunk indices (e.g., [0, 3, 7]) - no other text:
-
-Available chunks:
 {chunk_list}
 """
 
@@ -100,7 +95,7 @@ Available chunks:
         resp = client.chat.completions.create(
             model="groq/compound",
             messages=[{"role": "user", "content": selection_prompt}],
-            max_tokens=200,
+            max_tokens=100,
             temperature=0.1
         )
         result_text = resp.choices[0].message.content or ""
@@ -108,9 +103,15 @@ Available chunks:
         # Parse the JSON response
         import json
         try:
-            selected_indices = json.loads(result_text.strip())
-            if isinstance(selected_indices, list):
-                return [candidates[i] for i in selected_indices if i < len(candidates)]
+            # Extract JSON array from response
+            import re
+            match = re.search(r'\[.*?\]', result_text)
+            if match:
+                selected_indices = json.loads(match.group())
+                if isinstance(selected_indices, list):
+                    selected = [candidates[i] for i in selected_indices if i < len(candidates)]
+                    if selected:
+                        return selected
         except:
             pass
     except Exception as e:
