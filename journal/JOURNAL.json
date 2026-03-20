@@ -632,5 +632,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "62a49670664517d8",
+    "timestamp": "2026-03-20T07:32:57.200917+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+    "body": "Today I reviewed my progress and realized that while I have a foothold in many areas, critical sections like “function_indices” remain untouched. I deepened my understanding of chart manipulation via ChartSetDouble() and saw how OnTick() can trigger order functions such as OrderSend(). I also noted the importance of object‑oriented classes like CTrade for clean EA code. Moving forward, I’ll prioritize the missing sections and streamline my crawling logic to accelerate knowledge acquisition.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

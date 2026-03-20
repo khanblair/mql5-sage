@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 0,
-  "journal_count": 50,
+  "journal_count": 51,
   "coverage_pct": 33,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,23 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-20 07:22 UTC",
+  "last_updated": "2026-03-20 07:32 UTC",
   "journal": [
-    {
-      "id": "a46c3e63d1efa57a",
-      "timestamp": "2026-03-15T00:52:34.086170+00:00",
-      "entry_type": "CRAWL",
-      "title": "Crawled 40 pages across 4 sections",
-      "body": "I just wrapped up a crawl of 40 MQL5 pages, adding 279 new chunks to my knowledge base. I learned how to embed ONNX machine‑learning models directly in scripts using OnnxCreateFromBuffer, OnnxSetInputShape, and the related format‑conversion utilities, which opens the door to AI‑driven signal generation. The session also covered the migration path from MQL4—reviewing constants, the SubwinOff function, and the comprehensive list of MQL5 functions—so I can rewrite legacy experts more reliably. Working with optimization results introduced FrameFilter, FrameNext, ParameterGetRange, and FrameAdd, essential for pruning large parameter spaces during strategy testing. Finally, I explored database handling via DatabaseImport, DatabaseColumnType, DatabaseReadBind, and DatabaseColumnDouble, enabling persistent storage of tick data and trade logs. Next I’m eager to dive into advanced chart‑visualization tools, custom indicator development, and order‑execution APIs to round out my ability to build fully automated, data‑rich trading systems.",
-      "tags": [
-        "onnx-models",
-        "moving-from-mql4",
-        "working-with-optimization-results",
-        "working-with-databases",
-        "crawl",
-        "mql5"
-      ]
-    },
     {
       "id": "ea67ad553c9ebee7",
       "timestamp": "2026-03-15T01:01:07.506980+00:00",
@@ -284,6 +269,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
       "body": "Today, I reflected on my progress and realized that I've made significant strides in crawling MQL5 documentation pages, but there's still much to learn. I've been focusing on understanding the structure of the MQL5 language and have gained insights into how different sections, such as \"common\" and \"event_handlers\", fit together. I've also been exploring the use of custom indicators and trading functions, like `CustomIndicator` and `OrderSend`. As I continue to crawl and learn, I'm excited to see how my knowledge will grow and improve. I'm looking forward to tackling the remaining sections, including \"function_indices\", and expanding my understanding of MQL5.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "62a49670664517d8",
+      "timestamp": "2026-03-20T07:32:57.200917+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
+      "body": "Today I reviewed my progress and realized that while I have a foothold in many areas, critical sections like “function_indices” remain untouched. I deepened my understanding of chart manipulation via ChartSetDouble() and saw how OnTick() can trigger order functions such as OrderSend(). I also noted the importance of object‑oriented classes like CTrade for clean EA code. Moving forward, I’ll prioritize the missing sections and streamline my crawling logic to accelerate knowledge acquisition.",
       "tags": [
         "evolution",
         "self-assessment",
