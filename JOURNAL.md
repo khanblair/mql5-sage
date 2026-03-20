@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-20 08:44 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the full `OrderSend` workflow, moving from the `OnTick` event through indicator calculation to the construction of a `MqlTradeRequest`. Writing the MA‑crossover example forced me to think about every field—price, sl/tp, deviation, and especially the mandatory `result.retcode` check that many beginners overlook. I also codified a reusable pip‑size function, which will be a building block for risk‑management utilities. The exercise highlighted how tightly event handling, data acquisition, and trade execution are intertwined in a well‑structured EA.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
