@@ -33,9 +33,27 @@ def score_chunk(chunk: dict, query_words: list, query_lower: str) -> float:
 
     # Boost trading-related sections for trading questions
     trading_sections = ["trading", "series", "account", "indicators", "common", "marketinformation"]
-    if any(ts in section for ts in trading_sections):
-        if any(w in query_lower for w in ["trade", "order", "position", "pip", "lot", "sl", "tp", "price", "symbol", "market", "buy", "sell"]):
-            score += 3.0
+    is_trading_section = any(ts in section for ts in trading_sections)
+
+    # Strong boost for trading sections (even without trading keywords in query)
+    if is_trading_section:
+        score += 5.0
+
+    if is_trading_section:
+        trading_keywords = ["trade", "order", "position", "pip", "pips", "lot", "lotsize", "sl", "tp", "price", "symbol", "market",
+                           "buy", "sell", "stop", "profit", "loss", "equity", "margin", "balance", "broker",
+                           "tick", "volume", "spread", "bid", "ask", "currency", "forex", "ea", "expert", "advisor",
+                           "mql5", "mt5", "metatrader", "indicator", "expertadvisor", "script", "library"]
+        if any(w in query_lower for w in trading_keywords):
+            score += 8.0
+
+    # Additional domain-specific boost: trading function names in text
+    trading_funcs = ["ordersend", "ordermodify", "orderclose", "orderdelete", "positionget", "positionopen",
+                     "symbolinfo", "symbolinfodouble", "symbolinfoint", "symbolinfostring",
+                     "copyrates", "copyclose", "copyhigh", "copylow", "copytick", "copyticks",
+                     "volume", "normalizedlot", "calculate", "checkmoney"]
+    if is_trading_section and any(tf in text_lower for tf in trading_funcs):
+        score += 5.0
 
     for word in query_words:
         if len(word) < 3: continue
@@ -82,12 +100,28 @@ def search(kb: dict, question: str, top_k=MAX_CONTEXT) -> list[dict]:
         for i, c in enumerate(candidates)
     ])
 
+    # Determine likely domain from question keywords
+    question_lower = question.lower()
+    is_trading_query = any(w in question_lower for w in [
+        "trade", "order", "position", "pip", "lot", "sl", "tp", "price", "symbol", "market",
+        "buy", "sell", "stop", "profit", "loss", "equity", "margin", "balance", "broker",
+        "tick", "volume", "spread", "bid", "ask", "currency", "forex", "ea", "expert", "advisor",
+        "mql5", "mt5", "metatrader", "indicator", "expertadvisor", "script", "library"
+    ])
+
+    domain_hint = ""
+    if is_trading_query:
+        domain_hint = "IMPORTANT: This appears to be a TRADING question. Prioritize chunks from trading-related sections (trading, series, account, common, indicators, marketinformation)."
+
     selection_prompt = f"""Given the user question: "{question}"
+{domain_hint}
 
 Select the {top_k} most relevant chunks from this knowledge base that can answer the question. Consider:
+- Section relevance: chunks from trading-related sections are preferred for trading questions
 - Function names, parameters, return values
 - Code examples
 - Related concepts
+- Prioritize chunks with relevant code examples for "how to" questions
 
 Return ONLY a JSON array of the chunk indices (e.g., [0, 3, 7]) - no other text:
 
@@ -115,6 +149,13 @@ Available chunks:
             pass
     except Exception as e:
         print(f"  ⚠ Semantic selection failed: {e}, using keyword results")
+
+    # If trading query, filter to trading sections first
+    if is_trading_query:
+        trading_sections = ["trading", "series", "account", "indicators", "common", "marketinformation"]
+        trading_results = [(s, c) for s, c in scored if c.get("section", "").lower() in trading_sections]
+        if trading_results:
+            return [c for _, c in trading_results[:top_k]]
 
     # Fallback to keyword-based results
     return [c for _, c in scored[:top_k]]
