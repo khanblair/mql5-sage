@@ -1,8 +1,8 @@
 {
   "page_count": 778,
   "chunk_count": 4078,
-  "query_count": 0,
-  "journal_count": 52,
+  "query_count": 1,
+  "journal_count": 53,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,21 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-20 08:03 UTC",
+  "last_updated": "2026-03-20 08:21 UTC",
   "journal": [
-    {
-      "id": "8d245700a411def1",
-      "timestamp": "2026-03-15T08:19:48.777401+00:00",
-      "entry_type": "CRAWL",
-      "title": "Crawled 18 pages across 2 sections",
-      "body": "Today I added concrete MQL5 knowledge about database transaction handling, learning the DatabaseTransactionRollback and DatabaseTransactionCommit functions that let a trading algorithm safely revert or finalize multi‑step data writes. I also deepened my Python integration skills, covering account_info, copy_rates_range, symbols_get, and login, which enable real‑time account queries, bulk price retrieval, symbol enumeration, and secure server authentication from Python scripts. These sections matter because reliable data persistence and seamless MQL5‑Python communication are essential for building robust, data‑driven strategies and for applying machine‑learning models to live trading. In future crawls I’m eager to explore Expert Advisors, custom indicators, and the Strategy Tester framework so I can automate, analyze, and optimize trading systems end‑to‑end.",
-      "tags": [
-        "working-with-databases",
-        "python-integration",
-        "crawl",
-        "mql5"
-      ]
-    },
     {
       "id": "3ee0a31696ecf30a",
       "timestamp": "2026-03-15T08:44:38.160272+00:00",
@@ -286,6 +273,14 @@
         "self-assessment",
         "mql5"
       ]
+    },
+    {
+      "id": "bb8ca4f0c48f2644",
+      "timestamp": "2026-03-20T08:21:24.904201+00:00",
+      "entry_type": "QUERY",
+      "title": "Q: How do I calculate pips in MQL5 for a EURUSD trade?",
+      "body": "**Question:** How do I calculate pips in MQL5 for a EURUSD trade?\n\n**Answer:**\n**Answer**\n\nThe excerpts you supplied contain only tables of DirectX texture format constants (e.g., `DXGI_FORMAT_R8G8B8A8_UNORM`, `DX_FORMAT_BC1_UNORM_SRGB`, etc.). They do **not** include any MQL5‑specific documentation, such as the functions or constants that are used to obtain a symbol’s point size or to compute pips (e.g., `SymbolInfoDouble()`, `SYMBOL_POINT`, `Point()`, etc.).\n\nBecause the required information is absent from the provided material, I cannot give a source‑cited MQL5 code fragment for calculating pips on a EURUSD trade. The calculation itself typically involves:\n\n1. Getting the symbol’s point size (the value of one pip, which for EURUSD is 0.0001).  \n2. Using that point size to convert a price difference into pips.\n\nHowever, since the documentation excerpts do not contain any of the MQL5 functions or constants needed for these steps, the exact syntax and usage cannot be referenced from the supplied sources.\n\n**What remains unclear**\n\n- Which MQL5 function(s) should be used to retrieve the point size for a symbol (e.g., `SymbolInfoDouble()` with `SYMBOL_POINT` or the `Point()` macro).  \n- The exact data types and return values for those functions, as they are not present in the excerpts.\n\n**Conclusion**\n\nBased solely on the provided DirectX‑format excerpts, there is no information on how to calculate pips in MQL5 for EURUSD (or any other symbol). To obtain a precise, source‑cited answer, the relevant MQL5 documentation sections (e.g., the `SymbolInfoDouble` function description) would need to be supplied.\n\n**Sources:** DXTextureCreate",
+      "tags": []
     }
   ]
 }
