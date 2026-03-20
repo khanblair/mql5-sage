@@ -31,19 +31,27 @@ def score_chunk(chunk: dict, query_words: list, query_lower: str) -> float:
     if query_lower in text_lower:
         score += 5.0
 
-    # Boost trading-related sections for trading questions
-    trading_sections = ["trading", "series", "account", "indicators", "common", "marketinformation"]
-    is_trading_section = any(ts in section for ts in trading_sections)
+    # Trading operations sections (core trading functions)
+    trading_ops_sections = ["trading", "series", "account", "common", "marketinformation"]
+    # Technical sections (indicators, objects, etc.) - lower priority for trading queries
+    technical_sections = ["indicators", "objects", "constants", "convert"]
 
-    # Strong boost for trading sections (even without trading keywords in query)
-    if is_trading_section:
-        score += 5.0
+    is_trading_ops = any(ts in section for ts in trading_ops_sections)
+    is_technical = any(ts in section for ts in technical_sections)
 
-    if is_trading_section:
+    # Strong boost for trading operations sections
+    if is_trading_ops:
+        score += 8.0
+
+    # Slight boost for technical sections (but less than trading ops)
+    if is_technical:
+        score += 2.0
+
+    if is_trading_ops or (is_technical and any(w in query_lower for w in ["indicator", "handle", "buffer", "oncalculate"])):
         trading_keywords = ["trade", "order", "position", "pip", "pips", "lot", "lotsize", "sl", "tp", "price", "symbol", "market",
                            "buy", "sell", "stop", "profit", "loss", "equity", "margin", "balance", "broker",
                            "tick", "volume", "spread", "bid", "ask", "currency", "forex", "ea", "expert", "advisor",
-                           "mql5", "mt5", "metatrader", "indicator", "expertadvisor", "script", "library"]
+                           "mql5", "mt5", "metatrader", "expertadvisor", "script", "library"]
         if any(w in query_lower for w in trading_keywords):
             score += 8.0
 
@@ -111,7 +119,7 @@ def search(kb: dict, question: str, top_k=MAX_CONTEXT) -> list[dict]:
 
     domain_hint = ""
     if is_trading_query:
-        domain_hint = "IMPORTANT: This appears to be a TRADING question. Prioritize chunks from trading-related sections (trading, series, account, common, indicators, marketinformation)."
+        domain_hint = "IMPORTANT: This appears to be a TRADING question. Prioritize chunks from trading operations sections (trading, series, account, common, marketinformation). EXCLUDE generic indicator pages."
 
     selection_prompt = f"""Given the user question: "{question}"
 {domain_hint}
@@ -150,10 +158,10 @@ Available chunks:
     except Exception as e:
         print(f"  ⚠ Semantic selection failed: {e}, using keyword results")
 
-    # If trading query, filter to trading sections first
+    # If trading query, filter to trading operations sections first (exclude indicators which is too broad)
     if is_trading_query:
-        trading_sections = ["trading", "series", "account", "indicators", "common", "marketinformation"]
-        trading_results = [(s, c) for s, c in scored if c.get("section", "").lower() in trading_sections]
+        trading_ops_sections = ["trading", "series", "account", "common", "marketinformation"]
+        trading_results = [(s, c) for s, c in scored if c.get("section", "").lower() in trading_ops_sections]
         if trading_results:
             return [c for _, c in trading_results[:top_k]]
 
