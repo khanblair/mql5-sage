@@ -1,8 +1,8 @@
 {
   "page_count": 778,
   "chunk_count": 4078,
-  "query_count": 3,
-  "journal_count": 56,
+  "query_count": 4,
+  "journal_count": 57,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-20 09:36 UTC",
+  "last_updated": "2026-03-20 10:03 UTC",
   "journal": [
-    {
-      "id": "616e17255f8d8f9f",
-      "timestamp": "2026-03-16T08:46:42.986417+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today I reviewed my overall coverage and realized that while I have a foothold in many sections, the depth is still shallow in crucial areas like account management and custom indicators. I revisited the event‑handler lifecycle (`OnInit`, `OnTick`, `OnDeinit`) and noted how tightly they intertwine with order functions such as `OrderSend`. I also reflected on the importance of `input` parameters for EA configurability and the OOP design of classes like `CTrade`. My next step is to prioritize the missing function_indices section and to speed up crawling with asynchronous requests.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "dceb74cfa3b45bab",
       "timestamp": "2026-03-16T16:47:58.830267+00:00",
@@ -272,6 +260,14 @@
       "entry_type": "QUERY",
       "title": "Q: How do I calculate pips in MQL5 for EURUSD?",
       "body": "**Question:** How do I calculate pips in MQL5 for EURUSD?\n\n**Answer:**\n**Answer**\n\nA pip for EURUSD (and for most major FX pairs) is 0.0001 of the quote currency.  \nIn MQL5 you obtain the size of one “point” (the smallest price increment) with the built‑in function **`Point()`**. For EURUSD the value returned by `Point()` is exactly the pip size (0.0001), because the symbol’s `Digits` property is 5 (the fifth digit is the fractional pip).\n\n```mql5\n//--- calculate the size of one pip for the current symbol (EURUSD)\ndouble pipSize = Point();          // 0.0001 for EURUSD\n\n//--- example: calculate the pip distance between two prices\ndouble priceOpen = 1.1200;\ndouble priceClose = 1.1255;\ndouble pips = (priceClose - priceOpen) / pipSize;   // = 55 pips\nPrint(\"Pip size = \", pipSize, \", distance = \", pips, \" pips\");\n```\n\n**Explanation**\n\n1. `Point()` returns the minimal price change for the symbol (the “point” size).  \n2. For EURUSD the point size equals one pip (0.0001).  \n3. To convert a price difference to pips, divide the difference by `Point()`.\n\n**Source reference**\n\nThe excerpts you provided contain only DirectX format enumerations (e.g., `DXGI_FORMAT_R8G8B8A8_UNORM`, `ENUM_DX_FORMAT`, etc.) and do **not** include any MQL5‑specific documentation about the `Point()` function or pip calculation. Therefore, the answer relies on standard MQL5 knowledge that is not present in the supplied excerpts.\n\n**Sources:** DXTextureCreate",
+      "tags": []
+    },
+    {
+      "id": "bf3e79b6cb193201",
+      "timestamp": "2026-03-20T10:03:58.270130+00:00",
+      "entry_type": "QUERY",
+      "title": "Q: How do I calculate pips in MQL5 for EURUSD?",
+      "body": "**Question:** How do I calculate pips in MQL5 for EURUSD?\n\n**Answer:**\n**Answer**\n\nThe excerpts you supplied are all about the **iForce** custom indicator (creating the indicator handle, copying its buffers, handling `OnCalculate`, etc.). None of the provided material contains any information on how to compute pips, nor does it mention the MQL5 constants or functions that are normally used for that purpose (e.g., `Point`, `Digits`, `SymbolInfoDouble()`, etc.).\n\n**What the excerpts do cover**\n\n| Excerpt | Content |\n|---------|---------|\n| Source 1 & 2 | Logic for determining how many values have been calculated by the iForce indicator (`BarsCalculated()`) and how many of those values should be copied. |\n| Source 3 | Parameters used when creating the iForce indicator (`ma_period`, `ma_method`, `applied_volume`) and the fact that `IndicatorCreate()` returns a handle (or `INVALID_HANDLE`). |\n| Source 4‑5 | Example of creating the iForce handle, checking for errors, and setting the indicator short‑name. |\n| Source 6 | The helper function `FillArrayFromBuffer()` that copies data from the indicator buffer via `CopyBuffer()`. |\n\n**What is missing for pip calculation**\n\nTo calculate pips for EURUSD you would normally need:\n\n* The **point size** of the symbol (`Point` or `SymbolInfoDouble(_Symbol, SYMBOL_POINT)`).\n* The number of **decimal digits** (`Digits`) to decide whether the broker quotes 4‑digit or 5‑digit prices.\n* A formula such as  \n\n  `pips = (price_current – price_open) / pip_size;`  \n\n  where `pip_size` is `0.0001` for EURUSD on a 4‑digit broker (or `Point*10` on a 5‑digit broker).\n\nNone of these constants, functions, or the formula appear in any of the six excerpts you provided. Therefore, based solely on the supplied documentation, I cannot give a concrete MQL5 code example for pip calculation.\n\n**Conclusion**\n\n- The supplied excerpts do **not** contain the information needed to calculate pips for EURUSD.  \n- To implement pip calculation you will need to consult other parts of the MQL5 reference that describe `Point`, `Digits`, `SymbolInfoDouble()`, and related price‑handling functions.  \n\nIf you can provide the relevant sections of the MQL5 documentation that cover those symbols, I can give you a precise, citation‑backed code example.\n\n**Sources:** iForce",
       "tags": []
     }
   ]

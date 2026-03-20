@@ -4,6 +4,51 @@
 
 ---
 
+## 🔍 QUERY — 2026-03-20 10:03 UTC
+
+**Q: How do I calculate pips in MQL5 for EURUSD?**
+
+**Question:** How do I calculate pips in MQL5 for EURUSD?
+
+**Answer:**
+**Answer**
+
+The excerpts you supplied are all about the **iForce** custom indicator (creating the indicator handle, copying its buffers, handling `OnCalculate`, etc.). None of the provided material contains any information on how to compute pips, nor does it mention the MQL5 constants or functions that are normally used for that purpose (e.g., `Point`, `Digits`, `SymbolInfoDouble()`, etc.).
+
+**What the excerpts do cover**
+
+| Excerpt | Content |
+|---------|---------|
+| Source 1 & 2 | Logic for determining how many values have been calculated by the iForce indicator (`BarsCalculated()`) and how many of those values should be copied. |
+| Source 3 | Parameters used when creating the iForce indicator (`ma_period`, `ma_method`, `applied_volume`) and the fact that `IndicatorCreate()` returns a handle (or `INVALID_HANDLE`). |
+| Source 4‑5 | Example of creating the iForce handle, checking for errors, and setting the indicator short‑name. |
+| Source 6 | The helper function `FillArrayFromBuffer()` that copies data from the indicator buffer via `CopyBuffer()`. |
+
+**What is missing for pip calculation**
+
+To calculate pips for EURUSD you would normally need:
+
+* The **point size** of the symbol (`Point` or `SymbolInfoDouble(_Symbol, SYMBOL_POINT)`).
+* The number of **decimal digits** (`Digits`) to decide whether the broker quotes 4‑digit or 5‑digit prices.
+* A formula such as  
+
+  `pips = (price_current – price_open) / pip_size;`  
+
+  where `pip_size` is `0.0001` for EURUSD on a 4‑digit broker (or `Point*10` on a 5‑digit broker).
+
+None of these constants, functions, or the formula appear in any of the six excerpts you provided. Therefore, based solely on the supplied documentation, I cannot give a concrete MQL5 code example for pip calculation.
+
+**Conclusion**
+
+- The supplied excerpts do **not** contain the information needed to calculate pips for EURUSD.  
+- To implement pip calculation you will need to consult other parts of the MQL5 reference that describe `Point`, `Digits`, `SymbolInfoDouble()`, and related price‑handling functions.  
+
+If you can provide the relevant sections of the MQL5 documentation that cover those symbols, I can give you a precise, citation‑backed code example.
+
+**Sources:** iForce
+
+---
+
 ## 🔍 QUERY — 2026-03-20 09:36 UTC
 
 **Q: How do I calculate pips in MQL5 for EURUSD?**
