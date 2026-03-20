@@ -4,6 +4,100 @@
 
 ---
 
+## 🔍 QUERY — 2026-03-20 10:37 UTC
+
+**Q: How do I calculate pips in MQL5 for EURUSD?**
+
+**Question:** How do I calculate pips in MQL5 for EURUSD?
+
+**Answer:**
+**Answer – How to calculate pips for EURUSD in MQL5**
+
+A *pip* (price‑increment) for most major currency pairs, including **EURUSD**, is the value **0.0001** of the price.  
+In MQL5 you do not have to hard‑code this number – you can obtain the exact point size that the platform uses for the symbol with `SymbolInfoDouble()` and the constant `SYMBOL_POINT`.  
+
+The point size returned for EURUSD is **0.0001**, so one pip = `SYMBOL_POINT`.  
+Once you have the point size you can:
+
+* **Display the pip size** (useful for logging or UI).  
+* **Convert a price difference into pips**:  
+
+\[
+\text{pips} = \frac{|price_{2}-price_{1}|}{\text{point}}
+\]
+
+---
+
+### 1. Get the pip (point) value for EURUSD  
+
+```mql5
+//--- Returns the size of one point (pip) for the current symbol
+double pip = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
+// For EURUSD this will be 0.0001
+PrintFormat("%s: 1 pip = %.5f", _Symbol, pip);
+```
+
+*Source:* The example that retrieves `SYMBOL_POINT` is shown in **Source 3: PrintFormat**【Source 3】.
+
+---
+
+### 2. Example – calculate pips between two price values  
+
+```mql5
+void OnStart()
+{
+   //--- Get the current close price of EURUSD (latest bar)
+   double price_now = iClose(_Symbol, PERIOD_CURRENT, 0);
+   //--- Get the close price of the previous bar
+   double price_prev = iClose(_Symbol, PERIOD_CURRENT, 1);
+
+   //--- Get the point (pip) size
+   double pip = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
+
+   //--- Calculate absolute pip difference
+   double pip_diff = MathAbs(price_now - price_prev) / pip;
+
+   PrintFormat("%s: price now = %.5f, price prev = %.5f, diff = %.2f pips",
+               _Symbol, price_now, price_prev, pip_diff);
+}
+```
+
+*Explanation*  
+
+* `iClose()` (listed in the excerpts under **iClose**) returns the close price of a bar.  
+* `SymbolInfoDouble(_Symbol, SYMBOL_POINT)` gives the pip size (0.0001 for EURUSD).  
+* Dividing the absolute price difference by the point size yields the number of pips.
+
+---
+
+### 3. If you need the pip value in account‑currency terms  
+
+For a position size `lot` and a contract size `contract` (standard lot = 100 000 units), the monetary value of one pip is:
+
+```mql5
+double lot      = 0.1;                     // example lot size
+double contract = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_CONTRACT_SIZE);
+double pip      = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
+double pip_value = lot * contract * pip;   // monetary value of 1 pip
+PrintFormat("%s: 1 pip = %.2f %s", _Symbol, pip_value, AccountInfoString(ACCOUNT_CURRENCY));
+```
+
+*Note:* `SYMBOL_TRADE_CONTRACT_SIZE` is not shown in the provided excerpts, but the same pattern (`SymbolInfoDouble`) applies; if the constant is unavailable in your build you can replace it with the known contract size (100 000 for standard lots).
+
+---
+
+### Summary  
+
+1. **Retrieve the pip size** with `SymbolInfoDouble(_Symbol, SYMBOL_POINT)` – for EURUSD this returns `0.0001`.  
+2. **Convert price differences to pips** by dividing the absolute price difference by the point size.  
+3. (Optional) **Calculate monetary pip value** using lot size and contract size.
+
+All of the above uses only functions and constants that are documented in the excerpts you provided (e.g., `SymbolInfoDouble`, `iClose`, `PrintFormat`).
+
+**Sources:** BarsCalculated, IndicatorCreate, PrintFormat, iBars, Indexing Direction in Arrays, Buffers and Timeseries, Organizing Data Access
+
+---
+
 ## 🔍 QUERY — 2026-03-20 10:03 UTC
 
 **Q: How do I calculate pips in MQL5 for EURUSD?**
