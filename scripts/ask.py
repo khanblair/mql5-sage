@@ -60,7 +60,7 @@ def score_chunk(chunk: dict, query_words: list, query_lower: str) -> float:
                      "symbolinfo", "symbolinfodouble", "symbolinfoint", "symbolinfostring",
                      "copyrates", "copyclose", "copyhigh", "copylow", "copytick", "copyticks",
                      "volume", "normalizedlot", "calculate", "checkmoney"]
-    if is_trading_section and any(tf in text_lower for tf in trading_funcs):
+    if is_trading_ops and any(tf in text_lower for tf in trading_funcs):
         score += 5.0
 
     for word in query_words:
