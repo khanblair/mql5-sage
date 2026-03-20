@@ -1,6 +1,68 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-03-20 08:44 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the full `OrderSend` workflow, moving from the `OnTick` event through indicator calculation to the construction of a `MqlTradeRequest`. Writing the MA‑crossover example forced me to think about every field—price, sl/tp, deviation, and especially the mandatory `result.retcode` check that many beginners overlook. I also codified a reusable pip‑size function, which will be a building block for risk‑management utilities. The exercise highlighted how tightly event handling, data acquisition, and trade execution are intertwined in a well‑structured EA.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
+## 🔍 QUERY — 2026-03-20 08:34 UTC
+
+**Q: How do I calculate pips in MQL5 for EURUSD?**
+
+**Question:** How do I calculate pips in MQL5 for EURUSD?
+
+**Answer:**
+**Answer**
+
+The excerpts you provided are tables of DirectX texture format constants (e.g., `DXGI_FORMAT_R8G8B8A8_UNORM`, `DX_FORMAT_BC1_UNORM_SRGB`, etc.) that are used with the `DXTextureCreate` function in MQL5. These excerpts do **not** contain any information about price‑related functions, symbols, or how to calculate pips for a currency pair such as EURUSD.
+
+Because the documentation excerpts do not cover the `SymbolInfoDouble` function, the `SYMBOL_POINT` property, or any other price‑handling utilities, I cannot quote a source that explains pip calculation directly from the material you gave.
+
+**What is missing from the excerpts**
+
+- No mention of `SymbolInfoDouble`, `SYMBOL_POINT`, or any other MQL5 function that returns the minimum price change (the “point”) for a symbol.  
+- No description of how a “pip” is defined for EURUSD (normally 0.0001).  
+- No code examples related to price arithmetic or pip conversion.
+
+**What is typically done in MQL5 (outside the supplied excerpts)**  
+
+In standard MQL5 programming (as described in the official MQL5 reference, not in the excerpts you supplied), the usual way to calculate pips for EURUSD is:
+
+1. Retrieve the symbol’s point size with `SymbolInfoDouble(_Symbol, SYMBOL_POINT)`.  
+2. For most major pairs, including EURUSD, one pip equals 10 × `SYMBOL_POINT` (because `SYMBOL_POINT` is 0.00001 for a 5‑digit quote).  
+3. Compute the pip difference between two prices:
+
+```mql5
+double point   = SymbolInfoDouble(_Symbol, SYMBOL_POINT);   // e.g., 0.00001
+double pipSize = 10 * point;                               // 0.0001 for EURUSD
+
+double priceNow     = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+double pricePrev    = SymbolInfoDouble(_Symbol, SYMBOL_ASK); // or any reference price
+
+int    pipsMoved = (int)MathRound((priceNow - pricePrev) / pipSize);
+Print("Pips moved: ", pipsMoved);
+```
+
+**Why this cannot be cited from the provided excerpts**
+
+All of the lines above refer to functions and constants (`SymbolInfoDouble`, `SYMBOL_POINT`, `SYMBOL_BID`, etc.) that are **not present** in any of the six excerpts you shared, which only list DirectX texture format identifiers and their numeric IDs. Consequently, I cannot provide a source citation for pip‑calculation code based on the supplied material.
+
+**Conclusion**
+
+- The supplied documentation excerpts do not contain any information on calculating pips for EURUSD.  
+- To calculate pips in MQL5 you would normally use `SymbolInfoDouble` with `SYMBOL_POINT` (or `SYMBOL_TRADE_TICK_SIZE`) and apply the standard pip definition (0.0001 for EURUSD).  
+- Since this information is not in the excerpts, the exact method cannot be referenced from the given sources.
+
+**Sources:** DXTextureCreate
 
 ---
 
