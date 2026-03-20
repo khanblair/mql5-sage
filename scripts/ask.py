@@ -24,27 +24,99 @@ def sha(text): return hashlib.sha256(text.encode()).hexdigest()[:16]
 
 def score_chunk(chunk: dict, query_words: list, query_lower: str) -> float:
     text_lower = chunk["text"].lower()
+    section = chunk.get("section", "").lower()
     score = 0.0
+
+    # Exact phrase match
     if query_lower in text_lower:
-        score += 3.0
+        score += 5.0
+
+    # Boost trading-related sections for trading questions
+    trading_sections = ["trading", "series", "account", "indicators", "common", "marketinformation"]
+    if any(ts in section for ts in trading_sections):
+        if any(w in query_lower for w in ["trade", "order", "position", "pip", "lot", "sl", "tp", "price", "symbol", "market", "buy", "sell"]):
+            score += 3.0
+
     for word in query_words:
         if len(word) < 3: continue
-        if word in text_lower: score += 0.6
-        if word in chunk.get("page_title", "").lower(): score += 1.0
+        # Word in text
+        if word in text_lower: score += 0.8
+        # Word in title (important!)
+        if word in chunk.get("page_title", "").lower(): score += 2.0
+        # Word in section title
+        if word in chunk.get("section_title", "").lower(): score += 1.5
+        # Keyword matching
         for kw in chunk.get("keywords", []):
-            if word == kw: score += 0.7
-            elif word in kw or kw in word: score += 0.3
+            if word == kw: score += 1.0
+            elif word in kw or kw in word: score += 0.5
+
     # Boost code examples for "how to" questions
-    if "[code_example]" in text_lower and any(w in query_lower for w in ["how", "example", "use", "syntax", "code"]):
-        score += 1.5
+    if "[code_example]" in text_lower and any(w in query_lower for w in ["how", "example", "use", "syntax", "code", "write", "create", "implement"]):
+        score += 2.0
+
+    # Boost chunks with function names (highly relevant)
+    if any(w in text_lower for w in ["ordersend", "symbolinfodouble", "positionget", "copyrates", "copyclose", "ichandle", "indicator"]):
+        score += 2.0
+
     return score
 
 def search(kb: dict, question: str, top_k=MAX_CONTEXT) -> list[dict]:
     query_lower = question.lower()
     query_words = re.findall(r'\b\w{3,}\b', query_lower)
+
+    # First pass: keyword-based scoring
     scored = [(score_chunk(c, query_words, query_lower), c) for c in kb.get("chunks", [])]
     scored = [(s, c) for s, c in scored if s > 0]
     scored.sort(key=lambda x: -x[0])
+
+    # Get top candidates
+    candidates = [c for _, c in scored[:50]]  # Top 50 candidates
+
+    if not candidates:
+        return []
+
+    # Second pass: Use Groq to pick the best chunks semantically
+    # This ensures we get the most relevant chunks even if keywords don't match perfectly
+    chunk_list = "\n\n".join([
+        f"[{i}] Section: {c.get('section_title','')} | Page: {c.get('page_title','')}\n{c['text'][:500]}"
+        for i, c in enumerate(candidates)
+    ])
+
+    selection_prompt = f"""Given the user question: "{question}"
+
+Select the {top_k} most relevant chunks from this knowledge base that can answer the question. Consider:
+- Function names, parameters, return values
+- Code examples
+- Related concepts
+
+Return ONLY a JSON array of the chunk indices (e.g., [0, 3, 7]) - no other text:
+
+Available chunks:
+{chunk_list}
+"""
+
+    try:
+        client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
+        resp = client.chat.completions.create(
+            model="groq/compound",
+            messages=[{"role": "user", "content": selection_prompt}],
+            max_tokens=200,
+            temperature=0.1
+        )
+        result_text = resp.choices[0].message.content or ""
+
+        # Parse the JSON response
+        import json
+        try:
+            selected_indices = json.loads(result_text.strip())
+            if isinstance(selected_indices, list):
+                return [candidates[i] for i in selected_indices if i < len(candidates)]
+        except:
+            pass
+    except Exception as e:
+        print(f"  ⚠ Semantic selection failed: {e}, using keyword results")
+
+    # Fallback to keyword-based results
     return [c for _, c in scored[:top_k]]
 
 def write_journal_md(journal: list):
