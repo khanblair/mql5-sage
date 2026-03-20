@@ -197,16 +197,12 @@ def main():
         section_progress.append(progress)
 
     # True coverage: if we have all pages, show 100%, otherwise calculate
+    sections_done = sorted([s for s, c in pages_by_section.items() if c > 0])
     total_pages = sum(pages_by_section.values())
     if total_pages > 700 and len(sections_done) >= 36:
         coverage_pct = 100  # Documentation complete!
     else:
-        total_pages = sum(pages_by_section.values())
-    if total_pages > 700:
-        coverage_pct = 100  # Documentation complete!
-    else:
         coverage_pct = round(sum(section_progress) / len(section_progress)) if section_progress else 0
-    sections_done = sorted([s for s, c in pages_by_section.items() if c > 0])
 
     # Recent queries
     recent_queries = [
