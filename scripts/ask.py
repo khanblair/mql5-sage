@@ -79,7 +79,7 @@ def score_chunk(chunk, query_words, query_lower):
             score += 3.0
 
     # Boost chunks with function names
-    function_indicators = ["ordersend", "symbolinfodouble", "positionget", "copyrates", "copyclose", "ichandle", "indicator", "point()", "symbolinfo"]:
+    function_indicators = ["ordersend", "symbolinfodouble", "positionget", "copyrates", "copyclose", "ichandle", "indicator", "point()", "symbolinfo"]
         for fi in function_indicators:
             if fi in text_lower:
                 score += 2.0
