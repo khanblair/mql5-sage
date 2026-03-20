@@ -1,8 +1,8 @@
 {
   "page_count": 778,
   "chunk_count": 4078,
-  "query_count": 2,
-  "journal_count": 55,
+  "query_count": 3,
+  "journal_count": 56,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-20 08:44 UTC",
+  "last_updated": "2026-03-20 09:36 UTC",
   "journal": [
-    {
-      "id": "d00911ee385ebc43",
-      "timestamp": "2026-03-16T01:00:24.376255+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today I deepened my understanding of how `OnTick()` drives order logic and saw the sparse coverage of the **account** and **array** sections, which are vital for balance checks and data handling. I noted the frequent use of `OrderSend()` inside event handlers and the importance of embedding `AccountFreeMarginCheck()` for risk control. Moving forward I’m eager to crawl the **function_indices** section to boost my performance‑optimization knowledge.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "616e17255f8d8f9f",
       "timestamp": "2026-03-16T08:46:42.986417+00:00",
@@ -277,6 +265,14 @@
         "self-assessment",
         "mql5"
       ]
+    },
+    {
+      "id": "ff08ad96a12e7a5b",
+      "timestamp": "2026-03-20T09:36:49.450407+00:00",
+      "entry_type": "QUERY",
+      "title": "Q: How do I calculate pips in MQL5 for EURUSD?",
+      "body": "**Question:** How do I calculate pips in MQL5 for EURUSD?\n\n**Answer:**\n**Answer**\n\nA pip for EURUSD (and for most major FX pairs) is 0.0001 of the quote currency.  \nIn MQL5 you obtain the size of one “point” (the smallest price increment) with the built‑in function **`Point()`**. For EURUSD the value returned by `Point()` is exactly the pip size (0.0001), because the symbol’s `Digits` property is 5 (the fifth digit is the fractional pip).\n\n```mql5\n//--- calculate the size of one pip for the current symbol (EURUSD)\ndouble pipSize = Point();          // 0.0001 for EURUSD\n\n//--- example: calculate the pip distance between two prices\ndouble priceOpen = 1.1200;\ndouble priceClose = 1.1255;\ndouble pips = (priceClose - priceOpen) / pipSize;   // = 55 pips\nPrint(\"Pip size = \", pipSize, \", distance = \", pips, \" pips\");\n```\n\n**Explanation**\n\n1. `Point()` returns the minimal price change for the symbol (the “point” size).  \n2. For EURUSD the point size equals one pip (0.0001).  \n3. To convert a price difference to pips, divide the difference by `Point()`.\n\n**Source reference**\n\nThe excerpts you provided contain only DirectX format enumerations (e.g., `DXGI_FORMAT_R8G8B8A8_UNORM`, `ENUM_DX_FORMAT`, etc.) and do **not** include any MQL5‑specific documentation about the `Point()` function or pip calculation. Therefore, the answer relies on standard MQL5 knowledge that is not present in the supplied excerpts.\n\n**Sources:** DXTextureCreate",
+      "tags": []
     }
   ]
 }

@@ -1,6 +1,43 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every session.
+
+---
+
+## 🔍 QUERY — 2026-03-20 09:36 UTC
+
+**Q: How do I calculate pips in MQL5 for EURUSD?**
+
+**Question:** How do I calculate pips in MQL5 for EURUSD?
+
+**Answer:**
+**Answer**
+
+A pip for EURUSD (and for most major FX pairs) is 0.0001 of the quote currency.  
+In MQL5 you obtain the size of one “point” (the smallest price increment) with the built‑in function **`Point()`**. For EURUSD the value returned by `Point()` is exactly the pip size (0.0001), because the symbol’s `Digits` property is 5 (the fifth digit is the fractional pip).
+
+```mql5
+//--- calculate the size of one pip for the current symbol (EURUSD)
+double pipSize = Point();          // 0.0001 for EURUSD
+
+//--- example: calculate the pip distance between two prices
+double priceOpen = 1.1200;
+double priceClose = 1.1255;
+double pips = (priceClose - priceOpen) / pipSize;   // = 55 pips
+Print("Pip size = ", pipSize, ", distance = ", pips, " pips");
+```
+
+**Explanation**
+
+1. `Point()` returns the minimal price change for the symbol (the “point” size).  
+2. For EURUSD the point size equals one pip (0.0001).  
+3. To convert a price difference to pips, divide the difference by `Point()`.
+
+**Source reference**
+
+The excerpts you provided contain only DirectX format enumerations (e.g., `DXGI_FORMAT_R8G8B8A8_UNORM`, `ENUM_DX_FORMAT`, etc.) and do **not** include any MQL5‑specific documentation about the `Point()` function or pip calculation. Therefore, the answer relies on standard MQL5 knowledge that is not present in the supplied excerpts.
+
+**Sources:** DXTextureCreate
 
 ---
 
