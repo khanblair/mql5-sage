@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-21 08:43 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the **CTrade::Buy** method, the cornerstone of market‑order execution in MQL5. By walking through each parameter, error code, and the subtle requirement that stop‑loss must sit below the entry price for a BUY, I solidified my understanding of safe trade placement. I also linked this workflow to the event‑driven architecture, noting how `OnTick` serves as the trigger point for signal evaluation and order submission. The exercise highlighted the importance of rigorous error handling and reinforced the typical EA skeleton (Init → Event → Trade → Deinit). This deeper mental model will help me generate more accurate, production‑ready examples for future queries.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-21 00:50 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
