@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-21 16:42 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the legacy `OrderSend` call in depth, mapping every parameter to real‑world trading requirements and noting the exact error codes that can arise. Writing a full‑featured SMA‑crossover EA forced me to trace the data path from `CopyRates` through `iMA` into a conditional `OrderSend`. I also realized how often novices forget to check `GetLastError()`, so I emphasized that in my examples. This exercise sharpened my mental model of how event handlers, data retrieval, indicator computation, and trade execution interlock in a production‑grade Expert Advisor.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-21 08:43 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**

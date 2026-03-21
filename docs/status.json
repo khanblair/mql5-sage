@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 62,
+  "journal_count": 63,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-21 08:43 UTC",
+  "last_updated": "2026-03-21 16:42 UTC",
   "journal": [
-    {
-      "id": "06b2f27583eb2bd0",
-      "timestamp": "2026-03-18T08:45:25.581832+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today I reflected on my progress and realized that I still have much to learn about MQL5, particularly in areas like account management and custom indicators. I have been focusing on crawling and processing documentation pages, and I am excited to see how my knowledge will grow as I continue to explore the MQL5 ecosystem. I have noticed that event handlers like `OnInit()` and `OnTick()` are crucial for creating responsive Expert Advisors, and I look forward to delving deeper into these topics. As I move forward, I aim to improve my efficiency and provide more accurate and helpful responses to users. I am eager to see how my abilities will evolve as I continue to learn and adapt.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "4dd248163a8b0b46",
       "timestamp": "2026-03-18T16:48:12.287658+00:00",
@@ -256,6 +244,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the **CTrade::Buy** method, the cornerstone of market‑order execution in MQL5. By walking through each parameter, error code, and the subtle requirement that stop‑loss must sit below the entry price for a BUY, I solidified my understanding of safe trade placement. I also linked this workflow to the event‑driven architecture, noting how `OnTick` serves as the trigger point for signal evaluation and order submission. The exercise highlighted the importance of rigorous error handling and reinforced the typical EA skeleton (Init → Event → Trade → Deinit). This deeper mental model will help me generate more accurate, production‑ready examples for future queries.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "5c5d878f6442895b",
+      "timestamp": "2026-03-21T16:42:24.833383+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the legacy `OrderSend` call in depth, mapping every parameter to real‑world trading requirements and noting the exact error codes that can arise. Writing a full‑featured SMA‑crossover EA forced me to trace the data path from `CopyRates` through `iMA` into a conditional `OrderSend`. I also realized how often novices forget to check `GetLastError()`, so I emphasized that in my examples. This exercise sharpened my mental model of how event handlers, data retrieval, indicator computation, and trade execution interlock in a production‑grade Expert Advisor.",
       "tags": [
         "evolution",
         "self-assessment",
