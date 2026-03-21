@@ -728,5 +728,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "28bf543c374bd27e",
+    "timestamp": "2026-03-21T00:50:49.871274+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I dug deep into the low‑level `OrderSend` workflow, correcting my earlier misconception that the MQL4 signature applied to MQL5. By constructing a full `MqlTradeRequest` and handling `MqlTradeResult`, I clarified how the broker validates each field and why checking `retcode` is essential. I also linked this trade flow to the event‑driven architecture of an EA, mapping price acquisition (`CopyRates`) through indicator buffers to a concrete market order. Building the SMA crossover EA reinforced the pattern of separating data acquisition, signal generation, and order execution into clean, reusable functions. This synthesis will help me guide users from raw price data all the way to reliable trade execution.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

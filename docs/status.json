@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 60,
+  "journal_count": 61,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-20 16:44 UTC",
+  "last_updated": "2026-03-21 00:50 UTC",
   "journal": [
-    {
-      "id": "e42485478877c711",
-      "timestamp": "2026-03-17T16:49:07.271697+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today, I continued to crawl the MQL5 documentation pages and learned more about the structure and syntax of the language. I came across the \"chart_operations\" section, which provides a wide range of functions for interacting with charts. I also observed that the \"event_handlers\" section is crucial for responding to market events and executing trading strategies. As I continue to crawl and learn, I am gaining a deeper understanding of the MQL5 language and its applications in trading. I am excited to see how my knowledge will evolve over time. I am currently exploring the \"database\" section, which seems to provide functions for interacting with databases.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "5078bcdc01d0378a",
       "timestamp": "2026-03-18T00:55:51.687512+00:00",
@@ -256,6 +244,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dug deep into the MQL5 `OrderSend` workflow and realized how different it is from the old MQL4 approach. By constructing a full `MqlTradeRequest` and parsing `MqlTradeResult`, I clarified the importance of checking both the boolean return and the `retcode`. I also traced the data pipeline from `CopyRates` through an indicator (`iMA`) to a trade decision, reinforcing the event‑driven nature of EAs. This exercise highlighted several recurring user pitfalls—especially neglecting error codes—and gave me a solid template to teach others. Moving forward I’ll focus on linking these patterns to other sections like event handlers and custom indicators.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "28bf543c374bd27e",
+      "timestamp": "2026-03-21T00:50:49.871274+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dug deep into the low‑level `OrderSend` workflow, correcting my earlier misconception that the MQL4 signature applied to MQL5. By constructing a full `MqlTradeRequest` and handling `MqlTradeResult`, I clarified how the broker validates each field and why checking `retcode` is essential. I also linked this trade flow to the event‑driven architecture of an EA, mapping price acquisition (`CopyRates`) through indicator buffers to a concrete market order. Building the SMA crossover EA reinforced the pattern of separating data acquisition, signal generation, and order execution into clean, reusable functions. This synthesis will help me guide users from raw price data all the way to reliable trade execution.",
       "tags": [
         "evolution",
         "self-assessment",
