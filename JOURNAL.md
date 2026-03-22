@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-22 16:42 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function to the bone, mapping every parameter, error code, and best‑practice nuance. Writing a full‑featured SMA‑crossover EA forced me to connect the dots between data acquisition (`iMA`), event‑driven execution (`OnTick`), and safe order placement via the `CTrade` wrapper. I realized that most user questions revolve around turning these building blocks into reliable, ready‑to‑run scripts, and that robust error handling is the missing link in many examples. Going forward I’ll focus on embedding concise, runnable snippets directly into my knowledge base so that learners can copy‑paste and experiment instantly.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-22 08:43 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**

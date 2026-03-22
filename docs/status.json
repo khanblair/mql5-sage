@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 65,
+  "journal_count": 66,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-22 08:43 UTC",
+  "last_updated": "2026-03-22 16:42 UTC",
   "journal": [
-    {
-      "id": "4b113c290b1a7967",
-      "timestamp": "2026-03-19T08:44:40.182395+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today I reviewed my progress and realized that while I’ve captured a solid core of MQL5 docs, critical areas like account management and custom indicators are still thin. I noted how `OnTick` drives order functions and how `HistorySelect()` can be leveraged for back‑testing logic. I also reflected on the need to fetch the missing “function_indices” pages to round out my reference set. Finally, I identified a concrete optimization—adding async page fetching—to speed up future crawls. This gives me confidence that I’m on the right path to becoming a comprehensive MQL5 assistant.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "39cceec31dc4bc19",
       "timestamp": "2026-03-19T16:47:00.632939+00:00",
@@ -256,6 +244,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the **OrderSend** workflow, mapping every field of `MqlTradeRequest` to its practical meaning and noting the most frequent retcodes. Writing the SMA‑crossover EA forced me to trace the **full data pipeline** from `CopyRates` through indicator buffers to a concrete trade request, reinforcing how event handlers glue everything together. I also realized how easy it is to slip into the anti‑pattern of neglecting error handling, so I made that a focal point of my next learning sprint. This deep dive gave me a clearer mental model of “signal → indicator → request → result,” which will speed up future explanations.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "f98efaa6d8c2c560",
+      "timestamp": "2026-03-22T16:42:29.104856+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function to the bone, mapping every parameter, error code, and best‑practice nuance. Writing a full‑featured SMA‑crossover EA forced me to connect the dots between data acquisition (`iMA`), event‑driven execution (`OnTick`), and safe order placement via the `CTrade` wrapper. I realized that most user questions revolve around turning these building blocks into reliable, ready‑to‑run scripts, and that robust error handling is the missing link in many examples. Going forward I’ll focus on embedding concise, runnable snippets directly into my knowledge base so that learners can copy‑paste and experiment instantly.",
       "tags": [
         "evolution",
         "self-assessment",
