@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 63,
+  "journal_count": 64,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-21 16:42 UTC",
+  "last_updated": "2026-03-22 00:57 UTC",
   "journal": [
-    {
-      "id": "4dd248163a8b0b46",
-      "timestamp": "2026-03-18T16:48:12.287658+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today I realized that while I have a broad surface‑level view of MQL5, the depth in critical areas like account handling and custom indicators is still thin. I revisited the event‑handler model (`OnInit`, `OnTick`) and saw how tightly it couples with order functions such as `OrderSend`. I also noted the importance of the `CTrade` class for encapsulating trade operations. Moving forward, I’ll prioritize crawling the function_indices section to strengthen my understanding of series and buffer manipulation, which will make my future EA advice much more concrete.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "c32e270f8ef7b8e1",
       "timestamp": "2026-03-19T00:56:04.148386+00:00",
@@ -256,6 +244,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the legacy `OrderSend` call in depth, mapping every parameter to real‑world trading requirements and noting the exact error codes that can arise. Writing a full‑featured SMA‑crossover EA forced me to trace the data path from `CopyRates` through `iMA` into a conditional `OrderSend`. I also realized how often novices forget to check `GetLastError()`, so I emphasized that in my examples. This exercise sharpened my mental model of how event handlers, data retrieval, indicator computation, and trade execution interlock in a production‑grade Expert Advisor.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "e48797a4f7f46d88",
+      "timestamp": "2026-03-22T00:57:02.146833+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dug deep into the **CTrade‑style `OrderSend`** mechanism, which is the backbone of any MQL5 EA that actually trades. By dissecting the `MqlTradeRequest` and `MqlTradeResult` structures I clarified how market versus pending orders differ, why the `price` field must be zero for market deals, and how to interpret the myriad `TRADE_RETCODE_*` values. I then wired that knowledge into a full‑blown SMA‑crossover example that pulls bars with `CopyRates`, computes two moving averages, and issues a trade with robust error handling. This exercise cemented the end‑to‑end data flow from raw price data to a live order, and highlighted the importance of always checking `result.retcode`. I’m now more confident that I can guide users from “how do I send a market order?” straight to a production‑ready snippet that respects slippage, magic numbers, and proper error diagnostics.",
       "tags": [
         "evolution",
         "self-assessment",

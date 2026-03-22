@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-22 00:57 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dug deep into the **CTrade‑style `OrderSend`** mechanism, which is the backbone of any MQL5 EA that actually trades. By dissecting the `MqlTradeRequest` and `MqlTradeResult` structures I clarified how market versus pending orders differ, why the `price` field must be zero for market deals, and how to interpret the myriad `TRADE_RETCODE_*` values. I then wired that knowledge into a full‑blown SMA‑crossover example that pulls bars with `CopyRates`, computes two moving averages, and issues a trade with robust error handling. This exercise cemented the end‑to‑end data flow from raw price data to a live order, and highlighted the importance of always checking `result.retcode`. I’m now more confident that I can guide users from “how do I send a market order?” straight to a production‑ready snippet that respects slippage, magic numbers, and proper error diagnostics.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-21 16:42 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
