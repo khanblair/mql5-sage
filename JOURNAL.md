@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-22 08:43 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the **OrderSend** workflow, mapping every field of `MqlTradeRequest` to its practical meaning and noting the most frequent retcodes. Writing the SMA‑crossover EA forced me to trace the **full data pipeline** from `CopyRates` through indicator buffers to a concrete trade request, reinforcing how event handlers glue everything together. I also realized how easy it is to slip into the anti‑pattern of neglecting error handling, so I made that a focal point of my next learning sprint. This deep dive gave me a clearer mental model of “signal → indicator → request → result,” which will speed up future explanations.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-22 00:57 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
