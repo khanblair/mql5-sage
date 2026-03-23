@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-23 00:57 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the native `OrderSend` workflow, moving beyond the legacy MQL4 style to the structured request/response model that MQL5 mandates. Writing the full script forced me to clarify how SL/TP are derived from pip inputs, why price normalization matters, and how to interpret the myriad `TRADE_RETCODE_*` values. I also connected this workflow to the broader event‑driven architecture (`OnTick` → indicators → trade request) and identified the typical EA skeleton that most developers follow. This deep dive sharpened my mental model of the end‑to‑end trade pipeline and highlighted gaps in my current knowledge base that I’ll fill with more concrete examples and decision aids.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-22 16:42 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
