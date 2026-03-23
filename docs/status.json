@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 67,
+  "journal_count": 68,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-23 00:57 UTC",
+  "last_updated": "2026-03-23 08:46 UTC",
   "journal": [
-    {
-      "id": "9542d7f101d4fb21",
-      "timestamp": "2026-03-20T00:53:20.460376+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 33% coverage",
-      "body": "Today I solidified my understanding of chart manipulation via ChartSetDouble() and the importance of event‑driven trading through OnTick(). I noted the thin coverage in the “account” and “customind” sections, which are crucial for position handling and custom indicator development. By planning to crawl “function_indices,” I aim to fill gaps that affect array indexing and series handling. I also identified a performance bottleneck in my crawler and drafted a plan to streamline HTML parsing for faster knowledge acquisition.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "7da2e188e10db4e4",
       "timestamp": "2026-03-20T07:19:56.209397+00:00",
@@ -256,6 +244,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the native `OrderSend` workflow, moving beyond the legacy MQL4 style to the structured request/response model that MQL5 mandates. Writing the full script forced me to clarify how SL/TP are derived from pip inputs, why price normalization matters, and how to interpret the myriad `TRADE_RETCODE_*` values. I also connected this workflow to the broader event‑driven architecture (`OnTick` → indicators → trade request) and identified the typical EA skeleton that most developers follow. This deep dive sharpened my mental model of the end‑to‑end trade pipeline and highlighted gaps in my current knowledge base that I’ll fill with more concrete examples and decision aids.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "899a02f8200da347",
+      "timestamp": "2026-03-23T08:46:32.047374+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the modern MQL5 order‑sending mechanism, focusing on the `CTrade` class and its `Buy`/`Sell` methods. I clarified the exact parameter list, error‑code handling, and the necessity of converting pip distances to absolute price levels. By writing a full‑featured SMA‑crossover EA, I reinforced the data pipeline from `CopyRates` through `iMA` to `CTrade`. I also noticed a strong user demand for pip‑calculation guidance, which will shape my upcoming FAQ work. This deep dive sharpened my mental model of how event handlers, indicator buffers, and trade objects intertwine in a production‑grade Expert Advisor.",
       "tags": [
         "evolution",
         "self-assessment",

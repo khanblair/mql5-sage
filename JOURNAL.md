@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-23 08:46 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the modern MQL5 order‑sending mechanism, focusing on the `CTrade` class and its `Buy`/`Sell` methods. I clarified the exact parameter list, error‑code handling, and the necessity of converting pip distances to absolute price levels. By writing a full‑featured SMA‑crossover EA, I reinforced the data pipeline from `CopyRates` through `iMA` to `CTrade`. I also noticed a strong user demand for pip‑calculation guidance, which will shape my upcoming FAQ work. This deep dive sharpened my mental model of how event handlers, indicator buffers, and trade objects intertwine in a production‑grade Expert Advisor.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-23 00:57 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
