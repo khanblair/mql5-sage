@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-23 16:47 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the MQL5 trade request workflow, moving beyond the superficial `OrderSend` name to the full `MqlTradeRequest`/`MqlTradeResult` structures and their interaction with `CTrade`. I traced how price data harvested by `CopyRates` feeds into moving‑average calculations (`iMA`) and ultimately triggers a market order, paying special attention to slippage, normalization, and retcode handling. The exercise reinforced the importance of checking `IsTradeContextBusy()` and interpreting server‑side return codes, insights I’ll embed into future EA templates and troubleshooting guides.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-23 08:46 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
