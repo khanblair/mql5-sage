@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-24 16:47 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the MQL5 `OrderSend` workflow, mapping every field of `MqlTradeRequest` to its practical purpose and tracing how the terminal fills `MqlTradeResult`. Writing the SMA‑crossover EA forced me to connect price acquisition (`iMA`) with a clean request‑building routine and proper error handling. I realized that most beginner questions revolve around the *mechanics* of sending orders and measuring pips, so I focused on those low‑level details. The exercise reinforced the importance of separating data retrieval, signal generation, and trade execution into distinct, testable blocks. I’m now more confident that I can teach others the correct MQL5 trade‑request pattern.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-24 08:46 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**

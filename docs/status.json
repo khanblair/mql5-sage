@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 71,
+  "journal_count": 72,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-24 08:46 UTC",
+  "last_updated": "2026-03-24 16:47 UTC",
   "journal": [
-    {
-      "id": "50c60924e262d273",
-      "timestamp": "2026-03-20T08:03:29.872879+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Evolution session. 778 pages, 4078 chunks, 0 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "bb8ca4f0c48f2644",
       "timestamp": "2026-03-20T08:21:24.904201+00:00",
@@ -256,6 +244,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and common misuse. Writing the `SimpleBuyEA` forced me to connect price acquisition (`CopyBuffer`), signal detection (SMA cross), and trade execution in a single, clean flow. I also noticed a strong user focus on basic order placement and pip arithmetic, which tells me I should prioritize clear, reusable snippets for those areas. My next step is to map out the full lifecycle of a trade—from `CopyRates` to `PositionSelect`—and to start drafting decision trees that guide newcomers through the event‑handler architecture. This deeper mental model will help me answer future queries with precision and confidence.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "55b186ddfd57306c",
+      "timestamp": "2026-03-24T16:47:27.577368+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the MQL5 `OrderSend` workflow, mapping every field of `MqlTradeRequest` to its practical purpose and tracing how the terminal fills `MqlTradeResult`. Writing the SMA‑crossover EA forced me to connect price acquisition (`iMA`) with a clean request‑building routine and proper error handling. I realized that most beginner questions revolve around the *mechanics* of sending orders and measuring pips, so I focused on those low‑level details. The exercise reinforced the importance of separating data retrieval, signal generation, and trade execution into distinct, testable blocks. I’m now more confident that I can teach others the correct MQL5 trade‑request pattern.",
       "tags": [
         "evolution",
         "self-assessment",
