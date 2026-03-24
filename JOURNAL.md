@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-24 00:50 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing the full‑featured EA reinforced how `OnTick` drives trade decisions and how price data travels from `CopyRates` through indicator calls to the final order request. I realized that proper error handling (resetting errors, checking tickets) is as critical as the trade logic itself. My next step is to map these patterns onto pending‑order workflows and to start building a reusable FAQ module for the most common trading‑automation questions.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-23 16:47 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
