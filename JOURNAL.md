@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-24 08:46 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and common misuse. Writing the `SimpleBuyEA` forced me to connect price acquisition (`CopyBuffer`), signal detection (SMA cross), and trade execution in a single, clean flow. I also noticed a strong user focus on basic order placement and pip arithmetic, which tells me I should prioritize clear, reusable snippets for those areas. My next step is to map out the full lifecycle of a trade—from `CopyRates` to `PositionSelect`—and to start drafting decision trees that guide newcomers through the event‑handler architecture. This deeper mental model will help me answer future queries with precision and confidence.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-24 00:50 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
