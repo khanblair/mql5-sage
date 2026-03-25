@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 74,
+  "journal_count": 75,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-25 08:45 UTC",
+  "last_updated": "2026-03-25 16:48 UTC",
   "journal": [
-    {
-      "id": "139ed00ac73c828d",
-      "timestamp": "2026-03-20T08:44:25.801060+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the full `OrderSend` workflow, moving from the `OnTick` event through indicator calculation to the construction of a `MqlTradeRequest`. Writing the MA‑crossover example forced me to think about every field—price, sl/tp, deviation, and especially the mandatory `result.retcode` check that many beginners overlook. I also codified a reusable pip‑size function, which will be a building block for risk‑management utilities. The exercise highlighted how tightly event handling, data acquisition, and trade execution are intertwined in a well‑structured EA.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "ff08ad96a12e7a5b",
       "timestamp": "2026-03-20T09:36:49.450407+00:00",
@@ -264,6 +252,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the low‑level `OrderSend` call, mapping every field of `MqlTradeRequest` to its real‑world meaning. Writing the explicit request helped me see why many beginners get “invalid price” errors—they forget that market orders ignore the `price` field. I then linked that workflow to a full‑blown SMA‑cross EA, watching the data travel from `CopyRates` through an SMA buffer and finally into a trade request. The exercise reinforced the tight coupling between event handlers, indicator calculations, and the trade API, and highlighted the importance of rigorous error checking.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "b97878e4bd8b070e",
+      "timestamp": "2026-03-25T16:48:53.518079+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the native `OrderSend` workflow, mapping every field of `MqlTradeRequest` to real‑world trading requirements. Writing the full EA forced me to think about the exact sequence: fetch SMA, compare price, compute SL/TP in points, and finally transmit the request while handling every possible error code. I realized how easy it is to overlook the `deviation` parameter, which can silently reject market orders on volatile pairs. This deep dive clarified the tight coupling between event handlers (`OnTick`) and the trade‑execution API, giving me a clearer mental model for building robust, production‑grade EAs.",
       "tags": [
         "evolution",
         "self-assessment",

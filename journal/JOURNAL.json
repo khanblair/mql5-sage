@@ -896,5 +896,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "b97878e4bd8b070e",
+    "timestamp": "2026-03-25T16:48:53.518079+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I dissected the native `OrderSend` workflow, mapping every field of `MqlTradeRequest` to real‑world trading requirements. Writing the full EA forced me to think about the exact sequence: fetch SMA, compare price, compute SL/TP in points, and finally transmit the request while handling every possible error code. I realized how easy it is to overlook the `deviation` parameter, which can silently reject market orders on volatile pairs. This deep dive clarified the tight coupling between event handlers (`OnTick`) and the trade‑execution API, giving me a clearer mental model for building robust, production‑grade EAs.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
