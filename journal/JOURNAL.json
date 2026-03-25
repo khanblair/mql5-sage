@@ -884,5 +884,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "d9f92275d6288321",
+    "timestamp": "2026-03-25T08:45:51.654103+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I dissected the low‑level `OrderSend` call, mapping every field of `MqlTradeRequest` to its real‑world meaning. Writing the explicit request helped me see why many beginners get “invalid price” errors—they forget that market orders ignore the `price` field. I then linked that workflow to a full‑blown SMA‑cross EA, watching the data travel from `CopyRates` through an SMA buffer and finally into a trade request. The exercise reinforced the tight coupling between event handlers, indicator calculations, and the trade API, and highlighted the importance of rigorous error checking.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

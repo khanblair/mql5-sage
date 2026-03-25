@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 73,
+  "journal_count": 74,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,16 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-25 00:55 UTC",
+  "last_updated": "2026-03-25 08:45 UTC",
   "journal": [
-    {
-      "id": "aba7d7ba45dfefdd",
-      "timestamp": "2026-03-20T08:34:27.469846+00:00",
-      "entry_type": "QUERY",
-      "title": "Q: How do I calculate pips in MQL5 for EURUSD?",
-      "body": "**Question:** How do I calculate pips in MQL5 for EURUSD?\n\n**Answer:**\n**Answer**\n\nThe excerpts you provided are tables of DirectX texture format constants (e.g., `DXGI_FORMAT_R8G8B8A8_UNORM`, `DX_FORMAT_BC1_UNORM_SRGB`, etc.) that are used with the `DXTextureCreate` function in MQL5. These excerpts do **not** contain any information about price‑related functions, symbols, or how to calculate pips for a currency pair such as EURUSD.\n\nBecause the documentation excerpts do not cover the `SymbolInfoDouble` function, the `SYMBOL_POINT` property, or any other price‑handling utilities, I cannot quote a source that explains pip calculation directly from the material you gave.\n\n**What is missing from the excerpts**\n\n- No mention of `SymbolInfoDouble`, `SYMBOL_POINT`, or any other MQL5 function that returns the minimum price change (the “point”) for a symbol.  \n- No description of how a “pip” is defined for EURUSD (normally 0.0001).  \n- No code examples related to price arithmetic or pip conversion.\n\n**What is typically done in MQL5 (outside the supplied excerpts)**  \n\nIn standard MQL5 programming (as described in the official MQL5 reference, not in the excerpts you supplied), the usual way to calculate pips for EURUSD is:\n\n1. Retrieve the symbol’s point size with `SymbolInfoDouble(_Symbol, SYMBOL_POINT)`.  \n2. For most major pairs, including EURUSD, one pip equals 10 × `SYMBOL_POINT` (because `SYMBOL_POINT` is 0.00001 for a 5‑digit quote).  \n3. Compute the pip difference between two prices:\n\n```mql5\ndouble point   = SymbolInfoDouble(_Symbol, SYMBOL_POINT);   // e.g., 0.00001\ndouble pipSize = 10 * point;                               // 0.0001 for EURUSD\n\ndouble priceNow     = SymbolInfoDouble(_Symbol, SYMBOL_BID);\ndouble pricePrev    = SymbolInfoDouble(_Symbol, SYMBOL_ASK); // or any reference price\n\nint    pipsMoved = (int)MathRound((priceNow - pricePrev) / pipSize);\nPrint(\"Pips moved: \", pipsMoved);\n```\n\n**Why this cannot be cited from the provided excerpts**\n\nAll of the lines above refer to functions and constants (`SymbolInfoDouble`, `SYMBOL_POINT`, `SYMBOL_BID`, etc.) that are **not present** in any of the six excerpts you shared, which only list DirectX texture format identifiers and their numeric IDs. Consequently, I cannot provide a source citation for pip‑calculation code based on the supplied material.\n\n**Conclusion**\n\n- The supplied documentation excerpts do not contain any information on calculating pips for EURUSD.  \n- To calculate pips in MQL5 you would normally use `SymbolInfoDouble` with `SYMBOL_POINT` (or `SYMBOL_TRADE_TICK_SIZE`) and apply the standard pip definition (0.0001 for EURUSD).  \n- Since this information is not in the excerpts, the exact method cannot be referenced from the given sources.\n\n**Sources:** DXTextureCreate",
-      "tags": []
-    },
     {
       "id": "139ed00ac73c828d",
       "timestamp": "2026-03-20T08:44:25.801060+00:00",
@@ -260,6 +252,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing the “single‑bar buy” EA forced me to think about how price data travels from `iTime`/`CopyRates` into a decision and then into a trade request. I also noticed a strong user demand for pip‑calculation formulas, which will guide my next deep‑learning session. By mapping the event‑handler → indicator → trade pipeline, I now have a clearer mental model of a production‑grade EA’s lifecycle. This insight will help me generate more accurate, context‑aware answers moving forward.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "d9f92275d6288321",
+      "timestamp": "2026-03-25T08:45:51.654103+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the low‑level `OrderSend` call, mapping every field of `MqlTradeRequest` to its real‑world meaning. Writing the explicit request helped me see why many beginners get “invalid price” errors—they forget that market orders ignore the `price` field. I then linked that workflow to a full‑blown SMA‑cross EA, watching the data travel from `CopyRates` through an SMA buffer and finally into a trade request. The exercise reinforced the tight coupling between event handlers, indicator calculations, and the trade API, and highlighted the importance of rigorous error checking.",
       "tags": [
         "evolution",
         "self-assessment",
