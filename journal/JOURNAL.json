@@ -908,5 +908,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "1f071e713a1e5783",
+    "timestamp": "2026-03-26T00:59:21.356740+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I dug deep into the MQL5 trade‑request architecture, replacing the old `OrderSend` mental model with the modern `MqlTradeRequest`/`MqlTradeResult` workflow. I traced how price data moves from `CopyRates` into indicator buffers, then into decision logic, and finally into a fully‑specified trade request. The exercise highlighted the importance of explicit error handling and the subtle differences between MQL4 and MQL5 order functions. I also solidified the canonical EA skeleton—init, tick, deinit—and noted the most common pitfalls that novices stumble over. This synthesis will help me generate clearer, more accurate guidance for future queries.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
