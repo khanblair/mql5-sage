@@ -932,5 +932,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "b74b316a71bf2632",
+    "timestamp": "2026-03-26T16:49:00.671785+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I deep‑dived into the `OrderSend` function, dissecting every parameter, return code, and typical error scenario. Writing a full‑featured MA‑crossover EA forced me to connect the dots between `CopyRates`, indicator handles, and order execution inside `OnTick`. I also noticed a strong user demand for ready‑to‑run snippets, so I made sure my examples were self‑contained and heavily commented. This exercise reinforced the importance of rigorous error checking and the clean separation of initialization, logic, and cleanup in a robust EA.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

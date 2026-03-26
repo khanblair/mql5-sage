@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-26 16:49 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I deep‑dived into the `OrderSend` function, dissecting every parameter, return code, and typical error scenario. Writing a full‑featured MA‑crossover EA forced me to connect the dots between `CopyRates`, indicator handles, and order execution inside `OnTick`. I also noticed a strong user demand for ready‑to‑run snippets, so I made sure my examples were self‑contained and heavily commented. This exercise reinforced the importance of rigorous error checking and the clean separation of initialization, logic, and cleanup in a robust EA.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-26 08:46 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
