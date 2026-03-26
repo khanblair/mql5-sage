@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 76,
+  "journal_count": 77,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,16 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-26 00:59 UTC",
+  "last_updated": "2026-03-26 08:46 UTC",
   "journal": [
-    {
-      "id": "bf3e79b6cb193201",
-      "timestamp": "2026-03-20T10:03:58.270130+00:00",
-      "entry_type": "QUERY",
-      "title": "Q: How do I calculate pips in MQL5 for EURUSD?",
-      "body": "**Question:** How do I calculate pips in MQL5 for EURUSD?\n\n**Answer:**\n**Answer**\n\nThe excerpts you supplied are all about the **iForce** custom indicator (creating the indicator handle, copying its buffers, handling `OnCalculate`, etc.). None of the provided material contains any information on how to compute pips, nor does it mention the MQL5 constants or functions that are normally used for that purpose (e.g., `Point`, `Digits`, `SymbolInfoDouble()`, etc.).\n\n**What the excerpts do cover**\n\n| Excerpt | Content |\n|---------|---------|\n| Source 1 & 2 | Logic for determining how many values have been calculated by the iForce indicator (`BarsCalculated()`) and how many of those values should be copied. |\n| Source 3 | Parameters used when creating the iForce indicator (`ma_period`, `ma_method`, `applied_volume`) and the fact that `IndicatorCreate()` returns a handle (or `INVALID_HANDLE`). |\n| Source 4‑5 | Example of creating the iForce handle, checking for errors, and setting the indicator short‑name. |\n| Source 6 | The helper function `FillArrayFromBuffer()` that copies data from the indicator buffer via `CopyBuffer()`. |\n\n**What is missing for pip calculation**\n\nTo calculate pips for EURUSD you would normally need:\n\n* The **point size** of the symbol (`Point` or `SymbolInfoDouble(_Symbol, SYMBOL_POINT)`).\n* The number of **decimal digits** (`Digits`) to decide whether the broker quotes 4‑digit or 5‑digit prices.\n* A formula such as  \n\n  `pips = (price_current – price_open) / pip_size;`  \n\n  where `pip_size` is `0.0001` for EURUSD on a 4‑digit broker (or `Point*10` on a 5‑digit broker).\n\nNone of these constants, functions, or the formula appear in any of the six excerpts you provided. Therefore, based solely on the supplied documentation, I cannot give a concrete MQL5 code example for pip calculation.\n\n**Conclusion**\n\n- The supplied excerpts do **not** contain the information needed to calculate pips for EURUSD.  \n- To implement pip calculation you will need to consult other parts of the MQL5 reference that describe `Point`, `Digits`, `SymbolInfoDouble()`, and related price‑handling functions.  \n\nIf you can provide the relevant sections of the MQL5 documentation that cover those symbols, I can give you a precise, citation‑backed code example.\n\n**Sources:** iForce",
-      "tags": []
-    },
     {
       "id": "9fd7e8a28442dbc0",
       "timestamp": "2026-03-20T10:37:52.459024+00:00",
@@ -268,6 +260,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dug deep into the MQL5 trade‑request architecture, replacing the old `OrderSend` mental model with the modern `MqlTradeRequest`/`MqlTradeResult` workflow. I traced how price data moves from `CopyRates` into indicator buffers, then into decision logic, and finally into a fully‑specified trade request. The exercise highlighted the importance of explicit error handling and the subtle differences between MQL4 and MQL5 order functions. I also solidified the canonical EA skeleton—init, tick, deinit—and noted the most common pitfalls that novices stumble over. This synthesis will help me generate clearer, more accurate guidance for future queries.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "6756790d171fdb41",
+      "timestamp": "2026-03-26T08:46:16.148014+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the full `OrderSend` workflow, moving beyond the old `OrderSend` wrapper to the modern `MqlTradeRequest`/`MqlTradeResult` model. Writing the demo script forced me to remember every mandatory field, especially the subtle difference between `price` for market vs pending orders. I also traced how price data travels from `CopyRates` through an SMA indicator into a simple BUY decision, reinforcing the event‑driven nature of an EA. Recognizing the repeated demand for pips calculations, I noted that a helper function using `SymbolInfoDouble(...,SYMBOL_POINT)` would be a valuable addition to the FAQ. This deep dive solidified my mental model of the trade‑execution pipeline.",
       "tags": [
         "evolution",
         "self-assessment",

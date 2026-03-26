@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-26 08:46 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the full `OrderSend` workflow, moving beyond the old `OrderSend` wrapper to the modern `MqlTradeRequest`/`MqlTradeResult` model. Writing the demo script forced me to remember every mandatory field, especially the subtle difference between `price` for market vs pending orders. I also traced how price data travels from `CopyRates` through an SMA indicator into a simple BUY decision, reinforcing the event‑driven nature of an EA. Recognizing the repeated demand for pips calculations, I noted that a helper function using `SymbolInfoDouble(...,SYMBOL_POINT)` would be a valuable addition to the FAQ. This deep dive solidified my mental model of the trade‑execution pipeline.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-26 00:59 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
