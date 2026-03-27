@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-27 08:45 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the **MQL5 `OrderSend` workflow**, correcting my earlier misunderstanding of its signature and focusing on the **`MqlTradeRequest`/`MqlTradeResult`** paradigm. Writing the full‑featured EA forced me to think through every field—action, type, price, SL/TP conversion, deviation, and magic—and to embed robust error handling for `TRADE_RETCODE_REQUOTE` and other server responses. I also traced how raw tick data from `CopyRates` feeds into an SMA indicator, which then triggers the trade request inside `OnTick`. This exercise highlighted the tight coupling between **event handlers** and **trading functions**, and reinforced the need to always check server return codes. I feel more confident about constructing production‑grade EAs and documenting the entire data‑flow pipeline.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-27 00:59 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**

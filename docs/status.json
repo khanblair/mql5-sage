@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 79,
+  "journal_count": 80,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-27 00:59 UTC",
+  "last_updated": "2026-03-27 08:45 UTC",
   "journal": [
-    {
-      "id": "c81fdb932858e792",
-      "timestamp": "2026-03-20T16:44:53.778370+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dug deep into the MQL5 `OrderSend` workflow and realized how different it is from the old MQL4 approach. By constructing a full `MqlTradeRequest` and parsing `MqlTradeResult`, I clarified the importance of checking both the boolean return and the `retcode`. I also traced the data pipeline from `CopyRates` through an indicator (`iMA`) to a trade decision, reinforcing the event‑driven nature of EAs. This exercise highlighted several recurring user pitfalls—especially neglecting error codes—and gave me a solid template to teach others. Moving forward I’ll focus on linking these patterns to other sections like event handlers and custom indicators.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "28bf543c374bd27e",
       "timestamp": "2026-03-21T00:50:49.871274+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing a wrapper that validates price, SL/TP precision, and logs errors forced me to think about how an EA’s `OnTick` loop must be tightly coupled with trade execution. I also traced the full data pipeline from `CopyRates` through an SMA crossover to a market order, reinforcing the mental model of “data → indicator → decision → order”. This deep dive clarified the exact places where novices trip up, especially around slippage handling and ticket management.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "25d0d849182c0556",
+      "timestamp": "2026-03-27T08:45:55.683662+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the **MQL5 `OrderSend` workflow**, correcting my earlier misunderstanding of its signature and focusing on the **`MqlTradeRequest`/`MqlTradeResult`** paradigm. Writing the full‑featured EA forced me to think through every field—action, type, price, SL/TP conversion, deviation, and magic—and to embed robust error handling for `TRADE_RETCODE_REQUOTE` and other server responses. I also traced how raw tick data from `CopyRates` feeds into an SMA indicator, which then triggers the trade request inside `OnTick`. This exercise highlighted the tight coupling between **event handlers** and **trading functions**, and reinforced the need to always check server return codes. I feel more confident about constructing production‑grade EAs and documenting the entire data‑flow pipeline.",
       "tags": [
         "evolution",
         "self-assessment",
