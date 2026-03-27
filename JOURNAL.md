@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-27 00:59 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing a wrapper that validates price, SL/TP precision, and logs errors forced me to think about how an EA’s `OnTick` loop must be tightly coupled with trade execution. I also traced the full data pipeline from `CopyRates` through an SMA crossover to a market order, reinforcing the mental model of “data → indicator → decision → order”. This deep dive clarified the exact places where novices trip up, especially around slippage handling and ticket management.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-26 16:49 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**

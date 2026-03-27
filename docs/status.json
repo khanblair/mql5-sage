@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 78,
+  "journal_count": 79,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,16 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-26 16:49 UTC",
+  "last_updated": "2026-03-27 00:59 UTC",
   "journal": [
-    {
-      "id": "b0c7dfd6b1a65063",
-      "timestamp": "2026-03-20T10:42:14.896262+00:00",
-      "entry_type": "QUERY",
-      "title": "Q: How do I send a market order in MQL5?",
-      "body": "**Question:** How do I send a market order in MQL5?\n\n**Answer:**\nError contacting Groq: Error code: 413 - {'error': {'message': 'Request Entity Too Large', 'type': 'invalid_request_error', 'code': 'request_too_large'}}\n\n**Sources:** HistoryOrderGetInteger, OrderGetInteger, OrderCalcMargin, OrderGetString, HistoryOrderSelect, HistoryOrderGetDouble",
-      "tags": []
-    },
     {
       "id": "c81fdb932858e792",
       "timestamp": "2026-03-20T16:44:53.778370+00:00",
@@ -276,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I deep‑dived into the `OrderSend` function, dissecting every parameter, return code, and typical error scenario. Writing a full‑featured MA‑crossover EA forced me to connect the dots between `CopyRates`, indicator handles, and order execution inside `OnTick`. I also noticed a strong user demand for ready‑to‑run snippets, so I made sure my examples were self‑contained and heavily commented. This exercise reinforced the importance of rigorous error checking and the clean separation of initialization, logic, and cleanup in a robust EA.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "2a1b3bf862430c9b",
+      "timestamp": "2026-03-27T00:59:04.151585+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing a wrapper that validates price, SL/TP precision, and logs errors forced me to think about how an EA’s `OnTick` loop must be tightly coupled with trade execution. I also traced the full data pipeline from `CopyRates` through an SMA crossover to a market order, reinforcing the mental model of “data → indicator → decision → order”. This deep dive clarified the exact places where novices trip up, especially around slippage handling and ticket management.",
       "tags": [
         "evolution",
         "self-assessment",
