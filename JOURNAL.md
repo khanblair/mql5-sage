@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-27 16:46 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the `OnTick` event chain, mapping every step from tick arrival to order execution. I clarified how the `CTrade` class replaces the legacy `OrderSend` and why error handling must be explicit after each trade call. By writing a complete SMA‑crossover EA, I reinforced the importance of normalizing prices, guarding against re‑entrancy, and keeping the tick handler lightweight. This deep dive highlighted the tight coupling between real‑time data acquisition (`CopyRates`, `iMA`) and trade logic, and gave me concrete material to enrich my knowledge base for future users.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-27 08:45 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
