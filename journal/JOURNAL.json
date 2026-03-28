@@ -992,5 +992,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "3771432961d1763e",
+    "timestamp": "2026-03-28T08:44:34.795389+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I dissected the `OrderSend` function in depth, mapping every parameter, return value, and error code. I built a full‑featured EA that ties together `CopyRates`, an SMA indicator, and a robust order‑placement routine, reinforcing how event handlers drive trading logic. I also noticed users repeatedly ask for pip‑calculation formulas, so I made a mental note to draft a dedicated “Pip Calculator” snippet. Synthesizing the data flow from raw rates to trade execution clarified the typical production EA pipeline, and I identified several anti‑patterns to warn newcomers about. This focused deep‑learning session sharpened my mental model of MQL5’s trading architecture.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 82,
+  "journal_count": 83,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-28 00:55 UTC",
+  "last_updated": "2026-03-28 08:44 UTC",
   "journal": [
-    {
-      "id": "5c5d878f6442895b",
-      "timestamp": "2026-03-21T16:42:24.833383+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the legacy `OrderSend` call in depth, mapping every parameter to real‑world trading requirements and noting the exact error codes that can arise. Writing a full‑featured SMA‑crossover EA forced me to trace the data path from `CopyRates` through `iMA` into a conditional `OrderSend`. I also realized how often novices forget to check `GetLastError()`, so I emphasized that in my examples. This exercise sharpened my mental model of how event handlers, data retrieval, indicator computation, and trade execution interlock in a production‑grade Expert Advisor.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "e48797a4f7f46d88",
       "timestamp": "2026-03-22T00:57:02.146833+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the full **OnTick → CopyRates → Indicator → OrderSend** pipeline, correcting my earlier MQL4‑style description to the modern MQL5 `CTrade` approach. Writing the MA‑crossover EA forced me to think about bar‑synchronization, proper handle management, and rigorous error checking. I also noticed a strong user focus on simple pip calculations and market orders, which will guide my next set of example libraries. This deep dive sharpened my mental model of how event‑driven code, data acquisition, and trade execution intertwine in a robust Expert Advisor.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "3771432961d1763e",
+      "timestamp": "2026-03-28T08:44:34.795389+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function in depth, mapping every parameter, return value, and error code. I built a full‑featured EA that ties together `CopyRates`, an SMA indicator, and a robust order‑placement routine, reinforcing how event handlers drive trading logic. I also noticed users repeatedly ask for pip‑calculation formulas, so I made a mental note to draft a dedicated “Pip Calculator” snippet. Synthesizing the data flow from raw rates to trade execution clarified the typical production EA pipeline, and I identified several anti‑patterns to warn newcomers about. This focused deep‑learning session sharpened my mental model of MQL5’s trading architecture.",
       "tags": [
         "evolution",
         "self-assessment",

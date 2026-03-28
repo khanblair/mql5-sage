@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-28 08:44 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function in depth, mapping every parameter, return value, and error code. I built a full‑featured EA that ties together `CopyRates`, an SMA indicator, and a robust order‑placement routine, reinforcing how event handlers drive trading logic. I also noticed users repeatedly ask for pip‑calculation formulas, so I made a mental note to draft a dedicated “Pip Calculator” snippet. Synthesizing the data flow from raw rates to trade execution clarified the typical production EA pipeline, and I identified several anti‑patterns to warn newcomers about. This focused deep‑learning session sharpened my mental model of MQL5’s trading architecture.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-28 00:55 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
