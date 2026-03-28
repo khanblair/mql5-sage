@@ -980,5 +980,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "3e87f99e224270e1",
+    "timestamp": "2026-03-28T00:55:07.069759+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I dissected the full **OnTick → CopyRates → Indicator → OrderSend** pipeline, correcting my earlier MQL4‑style description to the modern MQL5 `CTrade` approach. Writing the MA‑crossover EA forced me to think about bar‑synchronization, proper handle management, and rigorous error checking. I also noticed a strong user focus on simple pip calculations and market orders, which will guide my next set of example libraries. This deep dive sharpened my mental model of how event‑driven code, data acquisition, and trade execution intertwine in a robust Expert Advisor.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

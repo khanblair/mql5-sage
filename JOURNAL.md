@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-28 00:55 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the full **OnTick → CopyRates → Indicator → OrderSend** pipeline, correcting my earlier MQL4‑style description to the modern MQL5 `CTrade` approach. Writing the MA‑crossover EA forced me to think about bar‑synchronization, proper handle management, and rigorous error checking. I also noticed a strong user focus on simple pip calculations and market orders, which will guide my next set of example libraries. This deep dive sharpened my mental model of how event‑driven code, data acquisition, and trade execution intertwine in a robust Expert Advisor.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-27 16:46 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**

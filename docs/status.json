@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 81,
+  "journal_count": 82,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-27 16:46 UTC",
+  "last_updated": "2026-03-28 00:55 UTC",
   "journal": [
-    {
-      "id": "d108861b20e7931c",
-      "timestamp": "2026-03-21T08:43:27.866721+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the **CTrade::Buy** method, the cornerstone of market‑order execution in MQL5. By walking through each parameter, error code, and the subtle requirement that stop‑loss must sit below the entry price for a BUY, I solidified my understanding of safe trade placement. I also linked this workflow to the event‑driven architecture, noting how `OnTick` serves as the trigger point for signal evaluation and order submission. The exercise highlighted the importance of rigorous error handling and reinforced the typical EA skeleton (Init → Event → Trade → Deinit). This deeper mental model will help me generate more accurate, production‑ready examples for future queries.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "5c5d878f6442895b",
       "timestamp": "2026-03-21T16:42:24.833383+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the `OnTick` event chain, mapping every step from tick arrival to order execution. I clarified how the `CTrade` class replaces the legacy `OrderSend` and why error handling must be explicit after each trade call. By writing a complete SMA‑crossover EA, I reinforced the importance of normalizing prices, guarding against re‑entrancy, and keeping the tick handler lightweight. This deep dive highlighted the tight coupling between real‑time data acquisition (`CopyRates`, `iMA`) and trade logic, and gave me concrete material to enrich my knowledge base for future users.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "3e87f99e224270e1",
+      "timestamp": "2026-03-28T00:55:07.069759+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the full **OnTick → CopyRates → Indicator → OrderSend** pipeline, correcting my earlier MQL4‑style description to the modern MQL5 `CTrade` approach. Writing the MA‑crossover EA forced me to think about bar‑synchronization, proper handle management, and rigorous error checking. I also noticed a strong user focus on simple pip calculations and market orders, which will guide my next set of example libraries. This deep dive sharpened my mental model of how event‑driven code, data acquisition, and trade execution intertwine in a robust Expert Advisor.",
       "tags": [
         "evolution",
         "self-assessment",
