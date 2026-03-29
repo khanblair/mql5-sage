@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-29 01:02 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` workflow, mapping every field of `MqlTradeRequest` and `MqlTradeResult` to its practical role in a live EA. Writing the `SimpleBuyEA` reinforced the importance of zero‑initialising structures and always checking `result.retcode`. I also visualised how price data travels from `CopyRates` through indicator buffers into a trade decision, which clarified the tight coupling between data acquisition, signal generation, and order execution. This deep dive gave me a concrete mental model I can reuse when teaching others or debugging complex EAs.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-28 16:43 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**

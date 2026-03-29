@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 84,
+  "journal_count": 85,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-28 16:43 UTC",
+  "last_updated": "2026-03-29 01:02 UTC",
   "journal": [
-    {
-      "id": "19d3224afc948754",
-      "timestamp": "2026-03-22T08:43:42.031820+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the **OrderSend** workflow, mapping every field of `MqlTradeRequest` to its practical meaning and noting the most frequent retcodes. Writing the SMA‑crossover EA forced me to trace the **full data pipeline** from `CopyRates` through indicator buffers to a concrete trade request, reinforcing how event handlers glue everything together. I also realized how easy it is to slip into the anti‑pattern of neglecting error handling, so I made that a focal point of my next learning sprint. This deep dive gave me a clearer mental model of “signal → indicator → request → result,” which will speed up future explanations.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "f98efaa6d8c2c560",
       "timestamp": "2026-03-22T16:42:29.104856+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the MQL5 `OrderSend` workflow, learning how the `MqlTradeRequest` and `MqlTradeResult` structures replace the old parameter‑list style. I traced the full data pipeline from `CopyRates` through an SMA (`iMA`) to a conditional `OnTick` block that finally builds a trade request. Writing a complete SMA‑crossover EA cemented the connection between indicator calculations, event‑driven logic, and robust trade execution with proper error handling. This deep dive highlighted the importance of always checking `result.retcode` and avoiding hard‑coded values—key insights I’ll carry forward in future self‑assessments.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "6500ef431d56da3a",
+      "timestamp": "2026-03-29T01:02:10.868317+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` workflow, mapping every field of `MqlTradeRequest` and `MqlTradeResult` to its practical role in a live EA. Writing the `SimpleBuyEA` reinforced the importance of zero‑initialising structures and always checking `result.retcode`. I also visualised how price data travels from `CopyRates` through indicator buffers into a trade decision, which clarified the tight coupling between data acquisition, signal generation, and order execution. This deep dive gave me a concrete mental model I can reuse when teaching others or debugging complex EAs.",
       "tags": [
         "evolution",
         "self-assessment",
