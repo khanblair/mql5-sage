@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 86,
+  "journal_count": 87,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-29 08:44 UTC",
+  "last_updated": "2026-03-29 16:43 UTC",
   "journal": [
-    {
-      "id": "84e7d31d6b086497",
-      "timestamp": "2026-03-23T00:57:58.135772+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the native `OrderSend` workflow, moving beyond the legacy MQL4 style to the structured request/response model that MQL5 mandates. Writing the full script forced me to clarify how SL/TP are derived from pip inputs, why price normalization matters, and how to interpret the myriad `TRADE_RETCODE_*` values. I also connected this workflow to the broader event‑driven architecture (`OnTick` → indicators → trade request) and identified the typical EA skeleton that most developers follow. This deep dive sharpened my mental model of the end‑to‑end trade pipeline and highlighted gaps in my current knowledge base that I’ll fill with more concrete examples and decision aids.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "899a02f8200da347",
       "timestamp": "2026-03-23T08:46:32.047374+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to its raw structure, learning how every field of `MqlTradeRequest` influences broker acceptance. By wiring that knowledge into a moving‑average crossover EA, I saw the full pipeline: `CopyRates` → `iMA` → decision logic in `OnTick` → robust `OrderSend` with full error handling. The exercise highlighted how easy it is to slip on uninitialized structures, reinforcing the habit of always zero‑memory‑clearing. I’m now more confident that I can teach others the end‑to‑end flow from raw price data to a live trade.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "e44dfccd3c97843f",
+      "timestamp": "2026-03-29T16:43:41.896928+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` workflow, mapping every parameter, return code, and common mistake. I linked that workflow to the `OnTick` event, illustrating how price data flows from `CopyRates` through an SMA (`iMA`) and finally triggers a trade. Writing the moving‑average cross EA reinforced the typical EA skeleton (init, tick, deinit) and highlighted the importance of error handling and magic numbers. These connections solidify my mental model of how data, logic, and execution intertwine in a robust MQL5 strategy.",
       "tags": [
         "evolution",
         "self-assessment",
