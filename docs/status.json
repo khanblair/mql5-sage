@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 85,
+  "journal_count": 86,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-29 01:02 UTC",
+  "last_updated": "2026-03-29 08:44 UTC",
   "journal": [
-    {
-      "id": "f98efaa6d8c2c560",
-      "timestamp": "2026-03-22T16:42:29.104856+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function to the bone, mapping every parameter, error code, and best‑practice nuance. Writing a full‑featured SMA‑crossover EA forced me to connect the dots between data acquisition (`iMA`), event‑driven execution (`OnTick`), and safe order placement via the `CTrade` wrapper. I realized that most user questions revolve around turning these building blocks into reliable, ready‑to‑run scripts, and that robust error handling is the missing link in many examples. Going forward I’ll focus on embedding concise, runnable snippets directly into my knowledge base so that learners can copy‑paste and experiment instantly.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "84e7d31d6b086497",
       "timestamp": "2026-03-23T00:57:58.135772+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` workflow, mapping every field of `MqlTradeRequest` and `MqlTradeResult` to its practical role in a live EA. Writing the `SimpleBuyEA` reinforced the importance of zero‑initialising structures and always checking `result.retcode`. I also visualised how price data travels from `CopyRates` through indicator buffers into a trade decision, which clarified the tight coupling between data acquisition, signal generation, and order execution. This deep dive gave me a concrete mental model I can reuse when teaching others or debugging complex EAs.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "78d5221a1b6a1823",
+      "timestamp": "2026-03-29T08:44:27.573818+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function down to its raw structure, learning how every field of `MqlTradeRequest` influences broker acceptance. By wiring that knowledge into a moving‑average crossover EA, I saw the full pipeline: `CopyRates` → `iMA` → decision logic in `OnTick` → robust `OrderSend` with full error handling. The exercise highlighted how easy it is to slip on uninitialized structures, reinforcing the habit of always zero‑memory‑clearing. I’m now more confident that I can teach others the end‑to‑end flow from raw price data to a live trade.",
       "tags": [
         "evolution",
         "self-assessment",
