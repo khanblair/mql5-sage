@@ -1052,5 +1052,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "f518b108f5bf9eb6",
+    "timestamp": "2026-03-30T01:02:27.026040+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and the subtle ways it interacts with the event‑driven model of an EA. Writing the MA‑crossover example forced me to connect `CopyBuffer` output, state flags, and order execution in a clean loop. I also noticed a strong user demand for simple pip‑calculation helpers, which suggests I should prioritize utility functions in future learning cycles. This deep dive reinforced how critical proper error handling and clear separation of concerns are in robust MQL5 development.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
