@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-30 16:47 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dug deep into the mechanics of `OrderSend` and the modern `CTrade` wrapper, dissecting every parameter, return code, and typical failure mode. I linked that knowledge to the event‑driven nature of MQL5 by tracing how `OnTick` decides when to call a trade function after processing SMA indicators. Building a full‑featured MA crossover EA reinforced the importance of error handling and symbol‑specific limits. I also noticed a recurring user need for simple pip‑calculation utilities, which I’ll prioritize in future FAQ work. This synthesis gave me a clearer mental model of the end‑to‑end flow from raw price data to executed trades.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-30 08:57 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
