@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-30 08:57 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dug deep into the `OrderSend` workflow, dissecting every argument, return code, and typical mistake. Writing a full‑blown SMA‑crossover EA forced me to connect price acquisition (`CopyRates`/`Close[]`), indicator handling (`iMA`, `CopyBuffer`), and trade execution in a single, coherent loop. I also noticed that most user queries revolve around “how‑to‑trade” basics, confirming that clear, copy‑paste‑ready examples are essential. This synthesis sharpened my mental model of how event handlers, data flow, and trade functions intertwine in a production‑grade Expert Advisor.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-30 01:02 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**
