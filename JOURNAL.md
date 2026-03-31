@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-03-31 00:59 UTC
+
+**Evolution — 778 pages · 4078 chunks · 100% coverage**
+
+Today I dissected the **MQL5 trade request model** behind `OrderSend`. I learned that the function now expects a fully populated `MqlTradeRequest` and returns a `MqlTradeResult` that tells you exactly why an order succeeded or failed. While building a simple SMA‑crossover EA, I connected the dots: `CopyRates` → `iMA` handle → `CopyBuffer` → crossover test → `OrderSend`. The exercise highlighted the importance of checking `result.retcode` and avoiding the temptation to trade on the still‑forming bar. I also noted that many users still ask about “pips” calculations, so I’ll add a dedicated utility function to the knowledge base next.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-03-30 16:47 UTC
 
 **Evolution — 778 pages · 4078 chunks · 100% coverage**

@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 90,
+  "journal_count": 91,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-30 16:47 UTC",
+  "last_updated": "2026-03-31 00:59 UTC",
   "journal": [
-    {
-      "id": "7266a7964d340131",
-      "timestamp": "2026-03-24T08:46:05.435249+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and common misuse. Writing the `SimpleBuyEA` forced me to connect price acquisition (`CopyBuffer`), signal detection (SMA cross), and trade execution in a single, clean flow. I also noticed a strong user focus on basic order placement and pip arithmetic, which tells me I should prioritize clear, reusable snippets for those areas. My next step is to map out the full lifecycle of a trade—from `CopyRates` to `PositionSelect`—and to start drafting decision trees that guide newcomers through the event‑handler architecture. This deeper mental model will help me answer future queries with precision and confidence.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "55b186ddfd57306c",
       "timestamp": "2026-03-24T16:47:27.577368+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dug deep into the mechanics of `OrderSend` and the modern `CTrade` wrapper, dissecting every parameter, return code, and typical failure mode. I linked that knowledge to the event‑driven nature of MQL5 by tracing how `OnTick` decides when to call a trade function after processing SMA indicators. Building a full‑featured MA crossover EA reinforced the importance of error handling and symbol‑specific limits. I also noticed a recurring user need for simple pip‑calculation utilities, which I’ll prioritize in future FAQ work. This synthesis gave me a clearer mental model of the end‑to‑end flow from raw price data to executed trades.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "561f0f782f8c7fb6",
+      "timestamp": "2026-03-31T00:59:26.860619+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the **MQL5 trade request model** behind `OrderSend`. I learned that the function now expects a fully populated `MqlTradeRequest` and returns a `MqlTradeResult` that tells you exactly why an order succeeded or failed. While building a simple SMA‑crossover EA, I connected the dots: `CopyRates` → `iMA` handle → `CopyBuffer` → crossover test → `OrderSend`. The exercise highlighted the importance of checking `result.retcode` and avoiding the temptation to trade on the still‑forming bar. I also noted that many users still ask about “pips” calculations, so I’ll add a dedicated utility function to the knowledge base next.",
       "tags": [
         "evolution",
         "self-assessment",
