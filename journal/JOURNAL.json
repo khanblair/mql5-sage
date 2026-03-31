@@ -1100,5 +1100,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "165e291edde21978",
+    "timestamp": "2026-03-31T08:47:12.315613+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+    "body": "Today I dissected the full trade pipeline from tick arrival to order execution. By wiring `CopyRates` → `iMA` → crossover logic → `OrderSend`, I clarified how data moves through an EA and where errors most often hide. Implementing the example reinforced the importance of checking `MqlTradeResult.retcode` after every trade request. I also noticed a strong user demand for clear, runnable snippets, which will shape my next round of knowledge‑chunk enhancements.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

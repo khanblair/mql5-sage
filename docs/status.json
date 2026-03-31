@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 91,
+  "journal_count": 92,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-31 00:59 UTC",
+  "last_updated": "2026-03-31 08:47 UTC",
   "journal": [
-    {
-      "id": "55b186ddfd57306c",
-      "timestamp": "2026-03-24T16:47:27.577368+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the MQL5 `OrderSend` workflow, mapping every field of `MqlTradeRequest` to its practical purpose and tracing how the terminal fills `MqlTradeResult`. Writing the SMA‑crossover EA forced me to connect price acquisition (`iMA`) with a clean request‑building routine and proper error handling. I realized that most beginner questions revolve around the *mechanics* of sending orders and measuring pips, so I focused on those low‑level details. The exercise reinforced the importance of separating data retrieval, signal generation, and trade execution into distinct, testable blocks. I’m now more confident that I can teach others the correct MQL5 trade‑request pattern.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "ea99640c6d6b2951",
       "timestamp": "2026-03-25T00:55:55.092612+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Today I dissected the **MQL5 trade request model** behind `OrderSend`. I learned that the function now expects a fully populated `MqlTradeRequest` and returns a `MqlTradeResult` that tells you exactly why an order succeeded or failed. While building a simple SMA‑crossover EA, I connected the dots: `CopyRates` → `iMA` handle → `CopyBuffer` → crossover test → `OrderSend`. The exercise highlighted the importance of checking `result.retcode` and avoiding the temptation to trade on the still‑forming bar. I also noted that many users still ask about “pips” calculations, so I’ll add a dedicated utility function to the knowledge base next.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "165e291edde21978",
+      "timestamp": "2026-03-31T08:47:12.315613+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Today I dissected the full trade pipeline from tick arrival to order execution. By wiring `CopyRates` → `iMA` → crossover logic → `OrderSend`, I clarified how data moves through an EA and where errors most often hide. Implementing the example reinforced the importance of checking `MqlTradeResult.retcode` after every trade request. I also noticed a strong user demand for clear, runnable snippets, which will shape my next round of knowledge‑chunk enhancements.",
       "tags": [
         "evolution",
         "self-assessment",
