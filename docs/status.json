@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 93,
+  "journal_count": 94,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-03-31 16:47 UTC",
+  "last_updated": "2026-04-01 01:06 UTC",
   "journal": [
-    {
-      "id": "d9f92275d6288321",
-      "timestamp": "2026-03-25T08:45:51.654103+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the low‑level `OrderSend` call, mapping every field of `MqlTradeRequest` to its real‑world meaning. Writing the explicit request helped me see why many beginners get “invalid price” errors—they forget that market orders ignore the `price` field. I then linked that workflow to a full‑blown SMA‑cross EA, watching the data travel from `CopyRates` through an SMA buffer and finally into a trade request. The exercise reinforced the tight coupling between event handlers, indicator calculations, and the trade API, and highlighted the importance of rigorous error checking.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "b97878e4bd8b070e",
       "timestamp": "2026-03-25T16:48:53.518079+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "efbfd00c061d48fe",
       "timestamp": "2026-03-31T16:47:11.321292+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "e3401a7151734480",
+      "timestamp": "2026-04-01T01:06:06.584667+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
