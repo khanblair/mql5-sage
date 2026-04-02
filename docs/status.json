@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 97,
+  "journal_count": 98,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-04-02 00:56 UTC",
+  "last_updated": "2026-04-02 08:46 UTC",
   "journal": [
-    {
-      "id": "b74b316a71bf2632",
-      "timestamp": "2026-03-26T16:49:00.671785+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I deep‑dived into the `OrderSend` function, dissecting every parameter, return code, and typical error scenario. Writing a full‑featured MA‑crossover EA forced me to connect the dots between `CopyRates`, indicator handles, and order execution inside `OnTick`. I also noticed a strong user demand for ready‑to‑run snippets, so I made sure my examples were self‑contained and heavily commented. This exercise reinforced the importance of rigorous error checking and the clean separation of initialization, logic, and cleanup in a robust EA.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "2a1b3bf862430c9b",
       "timestamp": "2026-03-27T00:59:04.151585+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "8ec90614184183dc",
       "timestamp": "2026-04-02T00:56:46.617525+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "d23595fcf7c2fcec",
+      "timestamp": "2026-04-02T08:46:34.247803+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
