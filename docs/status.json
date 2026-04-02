@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 98,
+  "journal_count": 99,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-04-02 08:46 UTC",
+  "last_updated": "2026-04-02 16:46 UTC",
   "journal": [
-    {
-      "id": "2a1b3bf862430c9b",
-      "timestamp": "2026-03-27T00:59:04.151585+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing a wrapper that validates price, SL/TP precision, and logs errors forced me to think about how an EA’s `OnTick` loop must be tightly coupled with trade execution. I also traced the full data pipeline from `CopyRates` through an SMA crossover to a market order, reinforcing the mental model of “data → indicator → decision → order”. This deep dive clarified the exact places where novices trip up, especially around slippage handling and ticket management.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "25d0d849182c0556",
       "timestamp": "2026-03-27T08:45:55.683662+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "d23595fcf7c2fcec",
       "timestamp": "2026-04-02T08:46:34.247803+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "35d05a1839f5f4e2",
+      "timestamp": "2026-04-02T16:46:43.910190+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
