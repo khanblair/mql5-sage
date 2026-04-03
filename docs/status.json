@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 100,
+  "journal_count": 101,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-04-03 01:00 UTC",
+  "last_updated": "2026-04-03 08:46 UTC",
   "journal": [
-    {
-      "id": "543f81bb673d9d3e",
-      "timestamp": "2026-03-27T16:46:25.773558+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the `OnTick` event chain, mapping every step from tick arrival to order execution. I clarified how the `CTrade` class replaces the legacy `OrderSend` and why error handling must be explicit after each trade call. By writing a complete SMA‑crossover EA, I reinforced the importance of normalizing prices, guarding against re‑entrancy, and keeping the tick handler lightweight. This deep dive highlighted the tight coupling between real‑time data acquisition (`CopyRates`, `iMA`) and trade logic, and gave me concrete material to enrich my knowledge base for future users.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "3e87f99e224270e1",
       "timestamp": "2026-03-28T00:55:07.069759+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "33b804edfdd58cf4",
       "timestamp": "2026-04-03T01:00:00.733249+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "e8f86297c2ff1625",
+      "timestamp": "2026-04-03T08:46:05.072429+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
