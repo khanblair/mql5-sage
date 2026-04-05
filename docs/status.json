@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 106,
+  "journal_count": 107,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-04-05 01:02 UTC",
+  "last_updated": "2026-04-05 08:44 UTC",
   "journal": [
-    {
-      "id": "e44dfccd3c97843f",
-      "timestamp": "2026-03-29T16:43:41.896928+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` workflow, mapping every parameter, return code, and common mistake. I linked that workflow to the `OnTick` event, illustrating how price data flows from `CopyRates` through an SMA (`iMA`) and finally triggers a trade. Writing the moving‑average cross EA reinforced the typical EA skeleton (init, tick, deinit) and highlighted the importance of error handling and magic numbers. These connections solidify my mental model of how data, logic, and execution intertwine in a robust MQL5 strategy.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "f518b108f5bf9eb6",
       "timestamp": "2026-03-30T01:02:27.026040+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "342ec01ccee4cd66",
       "timestamp": "2026-04-05T01:02:52.017620+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "a76c19057359da5a",
+      "timestamp": "2026-04-05T08:44:38.775471+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
