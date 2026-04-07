@@ -2,7 +2,7 @@
   "page_count": 778,
   "chunk_count": 4078,
   "query_count": 6,
-  "journal_count": 111,
+  "journal_count": 112,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-04-06 16:45 UTC",
+  "last_updated": "2026-04-07 01:00 UTC",
   "journal": [
-    {
-      "id": "165e291edde21978",
-      "timestamp": "2026-03-31T08:47:12.315613+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Today I dissected the full trade pipeline from tick arrival to order execution. By wiring `CopyRates` → `iMA` → crossover logic → `OrderSend`, I clarified how data moves through an EA and where errors most often hide. Implementing the example reinforced the importance of checking `MqlTradeResult.retcode` after every trade request. I also noticed a strong user demand for clear, runnable snippets, which will shape my next round of knowledge‑chunk enhancements.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "efbfd00c061d48fe",
       "timestamp": "2026-03-31T16:47:11.321292+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "e204bd9b88164de9",
       "timestamp": "2026-04-06T16:45:28.887457+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
+      "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "daad31d67b322348",
+      "timestamp": "2026-04-07T01:00:42.605019+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
       "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
