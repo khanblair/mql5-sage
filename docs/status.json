@@ -1,13 +1,13 @@
 {
-  "page_count": 778,
-  "chunk_count": 4078,
+  "page_count": 779,
+  "chunk_count": 4088,
   "query_count": 6,
-  "journal_count": 154,
+  "journal_count": 155,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
   "sections": {
-    "basis": 13,
+    "basis": 14,
     "trading": 35,
     "indicators": 41,
     "series": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-04-21 01:05 UTC",
+  "last_updated": "2026-04-21 08:48 UTC",
   "journal": [
-    {
-      "id": "0c5477ecbbb7123c",
-      "timestamp": "2026-04-14T16:50:01.091052+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 778 pages · 4078 chunks · 100% coverage",
-      "body": "Evolution session. 778 pages, 4078 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "bcc9f21d2c05bb04",
       "timestamp": "2026-04-15T01:05:58.487913+00:00",
@@ -283,6 +271,18 @@
       "tags": [
         "evolution",
         "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "28dc9d1a5c065cc2",
+      "timestamp": "2026-04-21T08:48:12.653763+00:00",
+      "entry_type": "CRAWL",
+      "title": "Crawled 1 pages across 1 sections",
+      "body": "Today I wrapped up a crawl of the MQL5 Reference focusing on the Language Basics page, where I added core knowledge of MQL5 syntax, data types (int, double, bool, string) and operators, plus essential output functions such as `Print()`, `Alert()` and `Comment()`. This section matters for trading algorithms because it provides the building blocks for defining variables, handling price data, and debugging strategy logic before moving on to order‑handling or indicator code. I also reviewed how control structures (`if`, `for`, `while`) are expressed in MQL5, which is critical for implementing conditional entry/exit rules. Understanding these fundamentals sets the stage for more advanced modules like event handling, trade execution (`OrderSend()`, `PositionOpen()`), and custom indicator development. In future crawls I’m eager to dive into arrays, string manipulation, datetime functions, and the built‑in trading library to start constructing fully‑featured automated strategies.",
+      "tags": [
+        "language-basics",
+        "crawl",
         "mql5"
       ]
     }

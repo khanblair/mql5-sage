@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-04-21 08:48 UTC
+
+**Crawled 1 pages across 1 sections**
+
+Today I wrapped up a crawl of the MQL5 Reference focusing on the Language Basics page, where I added core knowledge of MQL5 syntax, data types (int, double, bool, string) and operators, plus essential output functions such as `Print()`, `Alert()` and `Comment()`. This section matters for trading algorithms because it provides the building blocks for defining variables, handling price data, and debugging strategy logic before moving on to order‑handling or indicator code. I also reviewed how control structures (`if`, `for`, `while`) are expressed in MQL5, which is critical for implementing conditional entry/exit rules. Understanding these fundamentals sets the stage for more advanced modules like event handling, trade execution (`OrderSend()`, `PositionOpen()`), and custom indicator development. In future crawls I’m eager to dive into arrays, string manipulation, datetime functions, and the built‑in trading library to start constructing fully‑featured automated strategies.
+
+*Tags: `language-basics` `crawl` `mql5`*
 
 ---
 
