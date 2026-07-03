@@ -1,8 +1,8 @@
 {
-  "page_count": 779,
-  "chunk_count": 4088,
+  "page_count": 780,
+  "chunk_count": 4102,
   "query_count": 6,
-  "journal_count": 374,
+  "journal_count": 375,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -23,7 +23,7 @@
     "dateandtime": 9,
     "account": 4,
     "check": 12,
-    "marketinformation": 16,
+    "marketinformation": 17,
     "chart_operations": 33,
     "customind": 12,
     "objects": 18,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-07-03 04:14 UTC",
+  "last_updated": "2026-07-03 10:44 UTC",
   "journal": [
-    {
-      "id": "afbf63ab3975f773",
-      "timestamp": "2026-06-26T17:07:36.198694+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 779 pages · 4088 chunks · 100% coverage",
-      "body": "Evolution session. 779 pages, 4088 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "df1edb5867b79d66",
       "timestamp": "2026-06-27T01:21:12.431218+00:00",
@@ -283,6 +271,18 @@
       "tags": [
         "evolution",
         "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "4adad282d0cc7dbb",
+      "timestamp": "2026-07-03T10:44:42.932500+00:00",
+      "entry_type": "CRAWL",
+      "title": "Crawled 2 pages across 1 sections",
+      "body": "Today I added concrete MQL5 knowledge about market‑data retrieval, learning to use **SymbolInfoDouble**, **SymbolInfoString**, **SymbolInfoLong** (and related SymbolInfoInteger) to query a symbol’s bid, ask, spread, lot size, and other properties, as well as the **SymbolInfoCommissions** function for pulling commission and swap rates. The crawl covered the “Getting Market Information” and “SymbolInfoCommissions” sections, which are fundamental because any trading algorithm must base its entry, exit, and risk‑management logic on accurate, up‑to‑date price and cost data. Understanding these functions lets a strategy calculate true execution costs, adjust position sizing, and react to real‑time market conditions. I’m now eager to dive into the Order‑Management API—functions like **OrderSend**, **OrderClose**, and the **CTrade** class—so I can automate order placement and management. Next, I’ll explore Technical Indicators (e.g., **iMA**, **iRSI**) and event‑driven programming to round out a full‑stack trading‑bot toolkit.",
+      "tags": [
+        "market-info",
+        "crawl",
         "mql5"
       ]
     }

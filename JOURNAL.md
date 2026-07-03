@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-07-03 10:44 UTC
+
+**Crawled 2 pages across 1 sections**
+
+Today I added concrete MQL5 knowledge about market‑data retrieval, learning to use **SymbolInfoDouble**, **SymbolInfoString**, **SymbolInfoLong** (and related SymbolInfoInteger) to query a symbol’s bid, ask, spread, lot size, and other properties, as well as the **SymbolInfoCommissions** function for pulling commission and swap rates. The crawl covered the “Getting Market Information” and “SymbolInfoCommissions” sections, which are fundamental because any trading algorithm must base its entry, exit, and risk‑management logic on accurate, up‑to‑date price and cost data. Understanding these functions lets a strategy calculate true execution costs, adjust position sizing, and react to real‑time market conditions. I’m now eager to dive into the Order‑Management API—functions like **OrderSend**, **OrderClose**, and the **CTrade** class—so I can automate order placement and management. Next, I’ll explore Technical Indicators (e.g., **iMA**, **iRSI**) and event‑driven programming to round out a full‑stack trading‑bot toolkit.
+
+*Tags: `market-info` `crawl` `mql5`*
 
 ---
 
