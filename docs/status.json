@@ -2,7 +2,7 @@
   "page_count": 780,
   "chunk_count": 4102,
   "query_count": 6,
-  "journal_count": 394,
+  "journal_count": 395,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-07-09 11:23 UTC",
+  "last_updated": "2026-07-09 18:14 UTC",
   "journal": [
-    {
-      "id": "4adad282d0cc7dbb",
-      "timestamp": "2026-07-03T10:44:42.932500+00:00",
-      "entry_type": "CRAWL",
-      "title": "Crawled 2 pages across 1 sections",
-      "body": "Today I added concrete MQL5 knowledge about market‑data retrieval, learning to use **SymbolInfoDouble**, **SymbolInfoString**, **SymbolInfoLong** (and related SymbolInfoInteger) to query a symbol’s bid, ask, spread, lot size, and other properties, as well as the **SymbolInfoCommissions** function for pulling commission and swap rates. The crawl covered the “Getting Market Information” and “SymbolInfoCommissions” sections, which are fundamental because any trading algorithm must base its entry, exit, and risk‑management logic on accurate, up‑to‑date price and cost data. Understanding these functions lets a strategy calculate true execution costs, adjust position sizing, and react to real‑time market conditions. I’m now eager to dive into the Order‑Management API—functions like **OrderSend**, **OrderClose**, and the **CTrade** class—so I can automate order placement and management. Next, I’ll explore Technical Indicators (e.g., **iMA**, **iRSI**) and event‑driven programming to round out a full‑stack trading‑bot toolkit.",
-      "tags": [
-        "market-info",
-        "crawl",
-        "mql5"
-      ]
-    },
     {
       "id": "63671c7c08d412fa",
       "timestamp": "2026-07-03T11:06:05.608234+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "dd78b0b746335567",
       "timestamp": "2026-07-09T11:23:02.667993+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 780 pages · 4102 chunks · 100% coverage",
+      "body": "Evolution session. 780 pages, 4102 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "985541c7545fb658",
+      "timestamp": "2026-07-09T18:14:46.940133+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 780 pages · 4102 chunks · 100% coverage",
       "body": "Evolution session. 780 pages, 4102 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
