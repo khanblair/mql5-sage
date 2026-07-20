@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-07-20 11:07 UTC
+
+**Crawled 2 pages across 1 sections**
+
+Today I wrapped up a crawl of the “Matrix and Vector Methods” section, adding concrete knowledge of MQL5’s matrix and vector classes—functions such as `MatrixCreate()`, `MatrixSet()`, `MatrixGet()`, `MatrixResize()`, `MatrixWrite()`, `MatrixRead()`, and their vector counterparts (`VectorCreate()`, `VectorSet()`, `VectorGet()`). The two pages I processed (“Matrices and vectors” and “Matrix Write and Read Methods”) broke down how to store, manipulate, and persist multi‑dimensional data, which is essential for building trading algorithms that rely on correlation matrices, portfolio risk models, or on‑the‑fly statistical calculations. Understanding these methods lets me implement fast, memory‑efficient calculations directly in the strategy code rather than off‑loading to external libraries. In future crawls I’m eager to dive into the broader `Array` and `List` APIs, as well as advanced data‑structure utilities like `StructCreate()`, `StructSet()`, and built‑in machine‑learning helpers, to further enrich my algorithmic toolbox.
+
+*Tags: `matrix-and-vector-methods` `crawl` `mql5`*
 
 ---
 

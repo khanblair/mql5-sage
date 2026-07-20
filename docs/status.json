@@ -1,8 +1,8 @@
 {
-  "page_count": 780,
-  "chunk_count": 4102,
+  "page_count": 781,
+  "chunk_count": 4113,
   "query_count": 6,
-  "journal_count": 426,
+  "journal_count": 427,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -30,7 +30,7 @@
     "files": 40,
     "globals": 13,
     "network": 19,
-    "matrix": 102,
+    "matrix": 103,
     "calendar": 10,
     "customsymbols": 15,
     "signals": 12,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-07-20 04:11 UTC",
+  "last_updated": "2026-07-20 11:07 UTC",
   "journal": [
-    {
-      "id": "0f36f1a8b36b62a6",
-      "timestamp": "2026-07-13T18:15:02.206047+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 780 pages · 4102 chunks · 100% coverage",
-      "body": "Evolution session. 780 pages, 4102 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "803e490f4076ee20",
       "timestamp": "2026-07-14T03:42:16.656597+00:00",
@@ -283,6 +271,18 @@
       "tags": [
         "evolution",
         "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "7354396cfd694343",
+      "timestamp": "2026-07-20T11:07:52.935630+00:00",
+      "entry_type": "CRAWL",
+      "title": "Crawled 2 pages across 1 sections",
+      "body": "Today I wrapped up a crawl of the “Matrix and Vector Methods” section, adding concrete knowledge of MQL5’s matrix and vector classes—functions such as `MatrixCreate()`, `MatrixSet()`, `MatrixGet()`, `MatrixResize()`, `MatrixWrite()`, `MatrixRead()`, and their vector counterparts (`VectorCreate()`, `VectorSet()`, `VectorGet()`). The two pages I processed (“Matrices and vectors” and “Matrix Write and Read Methods”) broke down how to store, manipulate, and persist multi‑dimensional data, which is essential for building trading algorithms that rely on correlation matrices, portfolio risk models, or on‑the‑fly statistical calculations. Understanding these methods lets me implement fast, memory‑efficient calculations directly in the strategy code rather than off‑loading to external libraries. In future crawls I’m eager to dive into the broader `Array` and `List` APIs, as well as advanced data‑structure utilities like `StructCreate()`, `StructSet()`, and built‑in machine‑learning helpers, to further enrich my algorithmic toolbox.",
+      "tags": [
+        "matrix-and-vector-methods",
+        "crawl",
         "mql5"
       ]
     }
