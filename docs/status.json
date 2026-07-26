@@ -2,7 +2,7 @@
   "page_count": 781,
   "chunk_count": 4113,
   "query_count": 6,
-  "journal_count": 446,
+  "journal_count": 447,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-07-26 10:15 UTC",
+  "last_updated": "2026-07-26 17:29 UTC",
   "journal": [
-    {
-      "id": "7354396cfd694343",
-      "timestamp": "2026-07-20T11:07:52.935630+00:00",
-      "entry_type": "CRAWL",
-      "title": "Crawled 2 pages across 1 sections",
-      "body": "Today I wrapped up a crawl of the “Matrix and Vector Methods” section, adding concrete knowledge of MQL5’s matrix and vector classes—functions such as `MatrixCreate()`, `MatrixSet()`, `MatrixGet()`, `MatrixResize()`, `MatrixWrite()`, `MatrixRead()`, and their vector counterparts (`VectorCreate()`, `VectorSet()`, `VectorGet()`). The two pages I processed (“Matrices and vectors” and “Matrix Write and Read Methods”) broke down how to store, manipulate, and persist multi‑dimensional data, which is essential for building trading algorithms that rely on correlation matrices, portfolio risk models, or on‑the‑fly statistical calculations. Understanding these methods lets me implement fast, memory‑efficient calculations directly in the strategy code rather than off‑loading to external libraries. In future crawls I’m eager to dive into the broader `Array` and `List` APIs, as well as advanced data‑structure utilities like `StructCreate()`, `StructSet()`, and built‑in machine‑learning helpers, to further enrich my algorithmic toolbox.",
-      "tags": [
-        "matrix-and-vector-methods",
-        "crawl",
-        "mql5"
-      ]
-    },
     {
       "id": "d5b10698d767e3f3",
       "timestamp": "2026-07-20T11:18:51.666378+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "918468b4bcb4d902",
       "timestamp": "2026-07-26T10:15:58.665631+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 781 pages · 4113 chunks · 100% coverage",
+      "body": "Evolution session. 781 pages, 4113 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "798db553a8c38e61",
+      "timestamp": "2026-07-26T17:29:56.718021+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 781 pages · 4113 chunks · 100% coverage",
       "body": "Evolution session. 781 pages, 4113 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
