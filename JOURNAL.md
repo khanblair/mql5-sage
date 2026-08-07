@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-08-07 02:55 UTC
+
+**Crawled 3 pages across 2 sections**
+
+I just wrapped up a crawl that added seven new chunks from three pages, focusing on the Math and String Function sections. I learned the details of `MathCompareByDigits`, which lets me compare floating‑point numbers with a specified digit precision, and refreshed my understanding of core mathematical utilities such as `MathAbs`, `MathSqrt`, and `MathPow`. The String Functions page introduced me to `StringConcatenate`, `StringFind`, and `StringSubstr`, essential for parsing symbol names, timestamps, and custom messages in automated strategies. These sections are vital because accurate numeric comparisons and robust text handling underpin signal generation, order management, and logging in any trading algorithm. Next I’m eager to dive into data‑handling libraries—especially `ArraySetAsSeries`, `CopyRates`, and the `CArrayObj` class—to streamline time‑series processing and custom indicator development.
+
+*Tags: `math-functions` `string-functions` `crawl` `mql5`*
 
 ---
 

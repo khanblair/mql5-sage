@@ -1,8 +1,8 @@
 {
-  "page_count": 781,
-  "chunk_count": 4113,
+  "page_count": 782,
+  "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 479,
+  "journal_count": 480,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -17,7 +17,7 @@
     "predefined": 11,
     "common": 33,
     "array": 26,
-    "math": 33,
+    "math": 34,
     "strings": 20,
     "convert": 23,
     "dateandtime": 9,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-08-06 10:58 UTC",
+  "last_updated": "2026-08-07 02:55 UTC",
   "journal": [
-    {
-      "id": "ce4178d2fa949d25",
-      "timestamp": "2026-07-31T03:58:07.792758+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 781 pages · 4113 chunks · 100% coverage",
-      "body": "Evolution session. 781 pages, 4113 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "698005add2586775",
       "timestamp": "2026-07-31T11:03:27.837394+00:00",
@@ -283,6 +271,19 @@
       "tags": [
         "evolution",
         "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "53e63b1591b141b9",
+      "timestamp": "2026-08-07T02:55:11.724727+00:00",
+      "entry_type": "CRAWL",
+      "title": "Crawled 3 pages across 2 sections",
+      "body": "I just wrapped up a crawl that added seven new chunks from three pages, focusing on the Math and String Function sections. I learned the details of `MathCompareByDigits`, which lets me compare floating‑point numbers with a specified digit precision, and refreshed my understanding of core mathematical utilities such as `MathAbs`, `MathSqrt`, and `MathPow`. The String Functions page introduced me to `StringConcatenate`, `StringFind`, and `StringSubstr`, essential for parsing symbol names, timestamps, and custom messages in automated strategies. These sections are vital because accurate numeric comparisons and robust text handling underpin signal generation, order management, and logging in any trading algorithm. Next I’m eager to dive into data‑handling libraries—especially `ArraySetAsSeries`, `CopyRates`, and the `CArrayObj` class—to streamline time‑series processing and custom indicator development.",
+      "tags": [
+        "math-functions",
+        "string-functions",
+        "crawl",
         "mql5"
       ]
     }
