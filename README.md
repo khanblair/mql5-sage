@@ -10,9 +10,9 @@
 | 📄 Pages Crawled | 782 |
 | 🧩 Knowledge Chunks | 4120 |
 | 🔍 Queries Answered | 6 |
-| 📓 Journal Entries | 532 |
+| 📓 Journal Entries | 533 |
 | 🕷️ Last Crawled | 2026-08-07 |
-| 🧬 Last Evolved | 2026-08-24 02:03 UTC |
+| 🧬 Last Evolved | 2026-08-24 09:10 UTC |
 | 📈 True Coverage | 100% (based on actual pages crawled) |
 | 🤖 Model | `groq/compound` |
 
