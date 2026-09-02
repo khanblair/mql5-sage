@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-02 19:26 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the native `OrderSend` function in depth, correcting my earlier misunderstanding of its signature and emphasizing the importance of proper price direction and slippage handling. I linked that knowledge to the broader EA lifecycle, illustrating how a simple SMA crossover EA pulls price data with `CopyBuffer`, decides inside `OnTick`, and finally executes a trade via `OrderSend`. The exercise highlighted recurring user needs—clear, error‑aware snippets for order placement and pip calculations. I also identified gaps in my current knowledge base, notably the lack of decision‑tree style guidance, and set a plan to augment my chunks with richer examples and FAQs.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-02 12:51 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

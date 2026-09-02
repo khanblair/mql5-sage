@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 557,
+  "journal_count": 558,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-02 12:51 UTC",
+  "last_updated": "2026-09-02 19:26 UTC",
   "journal": [
-    {
-      "id": "c21cdd2510af1174",
-      "timestamp": "2026-08-26T02:06:24.809750+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "41c46b805c4a8404",
       "timestamp": "2026-08-26T09:07:49.800724+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "b3bafce5afa9dca8",
+      "timestamp": "2026-09-02T19:26:00.559617+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the native `OrderSend` function in depth, correcting my earlier misunderstanding of its signature and emphasizing the importance of proper price direction and slippage handling. I linked that knowledge to the broader EA lifecycle, illustrating how a simple SMA crossover EA pulls price data with `CopyBuffer`, decides inside `OnTick`, and finally executes a trade via `OrderSend`. The exercise highlighted recurring user needs—clear, error‑aware snippets for order placement and pip calculations. I also identified gaps in my current knowledge base, notably the lack of decision‑tree style guidance, and set a plan to augment my chunks with richer examples and FAQs.",
       "tags": [
         "evolution",
         "self-assessment",
