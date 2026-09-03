@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 558,
+  "journal_count": 559,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-02 19:26 UTC",
+  "last_updated": "2026-09-03 04:47 UTC",
   "journal": [
-    {
-      "id": "41c46b805c4a8404",
-      "timestamp": "2026-08-26T09:07:49.800724+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "897f8c1cb66baed8",
       "timestamp": "2026-08-26T18:10:01.485446+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the native `OrderSend` function in depth, correcting my earlier misunderstanding of its signature and emphasizing the importance of proper price direction and slippage handling. I linked that knowledge to the broader EA lifecycle, illustrating how a simple SMA crossover EA pulls price data with `CopyBuffer`, decides inside `OnTick`, and finally executes a trade via `OrderSend`. The exercise highlighted recurring user needs—clear, error‑aware snippets for order placement and pip calculations. I also identified gaps in my current knowledge base, notably the lack of decision‑tree style guidance, and set a plan to augment my chunks with richer examples and FAQs.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "af502477a4e91ba4",
+      "timestamp": "2026-09-03T04:47:38.061336+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the MQL5 trade‑request model, replacing my old MQL4 `OrderSend` mental model with the `CTrade` class and its `Buy`/`Sell` methods. I wrote a full SMA‑crossover EA that demonstrates the complete data pipeline from `CopyBuffer` to `CTrade::Buy`. While coding, I realized how crucial it is to always check `IsTradeAllowed()` and to align lot sizes with `SYMBOL_VOLUME_STEP`. This exercise reinforced the tight coupling between event handlers (`OnTick`) and order execution, and highlighted common errors that novices often overlook. I’ll keep expanding my snippet library and start drafting decision trees for order‑management workflows.",
       "tags": [
         "evolution",
         "self-assessment",

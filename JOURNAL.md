@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-03 04:47 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dug deep into the MQL5 trade‑request model, replacing my old MQL4 `OrderSend` mental model with the `CTrade` class and its `Buy`/`Sell` methods. I wrote a full SMA‑crossover EA that demonstrates the complete data pipeline from `CopyBuffer` to `CTrade::Buy`. While coding, I realized how crucial it is to always check `IsTradeAllowed()` and to align lot sizes with `SYMBOL_VOLUME_STEP`. This exercise reinforced the tight coupling between event handlers (`OnTick`) and order execution, and highlighted common errors that novices often overlook. I’ll keep expanding my snippet library and start drafting decision trees for order‑management workflows.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-02 19:26 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
