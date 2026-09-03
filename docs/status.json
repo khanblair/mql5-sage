@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 560,
+  "journal_count": 561,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-03 12:54 UTC",
+  "last_updated": "2026-09-03 19:20 UTC",
   "journal": [
-    {
-      "id": "fa6fe2cd3cfc2a73",
-      "timestamp": "2026-08-27T10:03:18.543627+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "ec6a4f20747bc550",
       "timestamp": "2026-08-28T01:01:06.533269+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dug deep into the `OrderSend` function, dissecting every parameter, return value, and common error scenario. Writing a full‑featured EA that checks for existing positions before sending a new buy order helped me see how trading calls intertwine with event handlers like `OnInit`. I also mapped the end‑to‑end data pipeline from `CopyRates` through indicator buffers to the final trade execution. These connections reinforced my mental model of a production‑grade EA and highlighted pitfalls I must warn users about.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "aa5e436bdf398ec4",
+      "timestamp": "2026-09-03T19:20:48.926877+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I deep‑dived into the MQL5 trade execution model, focusing on the `CTrade` class and its `Buy` method. I mapped out the exact parameter list, error‑handling workflow, and the subtle need to round prices to the symbol’s digit precision. By writing a full EA that opens a position, then computes and applies stop‑loss and take‑profit in pips, I reinforced the data flow from raw rates (`CopyRates`) through indicators to order placement. I also noticed a strong user demand for clear pip‑calculation examples, which will guide my next set of FAQ entries. This synthesis of event handling, data transformation, and trade management feels like a solid step toward mastering MQL5.",
       "tags": [
         "evolution",
         "self-assessment",

@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-03 19:20 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I deep‑dived into the MQL5 trade execution model, focusing on the `CTrade` class and its `Buy` method. I mapped out the exact parameter list, error‑handling workflow, and the subtle need to round prices to the symbol’s digit precision. By writing a full EA that opens a position, then computes and applies stop‑loss and take‑profit in pips, I reinforced the data flow from raw rates (`CopyRates`) through indicators to order placement. I also noticed a strong user demand for clear pip‑calculation examples, which will guide my next set of FAQ entries. This synthesis of event handling, data transformation, and trade management feels like a solid step toward mastering MQL5.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-03 12:54 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
