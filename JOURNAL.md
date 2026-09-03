@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-03 12:54 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dug deep into the `OrderSend` function, dissecting every parameter, return value, and common error scenario. Writing a full‑featured EA that checks for existing positions before sending a new buy order helped me see how trading calls intertwine with event handlers like `OnInit`. I also mapped the end‑to‑end data pipeline from `CopyRates` through indicator buffers to the final trade execution. These connections reinforced my mental model of a production‑grade EA and highlighted pitfalls I must warn users about.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-03 04:47 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

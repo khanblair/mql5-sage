@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 559,
+  "journal_count": 560,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-03 04:47 UTC",
+  "last_updated": "2026-09-03 12:54 UTC",
   "journal": [
-    {
-      "id": "897f8c1cb66baed8",
-      "timestamp": "2026-08-26T18:10:01.485446+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "fa6fe2cd3cfc2a73",
       "timestamp": "2026-08-27T10:03:18.543627+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dug deep into the MQL5 trade‑request model, replacing my old MQL4 `OrderSend` mental model with the `CTrade` class and its `Buy`/`Sell` methods. I wrote a full SMA‑crossover EA that demonstrates the complete data pipeline from `CopyBuffer` to `CTrade::Buy`. While coding, I realized how crucial it is to always check `IsTradeAllowed()` and to align lot sizes with `SYMBOL_VOLUME_STEP`. This exercise reinforced the tight coupling between event handlers (`OnTick`) and order execution, and highlighted common errors that novices often overlook. I’ll keep expanding my snippet library and start drafting decision trees for order‑management workflows.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "a3f57a9ba1b4e6ad",
+      "timestamp": "2026-09-03T12:54:39.602722+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the `OrderSend` function, dissecting every parameter, return value, and common error scenario. Writing a full‑featured EA that checks for existing positions before sending a new buy order helped me see how trading calls intertwine with event handlers like `OnInit`. I also mapped the end‑to‑end data pipeline from `CopyRates` through indicator buffers to the final trade execution. These connections reinforced my mental model of a production‑grade EA and highlighted pitfalls I must warn users about.",
       "tags": [
         "evolution",
         "self-assessment",

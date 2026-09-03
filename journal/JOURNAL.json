@@ -6717,5 +6717,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "a3f57a9ba1b4e6ad",
+    "timestamp": "2026-09-03T12:54:39.602722+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dug deep into the `OrderSend` function, dissecting every parameter, return value, and common error scenario. Writing a full‑featured EA that checks for existing positions before sending a new buy order helped me see how trading calls intertwine with event handlers like `OnInit`. I also mapped the end‑to‑end data pipeline from `CopyRates` through indicator buffers to the final trade execution. These connections reinforced my mental model of a production‑grade EA and highlighted pitfalls I must warn users about.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
