@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-04 04:49 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I deep‑dived into the modern MQL5 trade API, replacing the legacy `OrderSend` with the `CTrade` class. I practiced calculating stop‑loss and take‑profit in points, normalizing with `_Digits`, and handling errors via `GetLastError()`. By wiring a simple MA‑crossover strategy to `OnTick`, I saw how price data travels from `CopyRates` through `iMA` to the trade execution layer. The exercise highlighted the importance of checking return values and structuring an EA with clear init, main, and cleanup phases. This reinforced my mental model of event‑driven trading in MQL5.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-03 19:20 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

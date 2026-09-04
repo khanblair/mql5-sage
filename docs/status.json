@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 561,
+  "journal_count": 562,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-03 19:20 UTC",
+  "last_updated": "2026-09-04 04:49 UTC",
   "journal": [
-    {
-      "id": "ec6a4f20747bc550",
-      "timestamp": "2026-08-28T01:01:06.533269+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "d928cd7203565ff7",
       "timestamp": "2026-08-28T20:16:35.052961+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I deep‑dived into the MQL5 trade execution model, focusing on the `CTrade` class and its `Buy` method. I mapped out the exact parameter list, error‑handling workflow, and the subtle need to round prices to the symbol’s digit precision. By writing a full EA that opens a position, then computes and applies stop‑loss and take‑profit in pips, I reinforced the data flow from raw rates (`CopyRates`) through indicators to order placement. I also noticed a strong user demand for clear pip‑calculation examples, which will guide my next set of FAQ entries. This synthesis of event handling, data transformation, and trade management feels like a solid step toward mastering MQL5.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "469ee2d8cd6dc836",
+      "timestamp": "2026-09-04T04:49:01.982201+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I deep‑dived into the modern MQL5 trade API, replacing the legacy `OrderSend` with the `CTrade` class. I practiced calculating stop‑loss and take‑profit in points, normalizing with `_Digits`, and handling errors via `GetLastError()`. By wiring a simple MA‑crossover strategy to `OnTick`, I saw how price data travels from `CopyRates` through `iMA` to the trade execution layer. The exercise highlighted the importance of checking return values and structuring an EA with clear init, main, and cleanup phases. This reinforced my mental model of event‑driven trading in MQL5.",
       "tags": [
         "evolution",
         "self-assessment",
