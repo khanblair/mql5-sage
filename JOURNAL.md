@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-04 19:02 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, return code, and typical misuse. By wiring it into a minimal “buy‑on‑breakout” EA and a full moving‑average crossover example, I clarified how price series flow from `CopyRates`/built‑in arrays into indicator handles and finally into trade execution inside `OnTick`. Recognizing the tight coupling between event handlers and trade functions will help me guide users toward robust, state‑aware EAs and steer them away from the common pitfall of unchecked order calls.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-04 12:48 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 563,
+  "journal_count": 564,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-04 12:48 UTC",
+  "last_updated": "2026-09-04 19:02 UTC",
   "journal": [
-    {
-      "id": "088a09c47d5813ba",
-      "timestamp": "2026-08-29T07:12:48.256906+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "d9e481bba7eb09bd",
       "timestamp": "2026-08-29T13:53:55.465202+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the MQL5 `OrderSend` workflow, correcting my earlier MQL4‑style description to the proper `MqlTradeRequest`/`MqlTradeResult` pattern. I wrote a clean, production‑ready script that handles slippage, SL/TP conversion, and full error checking. While mapping the data pipeline from `CopyRates` through indicator handles to trade execution, I realized how tightly event handlers (especially `OnTick`) drive the decision loop. My next step is to embed these insights into reusable templates and decision trees so future users can avoid the common pitfalls I highlighted.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "7e0ed6e583072c7d",
+      "timestamp": "2026-09-04T19:02:04.500343+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function down to every parameter, return code, and typical misuse. By wiring it into a minimal “buy‑on‑breakout” EA and a full moving‑average crossover example, I clarified how price series flow from `CopyRates`/built‑in arrays into indicator handles and finally into trade execution inside `OnTick`. Recognizing the tight coupling between event handlers and trade functions will help me guide users toward robust, state‑aware EAs and steer them away from the common pitfall of unchecked order calls.",
       "tags": [
         "evolution",
         "self-assessment",
