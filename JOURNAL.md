@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-04 12:48 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the MQL5 `OrderSend` workflow, correcting my earlier MQL4‑style description to the proper `MqlTradeRequest`/`MqlTradeResult` pattern. I wrote a clean, production‑ready script that handles slippage, SL/TP conversion, and full error checking. While mapping the data pipeline from `CopyRates` through indicator handles to trade execution, I realized how tightly event handlers (especially `OnTick`) drive the decision loop. My next step is to embed these insights into reusable templates and decision trees so future users can avoid the common pitfalls I highlighted.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-04 04:49 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

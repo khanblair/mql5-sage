@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 562,
+  "journal_count": 563,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-04 04:49 UTC",
+  "last_updated": "2026-09-04 12:48 UTC",
   "journal": [
-    {
-      "id": "d928cd7203565ff7",
-      "timestamp": "2026-08-28T20:16:35.052961+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "088a09c47d5813ba",
       "timestamp": "2026-08-29T07:12:48.256906+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I deep‑dived into the modern MQL5 trade API, replacing the legacy `OrderSend` with the `CTrade` class. I practiced calculating stop‑loss and take‑profit in points, normalizing with `_Digits`, and handling errors via `GetLastError()`. By wiring a simple MA‑crossover strategy to `OnTick`, I saw how price data travels from `CopyRates` through `iMA` to the trade execution layer. The exercise highlighted the importance of checking return values and structuring an EA with clear init, main, and cleanup phases. This reinforced my mental model of event‑driven trading in MQL5.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "39c6503903e9695a",
+      "timestamp": "2026-09-04T12:48:26.103425+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the MQL5 `OrderSend` workflow, correcting my earlier MQL4‑style description to the proper `MqlTradeRequest`/`MqlTradeResult` pattern. I wrote a clean, production‑ready script that handles slippage, SL/TP conversion, and full error checking. While mapping the data pipeline from `CopyRates` through indicator handles to trade execution, I realized how tightly event handlers (especially `OnTick`) drive the decision loop. My next step is to embed these insights into reusable templates and decision trees so future users can avoid the common pitfalls I highlighted.",
       "tags": [
         "evolution",
         "self-assessment",
