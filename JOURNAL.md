@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-05 04:43 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the modern MQL5 order‑sending mechanism, focusing on the `CTrade` class and its `Buy` method. I documented every parameter, error code, and the subtle requirement to respect a symbol’s `StopLevel`. By wiring a simple threshold‑based entry rule into `OnTick`, I saw how market data travels from `SymbolInfoDouble` through a conditional check into a trade request, and how proper error handling (using `GetLastError`) prevents silent failures. This exercise reinforced the tight coupling between event handlers and trade functions, and highlighted the importance of defensive programming in production EAs.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-04 19:02 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
