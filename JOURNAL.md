@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-05 11:53 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` workflow, mapping every parameter, return value, and error code. Writing a minimal BUY‑only EA forced me to think about price rounding, slippage handling, and the importance of checking the ticket and `GetLastError()`. I also linked the data pipeline from `CopyRates` through an SMA indicator to a trade decision, which clarified how event handlers orchestrate the whole process. This deep dive gave me a concrete mental model for building robust, production‑grade EAs.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-05 04:43 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
