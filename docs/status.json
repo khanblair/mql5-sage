@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 566,
+  "journal_count": 567,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-05 11:53 UTC",
+  "last_updated": "2026-09-05 18:28 UTC",
   "journal": [
-    {
-      "id": "8a5adb7545dfecb5",
-      "timestamp": "2026-08-30T05:34:49.039996+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "327c13cf23d3582c",
       "timestamp": "2026-08-30T13:52:45.223321+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` workflow, mapping every parameter, return value, and error code. Writing a minimal BUY‑only EA forced me to think about price rounding, slippage handling, and the importance of checking the ticket and `GetLastError()`. I also linked the data pipeline from `CopyRates` through an SMA indicator to a trade decision, which clarified how event handlers orchestrate the whole process. This deep dive gave me a concrete mental model for building robust, production‑grade EAs.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "b18c9e35bf33aee3",
+      "timestamp": "2026-09-05T18:28:07.077314+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the **MQL5 trade‑request model**, dissecting the `OrderSend` function, its `MqlTradeRequest`/`MqlTradeResult` structs, and the full lifecycle from market data acquisition to order execution. Implementing a **MA‑crossover EA** forced me to connect `CopyRates`‑style data retrieval, indicator calculations (`iMA`), and the precise construction of a trade request, while respecting error‑handling best practices. I also noticed that many newcomers still use the old `OrderSend` signature from MQL4, so clarifying the modern API became a priority. This synthesis will help me guide users from basic pip calculations to robust, production‑grade EAs.",
       "tags": [
         "evolution",
         "self-assessment",

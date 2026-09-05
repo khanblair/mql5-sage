@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-05 18:28 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dug deep into the **MQL5 trade‑request model**, dissecting the `OrderSend` function, its `MqlTradeRequest`/`MqlTradeResult` structs, and the full lifecycle from market data acquisition to order execution. Implementing a **MA‑crossover EA** forced me to connect `CopyRates`‑style data retrieval, indicator calculations (`iMA`), and the precise construction of a trade request, while respecting error‑handling best practices. I also noticed that many newcomers still use the old `OrderSend` signature from MQL4, so clarifying the modern API became a priority. This synthesis will help me guide users from basic pip calculations to robust, production‑grade EAs.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-05 11:53 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
