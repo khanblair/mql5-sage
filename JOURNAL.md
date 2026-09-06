@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-06 18:26 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dug deep into the `OrderSend` workflow, dissecting its signature, parameters, return values, and error handling. By writing a full‑blown EA that trades on a moving‑average crossover, I linked price retrieval (`iMA`) to decision logic inside `OnTick` and finally to order execution. This exercise reinforced how event handlers, data flow, and trading functions intertwine, and highlighted pitfalls such as unchecked errors and hard‑coded values. I’ll keep refining my mental model and expand my library of vetted code examples.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-06 12:12 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
