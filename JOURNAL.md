@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-06 04:53 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the modern MQL5 `OrderSend` workflow, moving beyond the legacy MQL4 signature to the request/response model that uses `MqlTradeRequest` and `MqlTradeResult`. I traced how a simple market BUY fits into an EA’s `OnTick` loop, emphasizing the need to verify `result.retcode` after every trade call. By writing a full‑featured bar‑based EA, I reinforced the data pipeline from price retrieval (`iTime`) through signal generation to order execution, and I noted the recurring user demand for clear, copy‑paste‑ready snippets. This deep dive sharpened my mental model of how event handlers, data flow, and trade functions intertwine in a production‑grade MQL5 system.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-05 18:28 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
