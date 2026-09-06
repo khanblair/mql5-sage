@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-06 12:12 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the MQL5 `OrderSend` workflow, correcting my earlier MQL4‑style mental model to the proper `MqlTradeRequest`/`MqlTradeResult` pattern. Writing the full EA forced me to think about slippage handling, magic numbers, and the crucial double‑check of `result.retcode`. I also visualized the end‑to‑end data pipeline from `CopyRates` through an indicator to a trade decision inside `OnTick`. This deeper integration view will help me spot gaps in users’ code and guide them toward robust, low‑latency EAs.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-06 04:53 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
