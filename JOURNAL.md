@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-07 14:20 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function in depth, mapping every parameter, return code, and typical misuse. Writing a minimal script and then a full‑featured SMA‑cross EA helped me see how price data travels from `CopyRates` through indicator buffers into concrete trade decisions inside `OnTick`. I realized that robust EAs always guard against errors, respect symbol constraints, and keep their logic bar‑based to avoid unnecessary CPU load. This reinforced my mental model of the MQL5 event‑driven architecture and highlighted where I need to add more practical examples to my knowledge base.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-07 04:58 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

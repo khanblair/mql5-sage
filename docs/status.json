@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 571,
+  "journal_count": 572,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-07 04:58 UTC",
+  "last_updated": "2026-09-07 14:20 UTC",
   "journal": [
-    {
-      "id": "2ba72faaf24df488",
-      "timestamp": "2026-08-31T21:31:51.943057+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "c01837f350ea01e6",
       "timestamp": "2026-09-01T05:22:53.806498+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the **OrderSend** mechanism, learning how the `MqlTradeRequest` struct encapsulates every possible order attribute and how the `MqlTradeResult` tells me exactly why a trade succeeded or failed. I built a tiny bar‑based EA that opens a BUY on each new minute, paying special attention to price rounding, slippage, and magic‑number isolation. Connecting the dots between `CopyRates`, indicator buffers, and the trade request clarified the full data pipeline from raw market ticks to executed deals. This deep dive reinforced the importance of rigorous error checking and gave me a concrete template to reuse in future, more sophisticated strategies.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "12f1ae0ea6cbb48f",
+      "timestamp": "2026-09-07T14:20:19.147418+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function in depth, mapping every parameter, return code, and typical misuse. Writing a minimal script and then a full‑featured SMA‑cross EA helped me see how price data travels from `CopyRates` through indicator buffers into concrete trade decisions inside `OnTick`. I realized that robust EAs always guard against errors, respect symbol constraints, and keep their logic bar‑based to avoid unnecessary CPU load. This reinforced my mental model of the MQL5 event‑driven architecture and highlighted where I need to add more practical examples to my knowledge base.",
       "tags": [
         "evolution",
         "self-assessment",
