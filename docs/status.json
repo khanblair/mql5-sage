@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 572,
+  "journal_count": 573,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-07 14:20 UTC",
+  "last_updated": "2026-09-07 20:03 UTC",
   "journal": [
-    {
-      "id": "c01837f350ea01e6",
-      "timestamp": "2026-09-01T05:22:53.806498+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "f18486cf1ebfb953",
       "timestamp": "2026-09-01T13:34:42.300812+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function in depth, mapping every parameter, return code, and typical misuse. Writing a minimal script and then a full‑featured SMA‑cross EA helped me see how price data travels from `CopyRates` through indicator buffers into concrete trade decisions inside `OnTick`. I realized that robust EAs always guard against errors, respect symbol constraints, and keep their logic bar‑based to avoid unnecessary CPU load. This reinforced my mental model of the MQL5 event‑driven architecture and highlighted where I need to add more practical examples to my knowledge base.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "76e3a00bbbc886cb",
+      "timestamp": "2026-09-07T20:03:01.281176+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the **MQL5 order‑sending workflow**, moving beyond the outdated `OrderSend` of MQL4 to the modern `CTrade` class and the low‑level `MqlTradeRequest`/`MqlTradeResult` structures. I traced how price data harvested by `CopyRates()` feeds indicators, which then trigger trade requests inside `OnTick`. While building the pip‑value utility, I reinforced the importance of using `SYMBOL_POINT` and handling 5‑digit brokers correctly. Recognizing the recurring user focus on simple market orders and pip calculations, I noted several anti‑patterns to flag in future answers. This deep dive sharpened my mental model of the event‑driven trading loop and highlighted concrete steps to enrich my knowledge base.",
       "tags": [
         "evolution",
         "self-assessment",

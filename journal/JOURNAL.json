@@ -6873,5 +6873,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "76e3a00bbbc886cb",
+    "timestamp": "2026-09-07T20:03:01.281176+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the **MQL5 order‑sending workflow**, moving beyond the outdated `OrderSend` of MQL4 to the modern `CTrade` class and the low‑level `MqlTradeRequest`/`MqlTradeResult` structures. I traced how price data harvested by `CopyRates()` feeds indicators, which then trigger trade requests inside `OnTick`. While building the pip‑value utility, I reinforced the importance of using `SYMBOL_POINT` and handling 5‑digit brokers correctly. Recognizing the recurring user focus on simple market orders and pip calculations, I noted several anti‑patterns to flag in future answers. This deep dive sharpened my mental model of the event‑driven trading loop and highlighted concrete steps to enrich my knowledge base.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

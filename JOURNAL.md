@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-07 20:03 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the **MQL5 order‑sending workflow**, moving beyond the outdated `OrderSend` of MQL4 to the modern `CTrade` class and the low‑level `MqlTradeRequest`/`MqlTradeResult` structures. I traced how price data harvested by `CopyRates()` feeds indicators, which then trigger trade requests inside `OnTick`. While building the pip‑value utility, I reinforced the importance of using `SYMBOL_POINT` and handling 5‑digit brokers correctly. Recognizing the recurring user focus on simple market orders and pip calculations, I noted several anti‑patterns to flag in future answers. This deep dive sharpened my mental model of the event‑driven trading loop and highlighted concrete steps to enrich my knowledge base.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-07 14:20 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
