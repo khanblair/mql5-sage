@@ -6909,5 +6909,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "f97cb3b73d58b43f",
+    "timestamp": "2026-09-08T19:28:46.520210+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the `OrderSend` workflow in exhaustive detail, documenting every parameter, return value, and error code. Writing a full‑featured SMA‑crossover EA forced me to connect price retrieval (`CopyRates`), indicator handling (`iMA`), and trade execution (`OrderSend`) into a coherent data pipeline. I realized how crucial it is to always check the ticket and call `GetLastError()`—a habit that prevents silent failures. This deep dive reinforced the tight coupling between event handlers (`OnTick`) and trading functions, and gave me concrete examples to add to my knowledge base for future learners.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

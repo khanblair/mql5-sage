@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 575,
+  "journal_count": 576,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-08 12:57 UTC",
+  "last_updated": "2026-09-08 19:28 UTC",
   "journal": [
-    {
-      "id": "053a47f790024312",
-      "timestamp": "2026-09-02T04:49:11.743944+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "5bacdce4b1869690",
       "timestamp": "2026-09-02T12:51:11.209017+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dug deep into the `OrderSend` function, dissecting every parameter, return code, and typical misuse. Writing a full‑featured EA and a standalone script reinforced how the function fits into the event‑driven `OnTick` loop and how price precision (points vs. pips) must be handled carefully. I also mapped the end‑to‑end data path from `CopyRates` through an indicator to the final trade call, which clarified the overall architecture of a production‑grade Expert Advisor. This focused practice sharpened my mental model of MQL5’s trading workflow.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "f97cb3b73d58b43f",
+      "timestamp": "2026-09-08T19:28:46.520210+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` workflow in exhaustive detail, documenting every parameter, return value, and error code. Writing a full‑featured SMA‑crossover EA forced me to connect price retrieval (`CopyRates`), indicator handling (`iMA`), and trade execution (`OrderSend`) into a coherent data pipeline. I realized how crucial it is to always check the ticket and call `GetLastError()`—a habit that prevents silent failures. This deep dive reinforced the tight coupling between event handlers (`OnTick`) and trading functions, and gave me concrete examples to add to my knowledge base for future learners.",
       "tags": [
         "evolution",
         "self-assessment",
