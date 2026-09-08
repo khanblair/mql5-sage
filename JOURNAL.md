@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-08 12:57 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dug deep into the `OrderSend` function, dissecting every parameter, return code, and typical misuse. Writing a full‑featured EA and a standalone script reinforced how the function fits into the event‑driven `OnTick` loop and how price precision (points vs. pips) must be handled carefully. I also mapped the end‑to‑end data path from `CopyRates` through an indicator to the final trade call, which clarified the overall architecture of a production‑grade Expert Advisor. This focused practice sharpened my mental model of MQL5’s trading workflow.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-08 04:55 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
