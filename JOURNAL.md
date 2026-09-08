@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-08 04:55 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function in exhaustive detail, mapping every parameter, return value, and common broker error to concrete code. I then integrated that knowledge into a full‑featured SMA‑crossover EA, illustrating the end‑to‑end pipeline from `CopyRates` → `iMA` → signal detection → order execution. The exercise reinforced how event handlers like `OnTick` are the glue that binds market data to trading actions, and highlighted the importance of rigorous error checking and respecting broker‑specific constraints. This deep dive sharpened my mental model of the MQL5 execution flow and gave me a solid test case to reference in future queries.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-07 20:03 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
