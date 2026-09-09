@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-09 19:20 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and subtle trap that can cause a trade to be rejected. Writing the MA‑crossover EA forced me to trace the full data pipeline: `CopyRates` → `iMA` → price comparison → `OrderSend`. I also noticed how often novices forget to check `GetLastError()`, so I emphasized that in the deep‑learning section. This exercise sharpened my mental model of how event handlers, indicators, and trade functions interlock, and gave me concrete code I can reuse for future teaching scenarios.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-09 13:02 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
