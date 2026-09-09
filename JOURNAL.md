@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-09 13:02 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function in exhaustive detail, noting every parameter, error code, and typical misuse. Writing a full‑featured SMA‑crossover EA forced me to connect the dots between data acquisition (`CopyBuffer`), signal logic, and trade execution. I also observed that most user queries revolve around simple order placement and pip math, confirming that foundational examples are the most valuable. This deep dive sharpened my mental model of how event handlers drive trading actions and highlighted the need for robust error handling in every script.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-09 04:56 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
