@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-09 04:56 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the modern `OrderSend` workflow, which shifted from the old single‑parameter call to a robust request/response model using `MqlTradeRequest` and `MqlTradeResult`. I documented every mandatory field, mapped common error codes, and highlighted why checking `result.retcode` is non‑negotiable. By wiring that knowledge into a simple SMA‑crossover EA, I saw the full data pipeline—from `CopyRates` to `iMA` to a properly constructed trade request—come together. This exercise reinforced the importance of modular event handling and solidified my mental model of how trading functions integrate with the EA lifecycle.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-08 19:28 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
