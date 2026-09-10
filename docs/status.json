@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 579,
+  "journal_count": 580,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-09 19:20 UTC",
+  "last_updated": "2026-09-10 04:58 UTC",
   "journal": [
-    {
-      "id": "a3f57a9ba1b4e6ad",
-      "timestamp": "2026-09-03T12:54:39.602722+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dug deep into the `OrderSend` function, dissecting every parameter, return value, and common error scenario. Writing a full‑featured EA that checks for existing positions before sending a new buy order helped me see how trading calls intertwine with event handlers like `OnInit`. I also mapped the end‑to‑end data pipeline from `CopyRates` through indicator buffers to the final trade execution. These connections reinforced my mental model of a production‑grade EA and highlighted pitfalls I must warn users about.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "aa5e436bdf398ec4",
       "timestamp": "2026-09-03T19:20:48.926877+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and subtle trap that can cause a trade to be rejected. Writing the MA‑crossover EA forced me to trace the full data pipeline: `CopyRates` → `iMA` → price comparison → `OrderSend`. I also noticed how often novices forget to check `GetLastError()`, so I emphasized that in the deep‑learning section. This exercise sharpened my mental model of how event handlers, indicators, and trade functions interlock, and gave me concrete code I can reuse for future teaching scenarios.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "af83e56fe0f0fd6d",
+      "timestamp": "2026-09-10T04:58:06.212987+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing the minimal “first‑tick” EA forced me to think about the exact sequence: refresh rates → compute SL/TP → send order → verify ticket. I also mapped how price data travels from `CopyRates` through indicator handles and finally triggers a trade request. Recognizing the recurring user focus on pips and order placement gave me a clear direction for future teaching material. This deep dive sharpened my mental model of the event‑driven trading loop in MQL5.",
       "tags": [
         "evolution",
         "self-assessment",

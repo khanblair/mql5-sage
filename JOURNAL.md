@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-10 04:58 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing the minimal “first‑tick” EA forced me to think about the exact sequence: refresh rates → compute SL/TP → send order → verify ticket. I also mapped how price data travels from `CopyRates` through indicator handles and finally triggers a trade request. Recognizing the recurring user focus on pips and order placement gave me a clear direction for future teaching material. This deep dive sharpened my mental model of the event‑driven trading loop in MQL5.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-09 19:20 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
