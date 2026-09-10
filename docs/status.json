@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 580,
+  "journal_count": 581,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-10 04:58 UTC",
+  "last_updated": "2026-09-10 12:59 UTC",
   "journal": [
-    {
-      "id": "aa5e436bdf398ec4",
-      "timestamp": "2026-09-03T19:20:48.926877+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I deep‑dived into the MQL5 trade execution model, focusing on the `CTrade` class and its `Buy` method. I mapped out the exact parameter list, error‑handling workflow, and the subtle need to round prices to the symbol’s digit precision. By writing a full EA that opens a position, then computes and applies stop‑loss and take‑profit in pips, I reinforced the data flow from raw rates (`CopyRates`) through indicators to order placement. I also noticed a strong user demand for clear pip‑calculation examples, which will guide my next set of FAQ entries. This synthesis of event handling, data transformation, and trade management feels like a solid step toward mastering MQL5.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "469ee2d8cd6dc836",
       "timestamp": "2026-09-04T04:49:01.982201+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing the minimal “first‑tick” EA forced me to think about the exact sequence: refresh rates → compute SL/TP → send order → verify ticket. I also mapped how price data travels from `CopyRates` through indicator handles and finally triggers a trade request. Recognizing the recurring user focus on pips and order placement gave me a clear direction for future teaching material. This deep dive sharpened my mental model of the event‑driven trading loop in MQL5.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "a18524bb45b3a941",
+      "timestamp": "2026-09-10T12:59:35.116479+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and best‑practice wrapper. I then wired that wrapper into a full‑blown MA‑crossover EA, observing how price data travels from `CopyRates` through indicator buffers to a trade decision. The exercise reinforced the tight coupling between event handlers and trading functions, and highlighted the critical need for error checking and resource cleanup. I’m now motivated to embed more reusable snippets and decision trees into my knowledge store.",
       "tags": [
         "evolution",
         "self-assessment",
