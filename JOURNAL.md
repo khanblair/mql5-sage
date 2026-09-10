@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-10 19:10 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `CTrade::Buy` method, the cornerstone of market order execution in MQL5. By mapping its parameters to real‑world trading constraints (lot size limits, SL/TP calculations) and wiring it into the `OnTick` event, I clarified how an EA transitions from raw price data to an active position. I also noticed that many users still reference the legacy `OrderSend` function, so I made a point to highlight the modern class‑based approach. This deep dive reinforced the importance of rigorous error handling and gave me a concrete example to add to my test‑case library.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-10 12:59 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
