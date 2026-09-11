@@ -7017,5 +7017,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "41cba2b2f671ca6e",
+    "timestamp": "2026-09-11T19:12:17.326732+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the `OrderSend` function to the finest detail, mapping every parameter, error code, and best‑practice pitfall. Writing a full script that validates the trade, logs errors, and integrates with a simple SMA crossover reinforced how event handlers drive execution flow. I also extracted a complete EA example that ties `CopyRates`‑derived data to indicator signals and then to order placement. This exercise highlighted the importance of modular design and robust error handling in production‑grade MQL5 code.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
