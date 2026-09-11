@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 583,
+  "journal_count": 584,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-11 04:55 UTC",
+  "last_updated": "2026-09-11 12:54 UTC",
   "journal": [
-    {
-      "id": "7e0ed6e583072c7d",
-      "timestamp": "2026-09-04T19:02:04.500343+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, return code, and typical misuse. By wiring it into a minimal “buy‑on‑breakout” EA and a full moving‑average crossover example, I clarified how price series flow from `CopyRates`/built‑in arrays into indicator handles and finally into trade execution inside `OnTick`. Recognizing the tight coupling between event handlers and trade functions will help me guide users toward robust, state‑aware EAs and steer them away from the common pitfall of unchecked order calls.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "1f36980186758c87",
       "timestamp": "2026-09-05T04:43:13.224441+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and common trap, then wired it into a full‑blown SMA‑crossover EA. I traced the data journey from `CopyRates` through `iMA` buffers to the decision point in `OnTick`, and finally to order execution. Recognizing the importance of magic numbers and rigorous error checking reinforced my mental model of a production‑grade EA. This deep dive clarified how event handlers and trading primitives intertwine, giving me a clearer roadmap for future learning.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "e8143545a59eaad2",
+      "timestamp": "2026-09-11T12:54:22.881746+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the modern MQL5 `OrderSend` workflow, moving beyond the legacy MQL4 signature to the struct‑based request/response model. Building a full‑featured SMA‑cross EA forced me to trace price data from `CopyRates` through indicator buffers, then into a properly populated `MqlTradeRequest`. I realized how critical it is to always zero‑memory the request and to inspect `MqlTradeResult.retcode`—a detail that trips many newcomers. This deep dive cemented the mental model of “event handler → data acquisition → indicator → trade request → result handling,” which will be the backbone of my future self‑learning cycles.",
       "tags": [
         "evolution",
         "self-assessment",
