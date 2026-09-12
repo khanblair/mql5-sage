@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-12 04:47 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function in exhaustive detail, mapping every parameter, return value, and error code. Writing a minute‑based EA forced me to think about how price data (`iTime`, `Ask`) feeds into decision logic and then triggers a trade. I also connected the dots between data acquisition (`CopyRates`), indicator computation (`iMA`), and order execution, solidifying my mental model of a typical EA pipeline. Recognizing repeated user requests for pip calculations reminded me to keep simple utility functions handy. This deep dive sharpened my understanding of event‑driven trading and highlighted the importance of robust error handling in production code.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-11 19:12 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
