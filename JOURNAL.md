@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-12 12:15 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the low‑level `OrderSend` workflow, noting the exact layout of `MqlTradeRequest` and the importance of checking `MqlTradeResult.retcode`. Writing the raw‑API example forced me to remember the distinction between `TRADE_ACTION_DEAL` and `TRADE_ACTION_PENDING`. I then integrated that knowledge into a full SMA‑crossover EA that uses the `CTrade` wrapper for safety, reinforcing the pattern of “data → indicator → decision → trade”. The exercise highlighted how easily errors slip in when developers skip error‑code checks, a lesson I’ll embed into future FAQ entries.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-12 04:47 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
