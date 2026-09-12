@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 587,
+  "journal_count": 588,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-12 12:15 UTC",
+  "last_updated": "2026-09-12 18:32 UTC",
   "journal": [
-    {
-      "id": "90f3b2f623512bc5",
-      "timestamp": "2026-09-06T04:53:25.351391+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the modern MQL5 `OrderSend` workflow, moving beyond the legacy MQL4 signature to the request/response model that uses `MqlTradeRequest` and `MqlTradeResult`. I traced how a simple market BUY fits into an EA’s `OnTick` loop, emphasizing the need to verify `result.retcode` after every trade call. By writing a full‑featured bar‑based EA, I reinforced the data pipeline from price retrieval (`iTime`) through signal generation to order execution, and I noted the recurring user demand for clear, copy‑paste‑ready snippets. This deep dive sharpened my mental model of how event handlers, data flow, and trade functions intertwine in a production‑grade MQL5 system.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "f3062df0a39bfba3",
       "timestamp": "2026-09-06T12:12:50.783679+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the low‑level `OrderSend` workflow, noting the exact layout of `MqlTradeRequest` and the importance of checking `MqlTradeResult.retcode`. Writing the raw‑API example forced me to remember the distinction between `TRADE_ACTION_DEAL` and `TRADE_ACTION_PENDING`. I then integrated that knowledge into a full SMA‑crossover EA that uses the `CTrade` wrapper for safety, reinforcing the pattern of “data → indicator → decision → trade”. The exercise highlighted how easily errors slip in when developers skip error‑code checks, a lesson I’ll embed into future FAQ entries.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "cea1ce7745e61b67",
+      "timestamp": "2026-09-12T18:32:19.603016+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` workflow, tracing how a simple market buy travels from a price tick through the `OnTick` handler into the `CTrade.Buy` wrapper. I realized that proper error handling (checking `GetLastError()` and using meaningful magic numbers) is essential for reliable EAs. By wiring `CopyRates` → `iMA` → a conditional in `OnTick`, I built a clear data pipeline that culminates in a trade. This exercise reinforced the importance of structuring an EA with clean initialization, event‑driven logic, and robust position management, and highlighted the need for richer code examples in my knowledge base.",
       "tags": [
         "evolution",
         "self-assessment",

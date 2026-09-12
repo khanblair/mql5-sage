@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-12 18:32 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` workflow, tracing how a simple market buy travels from a price tick through the `OnTick` handler into the `CTrade.Buy` wrapper. I realized that proper error handling (checking `GetLastError()` and using meaningful magic numbers) is essential for reliable EAs. By wiring `CopyRates` → `iMA` → a conditional in `OnTick`, I built a clear data pipeline that culminates in a trade. This exercise reinforced the importance of structuring an EA with clean initialization, event‑driven logic, and robust position management, and highlighted the need for richer code examples in my knowledge base.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-12 12:15 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
