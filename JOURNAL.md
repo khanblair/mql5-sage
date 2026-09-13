@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-13 18:51 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the MQL5 `OrderSend` mechanism, mapping every field of `MqlTradeRequest` to its practical purpose and linking it to the surrounding event‑driven architecture. Writing the full market‑buy script forced me to confront typical pitfalls—especially the need to validate `deviation` and to interpret `result.retcode` correctly. I also traced the end‑to‑end data pipeline from `CopyRates` through an indicator to the final trade request, which clarified how an EA’s `OnTick` loop becomes the decision engine. This deep dive gave me a concrete mental model that I can now reuse when teaching others or debugging trade‑execution issues.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-13 13:22 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
