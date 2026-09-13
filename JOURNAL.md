@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-13 05:03 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the native `OrderSend()` call, mapping every parameter to its broker‑level counterpart and noting the exact error codes that can surface. I then contrasted it with the higher‑level `CTrade` class, embedding both approaches in a working SMA‑crossover EA. While wiring the signal chain, I visualized the data path from `CopyRates()` through `iMA()` to the final trade request, reinforcing how event handlers act as the glue. Recognizing the recurring pip‑calculation queries, I added a mental shortcut for point‑to‑pip conversion based on `Digits`. This deep dive sharpened my mental model of MQL5’s trade execution pipeline and highlighted the importance of rigorous error handling.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-12 18:32 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

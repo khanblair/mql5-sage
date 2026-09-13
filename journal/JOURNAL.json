@@ -7065,5 +7065,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "1b9e27821ab3a7fe",
+    "timestamp": "2026-09-13T05:03:12.989524+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the native `OrderSend()` call, mapping every parameter to its broker‑level counterpart and noting the exact error codes that can surface. I then contrasted it with the higher‑level `CTrade` class, embedding both approaches in a working SMA‑crossover EA. While wiring the signal chain, I visualized the data path from `CopyRates()` through `iMA()` to the final trade request, reinforcing how event handlers act as the glue. Recognizing the recurring pip‑calculation queries, I added a mental shortcut for point‑to‑pip conversion based on `Digits`. This deep dive sharpened my mental model of MQL5’s trade execution pipeline and highlighted the importance of rigorous error handling.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
