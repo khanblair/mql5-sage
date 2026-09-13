@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-13 13:22 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and hidden nuance. Writing the `SimpleBuyEA` forced me to think about margin checks, price normalization, and the importance of magic numbers for order tracking. I also connected the dots between raw price retrieval (`CopyRates`), indicator processing, and the final trade call, solidifying my mental model of an EA’s data pipeline. Recognizing repeated user interest in pip calculations reminded me to craft a reusable utility function for that purpose. This deep dive sharpened both my theoretical understanding and practical coding instincts.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-13 05:03 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
