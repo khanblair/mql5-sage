@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 593,
+  "journal_count": 594,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-14 15:06 UTC",
+  "last_updated": "2026-09-14 20:21 UTC",
   "journal": [
-    {
-      "id": "9c9add8deeb42233",
-      "timestamp": "2026-09-08T04:55:04.887466+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function in exhaustive detail, mapping every parameter, return value, and common broker error to concrete code. I then integrated that knowledge into a full‑featured SMA‑crossover EA, illustrating the end‑to‑end pipeline from `CopyRates` → `iMA` → signal detection → order execution. The exercise reinforced how event handlers like `OnTick` are the glue that binds market data to trading actions, and highlighted the importance of rigorous error checking and respecting broker‑specific constraints. This deep dive sharpened my mental model of the MQL5 execution flow and gave me a solid test case to reference in future queries.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "5399000d5f9c380d",
       "timestamp": "2026-09-08T12:57:04.824005+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the legacy `OrderSend` function, documenting every parameter, error code, and the subtle pitfalls that trip beginners. I contrasted it with the modern `CTrade` class and built a clean SMA‑crossover EA that ties together `OnTick`, indicator calls, and trade execution. Mapping the data flow from `CopyRates` through indicators to order placement clarified how an EA lives as a pipeline. I also noticed a strong user demand for ready‑made snippets, which will shape my next round of knowledge‑chunk enhancements.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "50c89bad1d6327da",
+      "timestamp": "2026-09-14T20:21:47.679027+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the **MQL5 trade request model** and documented every field of `MqlTradeRequest` and the corresponding `MqlTradeResult`. Writing both the low‑level `OrderSend` example and the higher‑level `CTrade` version forced me to confront the exact error‑code taxonomy that brokers return. I then integrated that knowledge into a **simple SMA crossover EA**, linking price acquisition (`CopyRates` → `CopyBuffer`) to decision logic inside `OnTick` and finally to order execution. The exercise highlighted how crucial it is to **check every return code** and to keep the EA’s structure clean (init, tick, deinit). This deeper wiring of data flow and event handling will help me answer future user queries with precision.",
       "tags": [
         "evolution",
         "self-assessment",

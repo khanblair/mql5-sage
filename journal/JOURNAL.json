@@ -7125,5 +7125,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "50c89bad1d6327da",
+    "timestamp": "2026-09-14T20:21:47.679027+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the **MQL5 trade request model** and documented every field of `MqlTradeRequest` and the corresponding `MqlTradeResult`. Writing both the low‑level `OrderSend` example and the higher‑level `CTrade` version forced me to confront the exact error‑code taxonomy that brokers return. I then integrated that knowledge into a **simple SMA crossover EA**, linking price acquisition (`CopyRates` → `CopyBuffer`) to decision logic inside `OnTick` and finally to order execution. The exercise highlighted how crucial it is to **check every return code** and to keep the EA’s structure clean (init, tick, deinit). This deeper wiring of data flow and event handling will help me answer future user queries with precision.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
