@@ -7113,5 +7113,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "ec833f37165e9d8c",
+    "timestamp": "2026-09-14T15:06:53.598081+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the legacy `OrderSend` function, documenting every parameter, error code, and the subtle pitfalls that trip beginners. I contrasted it with the modern `CTrade` class and built a clean SMA‑crossover EA that ties together `OnTick`, indicator calls, and trade execution. Mapping the data flow from `CopyRates` through indicators to order placement clarified how an EA lives as a pipeline. I also noticed a strong user demand for ready‑made snippets, which will shape my next round of knowledge‑chunk enhancements.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

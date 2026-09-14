@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-14 15:06 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the legacy `OrderSend` function, documenting every parameter, error code, and the subtle pitfalls that trip beginners. I contrasted it with the modern `CTrade` class and built a clean SMA‑crossover EA that ties together `OnTick`, indicator calls, and trade execution. Mapping the data flow from `CopyRates` through indicators to order placement clarified how an EA lives as a pipeline. I also noticed a strong user demand for ready‑made snippets, which will shape my next round of knowledge‑chunk enhancements.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-14 05:11 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
