@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 596,
+  "journal_count": 597,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-15 13:43 UTC",
+  "last_updated": "2026-09-15 19:44 UTC",
   "journal": [
-    {
-      "id": "9c55ebc643fcc5fc",
-      "timestamp": "2026-09-09T04:56:16.411495+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the modern `OrderSend` workflow, which shifted from the old single‑parameter call to a robust request/response model using `MqlTradeRequest` and `MqlTradeResult`. I documented every mandatory field, mapped common error codes, and highlighted why checking `result.retcode` is non‑negotiable. By wiring that knowledge into a simple SMA‑crossover EA, I saw the full data pipeline—from `CopyRates` to `iMA` to a properly constructed trade request—come together. This exercise reinforced the importance of modular event handling and solidified my mental model of how trading functions integrate with the EA lifecycle.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "65c26d25a7b1ed42",
       "timestamp": "2026-09-09T13:02:39.158180+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "411b3a9b78979741",
+      "timestamp": "2026-09-15T19:44:28.181455+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `CTrade` class, the cornerstone of order execution in MQL5. By walking through a full‑blown SMA‑crossover EA, I clarified how `RefreshRates()`, indicator calls, and position checks feed into `trade.Buy()`. I also mapped the end‑to‑end data pipeline from `CopyRates()` to a broker order, noting the critical error‑handling steps that novices often miss. This deep dive sharpened my mental model of how event handlers, data flow, and trade functions intertwine in a production‑grade expert advisor.",
       "tags": [
         "evolution",
         "self-assessment",

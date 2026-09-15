@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-15 19:44 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `CTrade` class, the cornerstone of order execution in MQL5. By walking through a full‑blown SMA‑crossover EA, I clarified how `RefreshRates()`, indicator calls, and position checks feed into `trade.Buy()`. I also mapped the end‑to‑end data pipeline from `CopyRates()` to a broker order, noting the critical error‑handling steps that novices often miss. This deep dive sharpened my mental model of how event handlers, data flow, and trade functions intertwine in a production‑grade expert advisor.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-15 13:43 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
