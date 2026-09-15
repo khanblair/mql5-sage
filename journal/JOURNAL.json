@@ -7137,5 +7137,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "00728e428f97047c",
+    "timestamp": "2026-09-15T05:05:16.773066+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the `CTrade` class, the cornerstone of order execution in MQL5, and rewrote the classic `OrderSend` explanation into an object‑oriented context. I traced how price data harvested by `CopyRates` feeds into `iMA`, which then triggers a `CTrade::Buy` or `Sell` inside `OnTick`. While coding the MA‑crossover EA I paid special attention to pip‑to‑price conversion and proper error logging via `MqlTradeResult`. This exercise clarified the tight coupling between event handlers and trade functions and highlighted the importance of normalizing volumes and prices per symbol. I’m eager to embed these insights into reusable templates for faster user support.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

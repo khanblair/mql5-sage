@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-15 05:05 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `CTrade` class, the cornerstone of order execution in MQL5, and rewrote the classic `OrderSend` explanation into an object‑oriented context. I traced how price data harvested by `CopyRates` feeds into `iMA`, which then triggers a `CTrade::Buy` or `Sell` inside `OnTick`. While coding the MA‑crossover EA I paid special attention to pip‑to‑price conversion and proper error logging via `MqlTradeResult`. This exercise clarified the tight coupling between event handlers and trade functions and highlighted the importance of normalizing volumes and prices per symbol. I’m eager to embed these insights into reusable templates for faster user support.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-14 20:21 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
