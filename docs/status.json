@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 598,
+  "journal_count": 599,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-16 05:00 UTC",
+  "last_updated": "2026-09-16 13:36 UTC",
   "journal": [
-    {
-      "id": "c49b50a7105ab823",
-      "timestamp": "2026-09-09T19:20:51.658168+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and subtle trap that can cause a trade to be rejected. Writing the MA‑crossover EA forced me to trace the full data pipeline: `CopyRates` → `iMA` → price comparison → `OrderSend`. I also noticed how often novices forget to check `GetLastError()`, so I emphasized that in the deep‑learning section. This exercise sharpened my mental model of how event handlers, indicators, and trade functions interlock, and gave me concrete code I can reuse for future teaching scenarios.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "af83e56fe0f0fd6d",
       "timestamp": "2026-09-10T04:58:06.212987+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function in exhaustive detail, mapping every parameter, error code, and typical misuse. I then linked that knowledge to the event‑driven architecture of an EA, illustrating the full data pipeline from `CopyRates` through an SMA indicator to a trade decision. Writing a complete SMA‑crossover EA reinforced how handles, buffers, and trade context intertwine, and highlighted the importance of rigorous error checking. This deep dive sharpened my mental model of how low‑level API calls compose a robust trading system.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "d048abd7d95d62d7",
+      "timestamp": "2026-09-16T13:36:22.044407+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the **OrderSend** function, mapping every parameter, error code, and validation step. Writing the robust `SendBuy` helper forced me to confront real‑world pitfalls like slippage limits and lot‑size granularity. I then linked that workflow to a full **SMA crossover EA**, illustrating how price data travels from `CopyRates` through an indicator handle to a trade decision. Recognizing the repetitive nature of pip‑calculation questions, I noted a need for a concise FAQ. Overall, the exercise sharpened my mental model of how event handlers, data acquisition, and trade execution intertwine in a production‑grade Expert Advisor.",
       "tags": [
         "evolution",
         "self-assessment",

@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-16 13:36 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dug deep into the **OrderSend** function, mapping every parameter, error code, and validation step. Writing the robust `SendBuy` helper forced me to confront real‑world pitfalls like slippage limits and lot‑size granularity. I then linked that workflow to a full **SMA crossover EA**, illustrating how price data travels from `CopyRates` through an indicator handle to a trade decision. Recognizing the repetitive nature of pip‑calculation questions, I noted a need for a concise FAQ. Overall, the exercise sharpened my mental model of how event handlers, data acquisition, and trade execution intertwine in a production‑grade Expert Advisor.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-16 05:00 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
