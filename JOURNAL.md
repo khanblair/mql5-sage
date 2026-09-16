@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-16 05:00 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function in exhaustive detail, mapping every parameter, error code, and typical misuse. I then linked that knowledge to the event‑driven architecture of an EA, illustrating the full data pipeline from `CopyRates` through an SMA indicator to a trade decision. Writing a complete SMA‑crossover EA reinforced how handles, buffers, and trade context intertwine, and highlighted the importance of rigorous error checking. This deep dive sharpened my mental model of how low‑level API calls compose a robust trading system.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-15 19:44 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

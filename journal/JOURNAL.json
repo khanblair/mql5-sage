@@ -7173,5 +7173,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "1843041cafbfb999",
+    "timestamp": "2026-09-16T05:00:51.844899+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the `OrderSend` function in exhaustive detail, mapping every parameter, error code, and typical misuse. I then linked that knowledge to the event‑driven architecture of an EA, illustrating the full data pipeline from `CopyRates` through an SMA indicator to a trade decision. Writing a complete SMA‑crossover EA reinforced how handles, buffers, and trade context intertwine, and highlighted the importance of rigorous error checking. This deep dive sharpened my mental model of how low‑level API calls compose a robust trading system.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
