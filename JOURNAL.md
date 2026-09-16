@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-16 19:37 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dug deep into the mechanics of `OrderSend`, reviewing its signature, parameters, and the importance of rigorous error checking. By wiring `OrderSend` into an `OnTick` handler I saw how a simple price‑breakout rule can become a functional EA. I also mapped the data pipeline from `CopyRates` → indicator calls (`iHigh`, `iMA`) → trade execution, which clarified the overall flow of a live trading system. Recognizing recurring user questions about pips and order placement helped me identify gaps in my teaching material, and I’m planning to add more concrete examples and decision trees to close those gaps.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-16 13:36 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**

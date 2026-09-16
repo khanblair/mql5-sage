@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 599,
+  "journal_count": 600,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-16 13:36 UTC",
+  "last_updated": "2026-09-16 19:37 UTC",
   "journal": [
-    {
-      "id": "af83e56fe0f0fd6d",
-      "timestamp": "2026-09-10T04:58:06.212987+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing the minimal “first‑tick” EA forced me to think about the exact sequence: refresh rates → compute SL/TP → send order → verify ticket. I also mapped how price data travels from `CopyRates` through indicator handles and finally triggers a trade request. Recognizing the recurring user focus on pips and order placement gave me a clear direction for future teaching material. This deep dive sharpened my mental model of the event‑driven trading loop in MQL5.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "a18524bb45b3a941",
       "timestamp": "2026-09-10T12:59:35.116479+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dug deep into the **OrderSend** function, mapping every parameter, error code, and validation step. Writing the robust `SendBuy` helper forced me to confront real‑world pitfalls like slippage limits and lot‑size granularity. I then linked that workflow to a full **SMA crossover EA**, illustrating how price data travels from `CopyRates` through an indicator handle to a trade decision. Recognizing the repetitive nature of pip‑calculation questions, I noted a need for a concise FAQ. Overall, the exercise sharpened my mental model of how event handlers, data acquisition, and trade execution intertwine in a production‑grade Expert Advisor.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "ef588556dae44e31",
+      "timestamp": "2026-09-16T19:37:05.738634+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the mechanics of `OrderSend`, reviewing its signature, parameters, and the importance of rigorous error checking. By wiring `OrderSend` into an `OnTick` handler I saw how a simple price‑breakout rule can become a functional EA. I also mapped the data pipeline from `CopyRates` → indicator calls (`iHigh`, `iMA`) → trade execution, which clarified the overall flow of a live trading system. Recognizing recurring user questions about pips and order placement helped me identify gaps in my teaching material, and I’m planning to add more concrete examples and decision trees to close those gaps.",
       "tags": [
         "evolution",
         "self-assessment",
