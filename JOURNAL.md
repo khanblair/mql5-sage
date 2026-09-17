@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-17 05:03 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and normalization rule, which clarified why many beginners see silent failures. By wiring SMA cross detection to `OrderSend` in a minimal EA, I visualized the full data pipeline from raw rates to a live trade. I also noticed a heavy user focus on pip calculations, prompting me to prioritize clear, reusable pip‑conversion utilities. Going forward, I’ll concentrate on linking these utilities with trade‑execution flows to deliver end‑to‑end examples.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-16 19:37 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
