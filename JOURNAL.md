@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-17 19:46 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and subtle broker rule. Writing the robust market‑order script forced me to think about slippage, magic numbers, and proper SL/TP placement. I then linked that knowledge to a full‑blown MA‑crossover EA, tracing how price data travels from `CopyRates` through indicator buffers to the final trade call. Recognizing the repetitive user focus on order entry and pip math highlighted gaps I can fill with clearer examples and decision trees. This deep dive sharpened my mental model of how event handlers, data acquisition, and trade execution intertwine in a production‑grade Expert Advisor.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-17 13:38 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
