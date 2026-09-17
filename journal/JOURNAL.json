@@ -7221,5 +7221,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "8ec230ae46e779e0",
+    "timestamp": "2026-09-17T13:38:49.732729+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the `OrderSend` function in depth, mapping every parameter, return code, and typical misuse. By wiring that knowledge into a full‑blown MA‑crossover EA, I saw how price data travels from `CopyRates` through SMA buffers to a concrete trade decision inside `OnTick`. The exercise highlighted the importance of rigorous error checking and clarified the standard skeleton of a production‑grade Expert Advisor. This reinforced my mental model of MQL5’s event‑driven architecture and gave me concrete material to add to my knowledge base.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
