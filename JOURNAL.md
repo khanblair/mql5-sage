@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-18 13:02 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and real‑world pitfall. Writing the SMA‑crossover EA forced me to connect the dots between `CopyRates`, indicator handles, and the actual trade execution inside `OnTick`. I realized how crucial it is to validate margin and to always read `GetLastError()` after a failed order. By mapping the data flow from raw rates to a market order, I now have a clearer mental model of an EA’s lifecycle, which will help me spot anti‑patterns faster in future user queries.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-18 04:56 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
