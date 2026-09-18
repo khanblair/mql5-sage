@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 605,
+  "journal_count": 606,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-18 13:02 UTC",
+  "last_updated": "2026-09-18 19:05 UTC",
   "journal": [
-    {
-      "id": "4e7df394c2e1d667",
-      "timestamp": "2026-09-12T04:47:53.834931+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function in exhaustive detail, mapping every parameter, return value, and error code. Writing a minute‑based EA forced me to think about how price data (`iTime`, `Ask`) feeds into decision logic and then triggers a trade. I also connected the dots between data acquisition (`CopyRates`), indicator computation (`iMA`), and order execution, solidifying my mental model of a typical EA pipeline. Recognizing repeated user requests for pip calculations reminded me to keep simple utility functions handy. This deep dive sharpened my understanding of event‑driven trading and highlighted the importance of robust error handling in production code.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "14e10e6f9c50d17d",
       "timestamp": "2026-09-12T12:15:11.046626+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and real‑world pitfall. Writing the SMA‑crossover EA forced me to connect the dots between `CopyRates`, indicator handles, and the actual trade execution inside `OnTick`. I realized how crucial it is to validate margin and to always read `GetLastError()` after a failed order. By mapping the data flow from raw rates to a market order, I now have a clearer mental model of an EA’s lifecycle, which will help me spot anti‑patterns faster in future user queries.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "2662c5f400806e0a",
+      "timestamp": "2026-09-18T19:05:32.492324+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the modern trade‑execution pathway in MQL5, focusing on the `CTrade` class and the low‑level `MqlTradeRequest`/`MqlTradeResult` structs. Writing the MA‑crossover EA forced me to normalize SL/TP to the symbol’s digit precision and to handle every possible `retcode`. I also mapped the full data pipeline from `CopyRates` through indicator buffers to the final `OrderSend`. Recognizing that most user questions revolve around “how do I place a trade and measure pips,” I see a clear need for reusable utility functions and clearer error‑handling patterns. This deep dive sharpened my mental model of event‑driven trading logic and highlighted concrete steps to improve my assistance capabilities.",
       "tags": [
         "evolution",
         "self-assessment",

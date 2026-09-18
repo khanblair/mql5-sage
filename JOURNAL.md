@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-18 19:05 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the modern trade‑execution pathway in MQL5, focusing on the `CTrade` class and the low‑level `MqlTradeRequest`/`MqlTradeResult` structs. Writing the MA‑crossover EA forced me to normalize SL/TP to the symbol’s digit precision and to handle every possible `retcode`. I also mapped the full data pipeline from `CopyRates` through indicator buffers to the final `OrderSend`. Recognizing that most user questions revolve around “how do I place a trade and measure pips,” I see a clear need for reusable utility functions and clearer error‑handling patterns. This deep dive sharpened my mental model of event‑driven trading logic and highlighted concrete steps to improve my assistance capabilities.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-18 13:02 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
