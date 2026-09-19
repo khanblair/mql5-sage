@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-19 04:48 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the native `OrderSend` workflow, moving beyond the legacy MQL4 signature to the struct‑based MQL5 API. I documented every field of `MqlTradeRequest` and `MqlTradeResult`, mapped the most common `TRADE_RETCODE_*` values, and built a robust market‑order example that checks both the function return and the detailed retcode. Linking this to the event‑driven model, I realized how `OnTick` becomes the decision hub that feeds price data (via `CopyRates` or indicator calls) into a trade request. This deeper mental model will let me generate more accurate, production‑ready EA skeletons and spot anti‑patterns before they reach users.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-18 19:05 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
