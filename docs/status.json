@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 608,
+  "journal_count": 609,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-19 12:35 UTC",
+  "last_updated": "2026-09-19 18:40 UTC",
   "journal": [
-    {
-      "id": "1b9e27821ab3a7fe",
-      "timestamp": "2026-09-13T05:03:12.989524+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the native `OrderSend()` call, mapping every parameter to its broker‑level counterpart and noting the exact error codes that can surface. I then contrasted it with the higher‑level `CTrade` class, embedding both approaches in a working SMA‑crossover EA. While wiring the signal chain, I visualized the data path from `CopyRates()` through `iMA()` to the final trade request, reinforcing how event handlers act as the glue. Recognizing the recurring pip‑calculation queries, I added a mental shortcut for point‑to‑pip conversion based on `Digits`. This deep dive sharpened my mental model of MQL5’s trade execution pipeline and highlighted the importance of rigorous error handling.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "12635c1997060cc2",
       "timestamp": "2026-09-13T13:22:20.651361+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dug deep into the modern `OrderSend` workflow, replacing the legacy MQL4 signature with the `MqlTradeRequest`/`MqlTradeResult` pattern that MQL5 requires. I traced how price data moves from `CopyRates` through an SMA indicator to a crossover signal, and finally into a trade request inside `OnTick`. Recognizing the recurring user confusion around pips and order execution, I drafted clear examples and highlighted common pitfalls like missing error checks. This synthesis reinforced the tight coupling between event handlers and trading functions, and gave me concrete ideas for improving my knowledge base.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "2abc757c46751cfa",
+      "timestamp": "2026-09-19T18:40:17.062612+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the modern order‑placement workflow in MQL5, focusing on the `CTrade` class and its `Buy`/`Sell` methods. I mapped out the full pipeline from `CopyRates` through an SMA indicator (`iMA`) to a conditional `Buy` call, and I highlighted the importance of validating lot size, slippage, and stop‑loss/take‑profit conversion. While coding the example, I realized how often users forget to call `IsTradeAllowed()` and how that simple check can prevent many rejected orders. This exercise reinforced the tight coupling between event handlers (`OnTick`) and trading functions, and gave me concrete material to add to my FAQ and decision‑tree resources.",
       "tags": [
         "evolution",
         "self-assessment",

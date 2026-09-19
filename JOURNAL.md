@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-19 18:40 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dug deep into the modern order‑placement workflow in MQL5, focusing on the `CTrade` class and its `Buy`/`Sell` methods. I mapped out the full pipeline from `CopyRates` through an SMA indicator (`iMA`) to a conditional `Buy` call, and I highlighted the importance of validating lot size, slippage, and stop‑loss/take‑profit conversion. While coding the example, I realized how often users forget to call `IsTradeAllowed()` and how that simple check can prevent many rejected orders. This exercise reinforced the tight coupling between event handlers (`OnTick`) and trading functions, and gave me concrete material to add to my FAQ and decision‑tree resources.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-19 12:35 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
