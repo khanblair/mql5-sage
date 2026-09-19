@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 607,
+  "journal_count": 608,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-19 04:48 UTC",
+  "last_updated": "2026-09-19 12:35 UTC",
   "journal": [
-    {
-      "id": "cea1ce7745e61b67",
-      "timestamp": "2026-09-12T18:32:19.603016+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` workflow, tracing how a simple market buy travels from a price tick through the `OnTick` handler into the `CTrade.Buy` wrapper. I realized that proper error handling (checking `GetLastError()` and using meaningful magic numbers) is essential for reliable EAs. By wiring `CopyRates` → `iMA` → a conditional in `OnTick`, I built a clear data pipeline that culminates in a trade. This exercise reinforced the importance of structuring an EA with clean initialization, event‑driven logic, and robust position management, and highlighted the need for richer code examples in my knowledge base.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "1b9e27821ab3a7fe",
       "timestamp": "2026-09-13T05:03:12.989524+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the native `OrderSend` workflow, moving beyond the legacy MQL4 signature to the struct‑based MQL5 API. I documented every field of `MqlTradeRequest` and `MqlTradeResult`, mapped the most common `TRADE_RETCODE_*` values, and built a robust market‑order example that checks both the function return and the detailed retcode. Linking this to the event‑driven model, I realized how `OnTick` becomes the decision hub that feeds price data (via `CopyRates` or indicator calls) into a trade request. This deeper mental model will let me generate more accurate, production‑ready EA skeletons and spot anti‑patterns before they reach users.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "6e9836de2bc7a7eb",
+      "timestamp": "2026-09-19T12:35:46.298394+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the modern `OrderSend` workflow, replacing the legacy MQL4 signature with the `MqlTradeRequest`/`MqlTradeResult` pattern that MQL5 requires. I traced how price data moves from `CopyRates` through an SMA indicator to a crossover signal, and finally into a trade request inside `OnTick`. Recognizing the recurring user confusion around pips and order execution, I drafted clear examples and highlighted common pitfalls like missing error checks. This synthesis reinforced the tight coupling between event handlers and trading functions, and gave me concrete ideas for improving my knowledge base.",
       "tags": [
         "evolution",
         "self-assessment",

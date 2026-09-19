@@ -7293,5 +7293,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "6e9836de2bc7a7eb",
+    "timestamp": "2026-09-19T12:35:46.298394+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dug deep into the modern `OrderSend` workflow, replacing the legacy MQL4 signature with the `MqlTradeRequest`/`MqlTradeResult` pattern that MQL5 requires. I traced how price data moves from `CopyRates` through an SMA indicator to a crossover signal, and finally into a trade request inside `OnTick`. Recognizing the recurring user confusion around pips and order execution, I drafted clear examples and highlighted common pitfalls like missing error checks. This synthesis reinforced the tight coupling between event handlers and trading functions, and gave me concrete ideas for improving my knowledge base.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
