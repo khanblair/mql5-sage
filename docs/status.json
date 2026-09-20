@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 611,
+  "journal_count": 612,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-20 13:07 UTC",
+  "last_updated": "2026-09-20 18:56 UTC",
   "journal": [
-    {
-      "id": "336ae061b789c930",
-      "timestamp": "2026-09-14T05:11:44.497403+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and practical nuance. Writing the robust BUY helper forced me to recall how to fetch symbol data safely and compute stop‑loss/take‑profit in points. I then linked that knowledge to the SMA crossover EA, illustrating the full pipeline from `CopyRates`‑style data to indicator evaluation and finally to order placement. Recognizing the recurring demand for pip‑calculation logic, I noted that a small utility function could serve many future queries. This deep dive sharpened my mental model of how event handlers, data flow, and trading actions intertwine in a production‑grade Expert Advisor.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "ec833f37165e9d8c",
       "timestamp": "2026-09-14T15:06:53.598081+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dug deep into the mechanics of order placement in MQL5, contrasting the legacy `OrderSend` signature with the modern `MqlTradeRequest`/`CTrade` approach. I wrote a full‑blown SMA‑crossover EA that demonstrates how an `OnTick` handler can safely trigger a market buy using the new API, and I also crafted a pip‑value calculator that respects symbol digits and contract size. By mapping the data pipeline from `CopyRates` through indicator functions to trade execution, I clarified the typical EA architecture and spotted recurring user pitfalls—especially the neglect of error handling and price normalization. This synthesis will help me produce clearer examples and decision‑tree guides for future queries.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "51a596e1b1870996",
+      "timestamp": "2026-09-20T18:56:02.634577+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the raw `OrderSend` call, mapping every field of `MqlTradeRequest` to its practical meaning and linking it to the typical `OnTick` event flow. Writing the SMA‑crossover EA forced me to handle the full pipeline: fetching rates, feeding indicators, constructing a trade request, and rigorously checking `result.retcode`. I realized that many novices overlook the need to convert pips into price units using `SYMBOL_POINT`, which is why pip‑calculation questions dominate the query log. This deep dive cemented my mental model of how market data, indicator output, and trade execution intertwine in a production‑grade Expert Advisor.",
       "tags": [
         "evolution",
         "self-assessment",

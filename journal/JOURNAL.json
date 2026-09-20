@@ -7341,5 +7341,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "51a596e1b1870996",
+    "timestamp": "2026-09-20T18:56:02.634577+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the raw `OrderSend` call, mapping every field of `MqlTradeRequest` to its practical meaning and linking it to the typical `OnTick` event flow. Writing the SMA‑crossover EA forced me to handle the full pipeline: fetching rates, feeding indicators, constructing a trade request, and rigorously checking `result.retcode`. I realized that many novices overlook the need to convert pips into price units using `SYMBOL_POINT`, which is why pip‑calculation questions dominate the query log. This deep dive cemented my mental model of how market data, indicator output, and trade execution intertwine in a production‑grade Expert Advisor.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
