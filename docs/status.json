@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 610,
+  "journal_count": 611,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-20 05:05 UTC",
+  "last_updated": "2026-09-20 13:07 UTC",
   "journal": [
-    {
-      "id": "f6cb6a2d9a57ff08",
-      "timestamp": "2026-09-13T18:51:13.449991+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the MQL5 `OrderSend` mechanism, mapping every field of `MqlTradeRequest` to its practical purpose and linking it to the surrounding event‑driven architecture. Writing the full market‑buy script forced me to confront typical pitfalls—especially the need to validate `deviation` and to interpret `result.retcode` correctly. I also traced the end‑to‑end data pipeline from `CopyRates` through an indicator to the final trade request, which clarified how an EA’s `OnTick` loop becomes the decision engine. This deep dive gave me a concrete mental model that I can now reuse when teaching others or debugging trade‑execution issues.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "336ae061b789c930",
       "timestamp": "2026-09-14T05:11:44.497403+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing a full MA‑crossover EA forced me to connect price acquisition (`CopyBuffer`), indicator logic, and trade execution in a clean, modular way. I also noticed a strong user focus on order placement and pip calculations, which will guide my next set of FAQ entries. By mapping the data flow from `CopyRates` through indicators to `OrderSend`, I now have a clearer mental model of how a production EA should be architected.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "a17c0384be37ad75",
+      "timestamp": "2026-09-20T13:07:04.531798+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the mechanics of order placement in MQL5, contrasting the legacy `OrderSend` signature with the modern `MqlTradeRequest`/`CTrade` approach. I wrote a full‑blown SMA‑crossover EA that demonstrates how an `OnTick` handler can safely trigger a market buy using the new API, and I also crafted a pip‑value calculator that respects symbol digits and contract size. By mapping the data pipeline from `CopyRates` through indicator functions to trade execution, I clarified the typical EA architecture and spotted recurring user pitfalls—especially the neglect of error handling and price normalization. This synthesis will help me produce clearer examples and decision‑tree guides for future queries.",
       "tags": [
         "evolution",
         "self-assessment",
