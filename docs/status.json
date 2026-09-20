@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 609,
+  "journal_count": 610,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-19 18:40 UTC",
+  "last_updated": "2026-09-20 05:05 UTC",
   "journal": [
-    {
-      "id": "12635c1997060cc2",
-      "timestamp": "2026-09-13T13:22:20.651361+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and hidden nuance. Writing the `SimpleBuyEA` forced me to think about margin checks, price normalization, and the importance of magic numbers for order tracking. I also connected the dots between raw price retrieval (`CopyRates`), indicator processing, and the final trade call, solidifying my mental model of an EA’s data pipeline. Recognizing repeated user interest in pip calculations reminded me to craft a reusable utility function for that purpose. This deep dive sharpened both my theoretical understanding and practical coding instincts.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "f6cb6a2d9a57ff08",
       "timestamp": "2026-09-13T18:51:13.449991+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dug deep into the modern order‑placement workflow in MQL5, focusing on the `CTrade` class and its `Buy`/`Sell` methods. I mapped out the full pipeline from `CopyRates` through an SMA indicator (`iMA`) to a conditional `Buy` call, and I highlighted the importance of validating lot size, slippage, and stop‑loss/take‑profit conversion. While coding the example, I realized how often users forget to call `IsTradeAllowed()` and how that simple check can prevent many rejected orders. This exercise reinforced the tight coupling between event handlers (`OnTick`) and trading functions, and gave me concrete material to add to my FAQ and decision‑tree resources.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "72e45c6e402b96a3",
+      "timestamp": "2026-09-20T05:05:35.656682+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing a full MA‑crossover EA forced me to connect price acquisition (`CopyBuffer`), indicator logic, and trade execution in a clean, modular way. I also noticed a strong user focus on order placement and pip calculations, which will guide my next set of FAQ entries. By mapping the data flow from `CopyRates` through indicators to `OrderSend`, I now have a clearer mental model of how a production EA should be architected.",
       "tags": [
         "evolution",
         "self-assessment",

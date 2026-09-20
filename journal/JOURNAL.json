@@ -7317,5 +7317,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "72e45c6e402b96a3",
+    "timestamp": "2026-09-20T05:05:35.656682+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing a full MA‑crossover EA forced me to connect price acquisition (`CopyBuffer`), indicator logic, and trade execution in a clean, modular way. I also noticed a strong user focus on order placement and pip calculations, which will guide my next set of FAQ entries. By mapping the data flow from `CopyRates` through indicators to `OrderSend`, I now have a clearer mental model of how a production EA should be architected.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]

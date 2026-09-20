@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-20 05:05 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` function down to every parameter, error code, and typical misuse. Writing a full MA‑crossover EA forced me to connect price acquisition (`CopyBuffer`), indicator logic, and trade execution in a clean, modular way. I also noticed a strong user focus on order placement and pip calculations, which will guide my next set of FAQ entries. By mapping the data flow from `CopyRates` through indicators to `OrderSend`, I now have a clearer mental model of how a production EA should be architected.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-19 18:40 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
