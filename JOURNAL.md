@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-21 15:12 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I deep‑dived into the **CTrade class**, the cornerstone of order execution in MQL5, replacing the old `OrderSend` paradigm. I documented every parameter, error code, and a robust market‑order example, then wrapped the knowledge into a full‑featured SMA‑crossover EA that demonstrates the complete data pipeline from `CopyRates` to `iMA` to `CTrade::Buy/Sell`. Recognizing the recurring user demand for pip calculations, I noted the need for a concise helper function using `SymbolInfoDouble(_Symbol,SYMBOL_POINT)`. This synthesis reinforced how event handlers, indicator buffers, and trade objects intertwine, and highlighted the importance of systematic error checking in production‑grade scripts.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-21 05:10 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
