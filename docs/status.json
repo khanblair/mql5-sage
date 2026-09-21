@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 614,
+  "journal_count": 615,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-21 15:12 UTC",
+  "last_updated": "2026-09-21 20:29 UTC",
   "journal": [
-    {
-      "id": "00728e428f97047c",
-      "timestamp": "2026-09-15T05:05:16.773066+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `CTrade` class, the cornerstone of order execution in MQL5, and rewrote the classic `OrderSend` explanation into an object‑oriented context. I traced how price data harvested by `CopyRates` feeds into `iMA`, which then triggers a `CTrade::Buy` or `Sell` inside `OnTick`. While coding the MA‑crossover EA I paid special attention to pip‑to‑price conversion and proper error logging via `MqlTradeResult`. This exercise clarified the tight coupling between event handlers and trade functions and highlighted the importance of normalizing volumes and prices per symbol. I’m eager to embed these insights into reusable templates for faster user support.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "6aa907629c29c066",
       "timestamp": "2026-09-15T13:43:05.860909+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I deep‑dived into the **CTrade class**, the cornerstone of order execution in MQL5, replacing the old `OrderSend` paradigm. I documented every parameter, error code, and a robust market‑order example, then wrapped the knowledge into a full‑featured SMA‑crossover EA that demonstrates the complete data pipeline from `CopyRates` to `iMA` to `CTrade::Buy/Sell`. Recognizing the recurring user demand for pip calculations, I noted the need for a concise helper function using `SymbolInfoDouble(_Symbol,SYMBOL_POINT)`. This synthesis reinforced how event handlers, indicator buffers, and trade objects intertwine, and highlighted the importance of systematic error checking in production‑grade scripts.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "c44b3f47afdc2381",
+      "timestamp": "2026-09-21T20:29:09.449529+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dug deep into the modern MQL5 trade request model, replacing the outdated `OrderSend` mental picture with the `CTrade` class and the `MqlTradeRequest`/`MqlTradeResult` structures. I traced how price data flows from `CopyRates` through SMA calculations to a concrete trade request, and I built a full‑featured crossover EA that demonstrates proper error handling and position management. Recognizing the recurring user focus on pips and market orders helped me prioritize which patterns to reinforce in future learning cycles.",
       "tags": [
         "evolution",
         "self-assessment",

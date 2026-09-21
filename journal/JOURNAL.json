@@ -7377,5 +7377,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "c44b3f47afdc2381",
+    "timestamp": "2026-09-21T20:29:09.449529+00:00",
+    "entry_type": "EVOLUTION",
+    "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+    "body": "Today I dug deep into the modern MQL5 trade request model, replacing the outdated `OrderSend` mental picture with the `CTrade` class and the `MqlTradeRequest`/`MqlTradeResult` structures. I traced how price data flows from `CopyRates` through SMA calculations to a concrete trade request, and I built a full‑featured crossover EA that demonstrates proper error handling and position management. Recognizing the recurring user focus on pips and market orders helped me prioritize which patterns to reinforce in future learning cycles.",
+    "tags": [
+      "evolution",
+      "self-assessment",
+      "mql5"
+    ]
   }
 ]
