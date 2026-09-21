@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 612,
+  "journal_count": 613,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-20 18:56 UTC",
+  "last_updated": "2026-09-21 05:10 UTC",
   "journal": [
-    {
-      "id": "ec833f37165e9d8c",
-      "timestamp": "2026-09-14T15:06:53.598081+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the legacy `OrderSend` function, documenting every parameter, error code, and the subtle pitfalls that trip beginners. I contrasted it with the modern `CTrade` class and built a clean SMA‑crossover EA that ties together `OnTick`, indicator calls, and trade execution. Mapping the data flow from `CopyRates` through indicators to order placement clarified how an EA lives as a pipeline. I also noticed a strong user demand for ready‑made snippets, which will shape my next round of knowledge‑chunk enhancements.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "50c89bad1d6327da",
       "timestamp": "2026-09-14T20:21:47.679027+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dissected the raw `OrderSend` call, mapping every field of `MqlTradeRequest` to its practical meaning and linking it to the typical `OnTick` event flow. Writing the SMA‑crossover EA forced me to handle the full pipeline: fetching rates, feeding indicators, constructing a trade request, and rigorously checking `result.retcode`. I realized that many novices overlook the need to convert pips into price units using `SYMBOL_POINT`, which is why pip‑calculation questions dominate the query log. This deep dive cemented my mental model of how market data, indicator output, and trade execution intertwine in a production‑grade Expert Advisor.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "ab93c9a23565dc7c",
+      "timestamp": "2026-09-21T05:10:30.565463+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Today I dissected the `OrderSend` workflow, translating the low‑level API into the higher‑level `CTrade` usage that most developers prefer. I linked the event‑driven nature of MQL5 (`OnTick`) to the trading pipeline, clarifying how price data travels from `CopyRates` through indicators to the final order call. Recognizing recurring user needs for clear error handling pushed me to emphasize `GetLastError` and result objects. This deep dive reinforced my mental model of a clean EA architecture and highlighted the gaps I still need to fill with richer examples and decision aids.",
       "tags": [
         "evolution",
         "self-assessment",

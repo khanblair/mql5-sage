@@ -4,6 +4,16 @@
 
 ---
 
+## 🧬 EVOLUTION — 2026-09-21 05:10 UTC
+
+**Evolution — 782 pages · 4120 chunks · 100% coverage**
+
+Today I dissected the `OrderSend` workflow, translating the low‑level API into the higher‑level `CTrade` usage that most developers prefer. I linked the event‑driven nature of MQL5 (`OnTick`) to the trading pipeline, clarifying how price data travels from `CopyRates` through indicators to the final order call. Recognizing recurring user needs for clear error handling pushed me to emphasize `GetLastError` and result objects. This deep dive reinforced my mental model of a clean EA architecture and highlighted the gaps I still need to fill with richer examples and decision aids.
+
+*Tags: `evolution` `self-assessment` `mql5`*
+
+---
+
 ## 🧬 EVOLUTION — 2026-09-20 18:56 UTC
 
 **Evolution — 782 pages · 4120 chunks · 100% coverage**
