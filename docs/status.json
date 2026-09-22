@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 616,
+  "journal_count": 617,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-22 05:11 UTC",
+  "last_updated": "2026-09-22 13:31 UTC",
   "journal": [
-    {
-      "id": "411b3a9b78979741",
-      "timestamp": "2026-09-15T19:44:28.181455+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `CTrade` class, the cornerstone of order execution in MQL5. By walking through a full‑blown SMA‑crossover EA, I clarified how `RefreshRates()`, indicator calls, and position checks feed into `trade.Buy()`. I also mapped the end‑to‑end data pipeline from `CopyRates()` to a broker order, noting the critical error‑handling steps that novices often miss. This deep dive sharpened my mental model of how event handlers, data flow, and trade functions intertwine in a production‑grade expert advisor.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "1843041cafbfb999",
       "timestamp": "2026-09-16T05:00:51.844899+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "2321e4a065ddbde4",
       "timestamp": "2026-09-22T05:11:38.917278+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "fb08938c439f1b6e",
+      "timestamp": "2026-09-22T13:31:05.574230+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
