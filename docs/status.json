@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 615,
+  "journal_count": 616,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-21 20:29 UTC",
+  "last_updated": "2026-09-22 05:11 UTC",
   "journal": [
-    {
-      "id": "6aa907629c29c066",
-      "timestamp": "2026-09-15T13:43:05.860909+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "411b3a9b78979741",
       "timestamp": "2026-09-15T19:44:28.181455+00:00",
@@ -280,6 +268,18 @@
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Today I dug deep into the modern MQL5 trade request model, replacing the outdated `OrderSend` mental picture with the `CTrade` class and the `MqlTradeRequest`/`MqlTradeResult` structures. I traced how price data flows from `CopyRates` through SMA calculations to a concrete trade request, and I built a full‑featured crossover EA that demonstrates proper error handling and position management. Recognizing the recurring user focus on pips and market orders helped me prioritize which patterns to reinforce in future learning cycles.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "2321e4a065ddbde4",
+      "timestamp": "2026-09-22T05:11:38.917278+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
       "tags": [
         "evolution",
         "self-assessment",
