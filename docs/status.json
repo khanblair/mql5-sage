@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 620,
+  "journal_count": 621,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-23 13:44 UTC",
+  "last_updated": "2026-09-23 19:43 UTC",
   "journal": [
-    {
-      "id": "1cf559b6209a46cc",
-      "timestamp": "2026-09-17T05:03:09.816451+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and normalization rule, which clarified why many beginners see silent failures. By wiring SMA cross detection to `OrderSend` in a minimal EA, I visualized the full data pipeline from raw rates to a live trade. I also noticed a heavy user focus on pip calculations, prompting me to prioritize clear, reusable pip‑conversion utilities. Going forward, I’ll concentrate on linking these utilities with trade‑execution flows to deliver end‑to‑end examples.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "8ec230ae46e779e0",
       "timestamp": "2026-09-17T13:38:49.732729+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "da5281946e8917fb",
       "timestamp": "2026-09-23T13:44:26.908601+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "c591d7295e9a6524",
+      "timestamp": "2026-09-23T19:43:57.694986+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
