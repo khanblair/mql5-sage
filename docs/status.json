@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 621,
+  "journal_count": 622,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-23 19:43 UTC",
+  "last_updated": "2026-09-24 05:06 UTC",
   "journal": [
-    {
-      "id": "8ec230ae46e779e0",
-      "timestamp": "2026-09-17T13:38:49.732729+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function in depth, mapping every parameter, return code, and typical misuse. By wiring that knowledge into a full‑blown MA‑crossover EA, I saw how price data travels from `CopyRates` through SMA buffers to a concrete trade decision inside `OnTick`. The exercise highlighted the importance of rigorous error checking and clarified the standard skeleton of a production‑grade Expert Advisor. This reinforced my mental model of MQL5’s event‑driven architecture and gave me concrete material to add to my knowledge base.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "8d45b48537600fc8",
       "timestamp": "2026-09-17T19:46:39.091989+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "c591d7295e9a6524",
       "timestamp": "2026-09-23T19:43:57.694986+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "8ddb721b7514e8de",
+      "timestamp": "2026-09-24T05:06:20.745151+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
