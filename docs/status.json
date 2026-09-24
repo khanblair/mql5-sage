@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 623,
+  "journal_count": 624,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-24 13:39 UTC",
+  "last_updated": "2026-09-24 20:02 UTC",
   "journal": [
-    {
-      "id": "b3deb284e24d09d7",
-      "timestamp": "2026-09-18T04:56:10.015068+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dug deep into the MQL5 trade class, dissecting the `Buy`/`Sell` methods, their parameters, and the exact error‑handling workflow. I linked that knowledge to the event‑driven nature of EAs, tracing how price data moves from `CopyRates` through an SMA indicator to a trade decision inside `OnTick`. By writing a full‑featured MA‑crossover EA I solidified the typical EA skeleton and spotted common pitfalls like missing `GetLastError` checks. This synthesis gave me a clearer mental model of the end‑to‑end trading pipeline in MQL5.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "01de22be724f578f",
       "timestamp": "2026-09-18T13:02:28.383673+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "6a59fc43f7d93fdc",
       "timestamp": "2026-09-24T13:39:05.663774+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "d435a59a0fe62a40",
+      "timestamp": "2026-09-24T20:02:29.114794+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
