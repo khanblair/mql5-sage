@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 625,
+  "journal_count": 626,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-25 05:08 UTC",
+  "last_updated": "2026-09-25 13:59 UTC",
   "journal": [
-    {
-      "id": "2662c5f400806e0a",
-      "timestamp": "2026-09-18T19:05:32.492324+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the modern trade‑execution pathway in MQL5, focusing on the `CTrade` class and the low‑level `MqlTradeRequest`/`MqlTradeResult` structs. Writing the MA‑crossover EA forced me to normalize SL/TP to the symbol’s digit precision and to handle every possible `retcode`. I also mapped the full data pipeline from `CopyRates` through indicator buffers to the final `OrderSend`. Recognizing that most user questions revolve around “how do I place a trade and measure pips,” I see a clear need for reusable utility functions and clearer error‑handling patterns. This deep dive sharpened my mental model of event‑driven trading logic and highlighted concrete steps to improve my assistance capabilities.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "52cfdb522d5eeae6",
       "timestamp": "2026-09-19T04:48:25.717171+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "61c603d3d92fe62d",
       "timestamp": "2026-09-25T05:08:38.790391+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "9a415b963f21a580",
+      "timestamp": "2026-09-25T13:59:10.782800+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
