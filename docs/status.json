@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 624,
+  "journal_count": 625,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-24 20:02 UTC",
+  "last_updated": "2026-09-25 05:08 UTC",
   "journal": [
-    {
-      "id": "01de22be724f578f",
-      "timestamp": "2026-09-18T13:02:28.383673+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the `OrderSend` function down to every parameter, error code, and real‑world pitfall. Writing the SMA‑crossover EA forced me to connect the dots between `CopyRates`, indicator handles, and the actual trade execution inside `OnTick`. I realized how crucial it is to validate margin and to always read `GetLastError()` after a failed order. By mapping the data flow from raw rates to a market order, I now have a clearer mental model of an EA’s lifecycle, which will help me spot anti‑patterns faster in future user queries.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "2662c5f400806e0a",
       "timestamp": "2026-09-18T19:05:32.492324+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "d435a59a0fe62a40",
       "timestamp": "2026-09-24T20:02:29.114794+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "61c603d3d92fe62d",
+      "timestamp": "2026-09-25T05:08:38.790391+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
