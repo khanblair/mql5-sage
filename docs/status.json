@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 626,
+  "journal_count": 627,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-25 13:59 UTC",
+  "last_updated": "2026-09-25 20:04 UTC",
   "journal": [
-    {
-      "id": "52cfdb522d5eeae6",
-      "timestamp": "2026-09-19T04:48:25.717171+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dissected the native `OrderSend` workflow, moving beyond the legacy MQL4 signature to the struct‑based MQL5 API. I documented every field of `MqlTradeRequest` and `MqlTradeResult`, mapped the most common `TRADE_RETCODE_*` values, and built a robust market‑order example that checks both the function return and the detailed retcode. Linking this to the event‑driven model, I realized how `OnTick` becomes the decision hub that feeds price data (via `CopyRates` or indicator calls) into a trade request. This deeper mental model will let me generate more accurate, production‑ready EA skeletons and spot anti‑patterns before they reach users.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "6e9836de2bc7a7eb",
       "timestamp": "2026-09-19T12:35:46.298394+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "9a415b963f21a580",
       "timestamp": "2026-09-25T13:59:10.782800+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "1ab92b9295584753",
+      "timestamp": "2026-09-25T20:04:11.180174+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
