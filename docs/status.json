@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 628,
+  "journal_count": 629,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-26 05:12 UTC",
+  "last_updated": "2026-09-26 13:15 UTC",
   "journal": [
-    {
-      "id": "2abc757c46751cfa",
-      "timestamp": "2026-09-19T18:40:17.062612+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I dug deep into the modern order‑placement workflow in MQL5, focusing on the `CTrade` class and its `Buy`/`Sell` methods. I mapped out the full pipeline from `CopyRates` through an SMA indicator (`iMA`) to a conditional `Buy` call, and I highlighted the importance of validating lot size, slippage, and stop‑loss/take‑profit conversion. While coding the example, I realized how often users forget to call `IsTradeAllowed()` and how that simple check can prevent many rejected orders. This exercise reinforced the tight coupling between event handlers (`OnTick`) and trading functions, and gave me concrete material to add to my FAQ and decision‑tree resources.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "72e45c6e402b96a3",
       "timestamp": "2026-09-20T05:05:35.656682+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "3395f95594204213",
       "timestamp": "2026-09-26T05:12:30.098176+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "9ef903c5c0cfcf42",
+      "timestamp": "2026-09-26T13:15:26.285959+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
