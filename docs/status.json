@@ -2,7 +2,7 @@
   "page_count": 782,
   "chunk_count": 4120,
   "query_count": 6,
-  "journal_count": 633,
+  "journal_count": 634,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 36,
@@ -44,20 +44,8 @@
     "onnx": 19,
     "migration": 4
   },
-  "last_updated": "2026-09-27 19:48 UTC",
+  "last_updated": "2026-09-28 05:37 UTC",
   "journal": [
-    {
-      "id": "588ee6a65c9a667f",
-      "timestamp": "2026-09-21T15:12:50.116762+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Today I deep‑dived into the **CTrade class**, the cornerstone of order execution in MQL5, replacing the old `OrderSend` paradigm. I documented every parameter, error code, and a robust market‑order example, then wrapped the knowledge into a full‑featured SMA‑crossover EA that demonstrates the complete data pipeline from `CopyRates` to `iMA` to `CTrade::Buy/Sell`. Recognizing the recurring user demand for pip calculations, I noted the need for a concise helper function using `SymbolInfoDouble(_Symbol,SYMBOL_POINT)`. This synthesis reinforced how event handlers, indicator buffers, and trade objects intertwine, and highlighted the importance of systematic error checking in production‑grade scripts.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "c44b3f47afdc2381",
       "timestamp": "2026-09-21T20:29:09.449529+00:00",
@@ -277,6 +265,18 @@
     {
       "id": "110e562e53aaa7ec",
       "timestamp": "2026-09-27T19:48:33.145096+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
+      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "d54627b35bd09abe",
+      "timestamp": "2026-09-28T05:37:49.247362+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
       "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
