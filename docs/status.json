@@ -1,11 +1,11 @@
 {
-  "page_count": 782,
-  "chunk_count": 4120,
+  "page_count": 783,
+  "chunk_count": 4189,
   "query_count": 6,
-  "journal_count": 656,
+  "journal_count": 657,
   "coverage_pct": 100,
   "total_sections": 37,
-  "sections_with_pages": 36,
+  "sections_with_pages": 37,
   "sections": {
     "basis": 14,
     "trading": 35,
@@ -27,7 +27,7 @@
     "chart_operations": 33,
     "customind": 12,
     "objects": 18,
-    "files": 40,
+    "files": 41,
     "globals": 13,
     "network": 19,
     "matrix": 103,
@@ -42,22 +42,11 @@
     "directx": 23,
     "python_metatrader5": 33,
     "onnx": 19,
-    "migration": 4
+    "migration": 3,
+    "function_indices": 1
   },
-  "last_updated": "2026-10-06 06:36 UTC",
+  "last_updated": "2026-10-06 14:57 UTC",
   "journal": [
-    {
-      "id": "e8d4c24643509bc0",
-      "timestamp": "2026-09-29T14:54:59.595962+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 782 pages · 4120 chunks · 100% coverage",
-      "body": "Evolution session. 782 pages, 4120 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "2c2539a37870f890",
       "timestamp": "2026-09-29T20:56:06.608098+00:00",
@@ -283,6 +272,19 @@
       "tags": [
         "evolution",
         "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "7e50260a86cbaf6c",
+      "timestamp": "2026-10-06T14:57:41.840551+00:00",
+      "entry_type": "CRAWL",
+      "title": "Crawled 3 pages across 2 sections",
+      "body": "Crawl session complete. Added 3 pages and 69 knowledge chunks covering: File Functions, List of MQL5 Functions. Knowledge base growing steadily.",
+      "tags": [
+        "file-functions",
+        "list-of-mql5-functions",
+        "crawl",
         "mql5"
       ]
     }

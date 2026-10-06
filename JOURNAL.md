@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-10-06 14:57 UTC
+
+**Crawled 3 pages across 2 sections**
+
+Crawl session complete. Added 3 pages and 69 knowledge chunks covering: File Functions, List of MQL5 Functions. Knowledge base growing steadily.
+
+*Tags: `file-functions` `list-of-mql5-functions` `crawl` `mql5`*
 
 ---
 
