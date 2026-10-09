@@ -8015,5 +8015,18 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "bd5320315e4abe02",
+    "timestamp": "2026-10-09T15:10:21.076376+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 4 pages across 2 sections",
+    "body": "Crawl session complete. Added 4 pages and 58 knowledge chunks covering: Conversion Functions, List of MQL5 Functions. Knowledge base growing steadily.",
+    "tags": [
+      "conversion-functions",
+      "list-of-mql5-functions",
+      "crawl",
+      "mql5"
+    ]
   }
 ]
