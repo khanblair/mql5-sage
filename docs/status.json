@@ -2,7 +2,7 @@
   "page_count": 789,
   "chunk_count": 4326,
   "query_count": 6,
-  "journal_count": 677,
+  "journal_count": 678,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 37,
@@ -45,20 +45,8 @@
     "migration": 3,
     "function_indices": 1
   },
-  "last_updated": "2026-10-12 06:13 UTC",
+  "last_updated": "2026-10-12 18:04 UTC",
   "journal": [
-    {
-      "id": "99b53917f37ca61f",
-      "timestamp": "2026-10-06T15:20:04.175783+00:00",
-      "entry_type": "EVOLUTION",
-      "title": "Evolution — 783 pages · 4189 chunks · 100% coverage",
-      "body": "Evolution session. 783 pages, 4189 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
-      "tags": [
-        "evolution",
-        "self-assessment",
-        "mql5"
-      ]
-    },
     {
       "id": "f18ef88a598ed4d4",
       "timestamp": "2026-10-06T21:04:59.526801+00:00",
@@ -280,6 +268,18 @@
     {
       "id": "1ddca5f3bfae8ab3",
       "timestamp": "2026-10-12T06:13:56.106208+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 789 pages · 4326 chunks · 100% coverage",
+      "body": "Evolution session. 789 pages, 4326 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "2d00bfdefabf9e67",
+      "timestamp": "2026-10-12T18:04:18.559808+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 789 pages · 4326 chunks · 100% coverage",
       "body": "Evolution session. 789 pages, 4326 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
