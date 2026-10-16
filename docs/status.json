@@ -2,7 +2,7 @@
   "page_count": 789,
   "chunk_count": 4326,
   "query_count": 6,
-  "journal_count": 687,
+  "journal_count": 688,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 37,
@@ -45,21 +45,8 @@
     "migration": 3,
     "function_indices": 1
   },
-  "last_updated": "2026-10-15 19:56 UTC",
+  "last_updated": "2026-10-16 04:45 UTC",
   "journal": [
-    {
-      "id": "bd5320315e4abe02",
-      "timestamp": "2026-10-09T15:10:21.076376+00:00",
-      "entry_type": "CRAWL",
-      "title": "Crawled 4 pages across 2 sections",
-      "body": "Crawl session complete. Added 4 pages and 58 knowledge chunks covering: Conversion Functions, List of MQL5 Functions. Knowledge base growing steadily.",
-      "tags": [
-        "conversion-functions",
-        "list-of-mql5-functions",
-        "crawl",
-        "mql5"
-      ]
-    },
     {
       "id": "7b7d3583f1855530",
       "timestamp": "2026-10-09T15:23:38.383628+00:00",
@@ -279,6 +266,18 @@
     {
       "id": "b7cb66128df0b170",
       "timestamp": "2026-10-15T19:56:44.780495+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 789 pages · 4326 chunks · 100% coverage",
+      "body": "Evolution session. 789 pages, 4326 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "e3d7e601668fab3a",
+      "timestamp": "2026-10-16T04:45:48.556561+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 789 pages · 4326 chunks · 100% coverage",
       "body": "Evolution session. 789 pages, 4326 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
