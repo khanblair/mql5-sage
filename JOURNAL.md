@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only record of every crawl, query, and evolution session.
+> Append-only. Never deleted.
+
+---
+
+## 🧬 EVOLUTION — 2026-10-22 13:56 UTC
+
+**Evolution — 826 pages · 4446 chunks · 100% coverage**
+
+Evolution session. 826 pages, 4446 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.
+
+*Tags: `evolution` `self-assessment` `mql5`*
 
 ---
 
