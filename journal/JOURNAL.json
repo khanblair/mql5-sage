@@ -8484,5 +8484,17 @@
       "self-assessment",
       "mql5"
     ]
+  },
+  {
+    "id": "bf90aa2268555fb3",
+    "timestamp": "2026-10-22T13:42:13.898658+00:00",
+    "entry_type": "CRAWL",
+    "title": "Crawled 38 pages across 1 sections",
+    "body": "Crawl session complete. Added 38 pages and 120 knowledge chunks covering: Matrix and Vector Methods. Knowledge base growing steadily.",
+    "tags": [
+      "matrix-and-vector-methods",
+      "crawl",
+      "mql5"
+    ]
   }
 ]

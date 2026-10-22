@@ -1,6 +1,16 @@
 # 📓 mql5-sage Journal
 
-> Append-only. Never deleted.
+> Append-only record of every crawl, query, and evolution session.
+
+---
+
+## 🕷️ CRAWL — 2026-10-22 13:42 UTC
+
+**Crawled 38 pages across 1 sections**
+
+Crawl session complete. Added 38 pages and 120 knowledge chunks covering: Matrix and Vector Methods. Knowledge base growing steadily.
+
+*Tags: `matrix-and-vector-methods` `crawl` `mql5`*
 
 ---
 
