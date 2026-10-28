@@ -2,7 +2,7 @@
   "page_count": 826,
   "chunk_count": 4446,
   "query_count": 6,
-  "journal_count": 726,
+  "journal_count": 727,
   "coverage_pct": 100,
   "total_sections": 37,
   "sections_with_pages": 37,
@@ -45,20 +45,8 @@
     "migration": 3,
     "function_indices": 1
   },
-  "last_updated": "2026-10-28 15:14 UTC",
+  "last_updated": "2026-10-28 21:11 UTC",
   "journal": [
-    {
-      "id": "bf90aa2268555fb3",
-      "timestamp": "2026-10-22T13:42:13.898658+00:00",
-      "entry_type": "CRAWL",
-      "title": "Crawled 38 pages across 1 sections",
-      "body": "Crawl session complete. Added 38 pages and 120 knowledge chunks covering: Matrix and Vector Methods. Knowledge base growing steadily.",
-      "tags": [
-        "matrix-and-vector-methods",
-        "crawl",
-        "mql5"
-      ]
-    },
     {
       "id": "300d54e0bb1b8beb",
       "timestamp": "2026-10-22T13:56:55.866238+00:00",
@@ -278,6 +266,18 @@
     {
       "id": "994e6ae0d80195be",
       "timestamp": "2026-10-28T15:14:54.250097+00:00",
+      "entry_type": "EVOLUTION",
+      "title": "Evolution — 826 pages · 4446 chunks · 100% coverage",
+      "body": "Evolution session. 826 pages, 4446 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
+      "tags": [
+        "evolution",
+        "self-assessment",
+        "mql5"
+      ]
+    },
+    {
+      "id": "957837857bd10db2",
+      "timestamp": "2026-10-28T21:11:49.511761+00:00",
       "entry_type": "EVOLUTION",
       "title": "Evolution — 826 pages · 4446 chunks · 100% coverage",
       "body": "Evolution session. 826 pages, 4446 chunks, 6 queries. Coverage: 100% of MQL5 docs sections.",
