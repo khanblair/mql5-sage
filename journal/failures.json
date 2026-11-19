@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "timestamp": "2026-11-19T17:14:13.999332+00:00",
+    "url": "https://www.mql5.com/en/docs/opencl",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Read timed out.",
+    "context": ""
+  }
+]
