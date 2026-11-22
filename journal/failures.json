@@ -1,1 +1,268 @@
-[]
+[
+  {
+    "timestamp": "2026-11-22T16:05:33.381606+00:00",
+    "url": "https://www.mql5.com/en/docs",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:05:53.384439+00:00",
+    "url": "https://www.mql5.com/en/docs/basis",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/basis (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:06:13.407318+00:00",
+    "url": "https://www.mql5.com/en/docs/trading",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/trading (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:06:33.430070+00:00",
+    "url": "https://www.mql5.com/en/docs/indicators",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/indicators (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:06:53.452875+00:00",
+    "url": "https://www.mql5.com/en/docs/series",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/series (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:07:13.460265+00:00",
+    "url": "https://www.mql5.com/en/docs/event_handlers",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/event_handlers (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:07:33.483829+00:00",
+    "url": "https://www.mql5.com/en/docs/constants",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/constants (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:07:53.506798+00:00",
+    "url": "https://www.mql5.com/en/docs/runtime",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/runtime (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:08:13.524373+00:00",
+    "url": "https://www.mql5.com/en/docs/predefined",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/predefined (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:08:33.537675+00:00",
+    "url": "https://www.mql5.com/en/docs/common",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/common (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:08:53.560535+00:00",
+    "url": "https://www.mql5.com/en/docs/array",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/array (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:09:13.583279+00:00",
+    "url": "https://www.mql5.com/en/docs/math",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/math (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:09:33.588340+00:00",
+    "url": "https://www.mql5.com/en/docs/strings",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/strings (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:09:53.611909+00:00",
+    "url": "https://www.mql5.com/en/docs/convert",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/convert (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:10:13.634955+00:00",
+    "url": "https://www.mql5.com/en/docs/dateandtime",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/dateandtime (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:10:33.652261+00:00",
+    "url": "https://www.mql5.com/en/docs/account",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/account (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:10:53.675351+00:00",
+    "url": "https://www.mql5.com/en/docs/check",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/check (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:11:13.698270+00:00",
+    "url": "https://www.mql5.com/en/docs/marketinformation",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/marketinformation (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:11:33.721404+00:00",
+    "url": "https://www.mql5.com/en/docs/chart_operations",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/chart_operations (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:11:53.744388+00:00",
+    "url": "https://www.mql5.com/en/docs/customind",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/customind (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:12:13.767300+00:00",
+    "url": "https://www.mql5.com/en/docs/objects",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/objects (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:12:33.782272+00:00",
+    "url": "https://www.mql5.com/en/docs/files",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/files (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:12:53.797556+00:00",
+    "url": "https://www.mql5.com/en/docs/globals",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/globals (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:13:13.813069+00:00",
+    "url": "https://www.mql5.com/en/docs/network",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/network (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:13:33.828378+00:00",
+    "url": "https://www.mql5.com/en/docs/matrix",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/matrix (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:13:53.843792+00:00",
+    "url": "https://www.mql5.com/en/docs/calendar",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/calendar (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:14:13.859100+00:00",
+    "url": "https://www.mql5.com/en/docs/customsymbols",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/customsymbols (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:14:33.874506+00:00",
+    "url": "https://www.mql5.com/en/docs/signals",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/signals (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:14:53.889944+00:00",
+    "url": "https://www.mql5.com/en/docs/standardlibrary",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/standardlibrary (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:15:13.905315+00:00",
+    "url": "https://www.mql5.com/en/docs/optimization_frames",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/optimization_frames (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:15:34.238280+00:00",
+    "url": "https://www.mql5.com/en/docs/eventfunctions",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/eventfunctions (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:15:54.254320+00:00",
+    "url": "https://www.mql5.com/en/docs/opencl",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/opencl (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:16:14.277051+00:00",
+    "url": "https://www.mql5.com/en/docs/database",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/database (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:16:34.282998+00:00",
+    "url": "https://www.mql5.com/en/docs/directx",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/directx (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:16:54.292214+00:00",
+    "url": "https://www.mql5.com/en/docs/python_metatrader5",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/python_metatrader5 (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:17:14.315158+00:00",
+    "url": "https://www.mql5.com/en/docs/onnx",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/onnx (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:17:34.338013+00:00",
+    "url": "https://www.mql5.com/en/docs/migration",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/migration (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  },
+  {
+    "timestamp": "2026-11-22T16:17:54.360964+00:00",
+    "url": "https://www.mql5.com/en/docs/function_indices",
+    "error_type": "FETCH_ERROR",
+    "message": "HTTPSConnectionPool(host='www.mql5.com', port=443): Max retries exceeded with url: /en/docs/function_indices (Caused by NewConnectionError(\"HTTPSConnection(host='www.mql5.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+    "context": ""
+  }
+]
